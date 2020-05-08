@@ -1,0 +1,4 @@
+lmp_serial -in in.snap.test -var nsteps 10 -var nx 10 -var ny 10 -var nz 10 -var snapdir 2J8_W.SNAP
+mv log.lammps log.lammps_2J8
+lmp_serial -in in.snap.test -var nsteps 10 -var nx 10 -var ny 10 -var nz 10 -var snapdir 2J14_InflatedFrom_2J10
+mv log.lammps log.lammps_2J14
