@@ -1,28 +1,43 @@
 #!/bin/bash
 
-# clone the lammps github repo
-git clone https://github.com/lammps/lammps.git
+set -xe
+export CRAYPE_LINK_TYPE=dynamic
 
-# enter lammps directory and revert to the particular commit
+# Clone the lammps github repo if not already cloned.
+if [ ! -d lammps ]; then
+git clone --single-branch --branch master https://github.com/lammps/lammps.git
+
 cd lammps
-git checkout 1316e93eb216b3bd14f77336284ec52b76b3d371
+# Checkout the commit from 09/02/2020.
+git checkout 2cd0e9edc4fc820db21f0ac4bb6b9cd3be9fd50e
 
-# copy the Makefile from top directory to MAKE/
-cp ../Makefile.kokkos_phi src/MAKE/OPTIONS
+cd ../
+fi
 
-echo "*******Entering into the src directory**************"
-cd src
+# Enter the lammps directory.
+cd lammps
 
-echo "*******Clean all object images and previous builds**************"
-make clean-all
-make no-all
+# Create the build dir .
+if [ ! -d build_knl ]; then
+mkdir build_knl
+fi
+cd build_knl
 
-echo "*******Setup SNAP and Kokkos modules**************"
-make yes-snap
-make yes-kokkos
+# CMake build statement
+cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_knl/ \
+  -D CMAKE_CXX_COMPILER=CC -D CMAKE_Fortran_COMPILER=ftn \
+  -D PKG_USER-OMP=ON \
+  -D PKG_USER-INTEL=ON -D TBB_MALLOC_LIBRARY=/opt/intel/compilers_and_libraries_2019.3.199/linux/tbb/lib/intel64/gcc4.7/libtbbmalloc.so.2 \
+  -D PKG_KOKKOS=ON -D DOWNLOAD_KOKKOS=ON -D Kokkos_ARCH_KNL=ON \
+  -D PKG_SNAP=ON \
+  -D CMAKE_POSITION_INDEPENDENT_CODE=ON \
+  -D CMAKE_EXE_FLAGS="-dynamic" \
+  ../cmake
 
-echo "*******Build LAMMPS Kokkos version**************"
-make -j kokkos_phi
+# A second cmake command is needed because a few local variables need to be overwritten.
+# Looks like a bug in the current commit.
+cmake ../cmake
 
-echo "*******Create soft link for lmp_kokkos_phi in LAMMPS_BENCHMARK**************"
-ln -s lmp_kokkos_phi ../../LAMMPS_Benchmarks
+# make && make install
+make -j16
+make install -j16
