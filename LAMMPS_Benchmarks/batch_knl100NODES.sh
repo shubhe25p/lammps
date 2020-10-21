@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --nodes=10
+#SBATCH --nodes=100
 #SBATCH -C knl
 #SBATCH -S 4
 #SBATCH --time=00:30:00
@@ -8,7 +8,7 @@
 
 NODES=100
 MPIPNODE=64
-THREADS=4
+threads=4
 EXE=lmp_knl
 
 echo "==================================================="

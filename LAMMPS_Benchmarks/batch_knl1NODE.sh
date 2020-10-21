@@ -8,7 +8,7 @@
 
 NODES=1
 MPIPNODE=64
-THREADS=4
+threads=4
 EXE=lmp_knl
 
 echo "==================================================="

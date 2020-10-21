@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --nodes=10
+#SBATCH --nodes=1000
 #SBATCH -C knl
 #SBATCH -S 4
 #SBATCH --time=00:30:00
-#SBATCH --qos=debug
+#SBATCH --qos=regular
 
-NODES=10
+NODES=1000
 MPIPNODE=64
 threads=4
 EXE=lmp_knl
