@@ -4,7 +4,8 @@ set -xe
 
 module purge
 module load esslurm
-module load cuda/10.2.89
+module load cuda/11.0.1
+#module load cuda/10.2.89
 module load gcc/8.3.0
 module load openmpi/4.0.2
 
