@@ -1,0 +1,944 @@
+[ 2022-01-16 16:10:04.432092 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:10:04.435481 ] trace:        Generate Interval: 10001864 count: 1276400 min: 0 mean: 0.000193513 max: 83
+[ 2022-01-16 16:10:04.435525 ] trace:            Recv Interval: 10001864 count: 13320699 min: 0 mean: 0.000220334 max: 90
+[ 2022-01-16 16:10:04.435535 ] trace: Recv-Assimilate Interval: 10001864 count: 68 min: 1 mean: 4.51471 max: 64
+[ 2022-01-16 16:10:04.435542 ] trace:    Recv-Extract Interval: 10001864 count: 68 min: 0 mean: 0.764706 max: 6
+[ 2022-01-16 16:10:04.435549 ] trace:       Recv-Mesg Interval: 10001864 count: 68 min: 5 mean: 12.6471 max: 86
+[ 2022-01-16 16:10:04.435555 ] trace:    Recv-Process Interval: 10001864 count: 68 min: 0 mean: 0.764706 max: 26
+[ 2022-01-16 16:10:04.435561 ] trace:          Report Interval: 10001864 count: 13320698 min: 0 mean: 8.85089e-05 max: 31
+[ 2022-01-16 16:10:04.435568 ] trace:            Send Interval: 10001864 count: 13320699 min: 0 mean: 8.25032e-05 max: 120
+[ 2022-01-16 16:10:04.435573 ] trace:       Send-Mesg Interval: 10001864 count: 5 min: 10 mean: 21.2 max: 38
+[ 2022-01-16 16:10:04.435580 ] trace:        UpdateDB Interval: 10001864 count: 13320699 min: 0 mean: 0.000843124 max: 8927
+[ 2022-01-16 16:10:04.435586 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:10:04.435592 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:10:04.435623 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 1
+[ 2022-01-16 16:10:04.435632 ] trace: 3 BLOCKS IN DATABASE 1 USED 4 4 TOTAL 
+[ 2022-01-16 16:10:04.435639 ] trace: RESULT MANAGER REPORT: 113 BUNDLES, 113 RESERVATIONS
+[ 2022-01-16 16:10:14.435652 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:10:14.435698 ] trace:        Generate Interval: 10000054 count: 4 min: 16 mean: 17.25 max: 18
+[ 2022-01-16 16:10:14.435712 ] trace:            Recv Interval: 10000054 count: 14588904 min: 0 mean: 0.0002761 max: 27
+[ 2022-01-16 16:10:14.435718 ] trace: Recv-Assimilate Interval: 10000054 count: 197 min: 1 mean: 2.07614 max: 19
+[ 2022-01-16 16:10:14.435724 ] trace:    Recv-Extract Interval: 10000054 count: 197 min: 0 mean: 1.92893 max: 8
+[ 2022-01-16 16:10:14.435728 ] trace:       Recv-Mesg Interval: 10000054 count: 197 min: 6 mean: 8.97462 max: 26
+[ 2022-01-16 16:10:14.435733 ] trace:    Recv-Process Interval: 10000054 count: 197 min: 0 mean: 0.0101523 max: 1
+[ 2022-01-16 16:10:14.435738 ] trace:          Report Interval: 10000054 count: 14588904 min: 0 mean: 0.0005461 max: 6873
+[ 2022-01-16 16:10:14.435743 ] trace:            Send Interval: 10000054 count: 14588904 min: 0 mean: 8.30083e-05 max: 106
+[ 2022-01-16 16:10:14.435748 ] trace:       Send-Mesg Interval: 10000054 count: 4 min: 12 mean: 12.75 max: 13
+[ 2022-01-16 16:10:14.435753 ] trace:        UpdateDB Interval: 10000054 count: 14588904 min: 0 mean: 0.000162795 max: 13
+[ 2022-01-16 16:10:14.435758 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:10:14.435763 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:10:14.435779 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 1
+[ 2022-01-16 16:10:14.435786 ] trace: 3 BLOCKS IN DATABASE 1 USED 4 4 TOTAL 
+[ 2022-01-16 16:10:14.435790 ] trace: RESULT MANAGER REPORT: 311 BUNDLES, 311 RESERVATIONS
+[ 2022-01-16 16:10:24.435801 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:10:24.435845 ] trace:        Generate Interval: 10000033 count: 6 min: 15 mean: 17.6667 max: 24
+[ 2022-01-16 16:10:24.435859 ] trace:            Recv Interval: 10000033 count: 14377468 min: 0 mean: 0.000753818 max: 4733
+[ 2022-01-16 16:10:24.435865 ] trace: Recv-Assimilate Interval: 10000033 count: 243 min: 1 mean: 22.3786 max: 4406
+[ 2022-01-16 16:10:24.435871 ] trace:    Recv-Extract Interval: 10000033 count: 243 min: 0 mean: 3.10288 max: 122
+[ 2022-01-16 16:10:24.436869 ] trace:       Recv-Mesg Interval: 10000033 count: 243 min: 5 mean: 32.9959 max: 4716
+[ 2022-01-16 16:10:24.436877 ] trace:    Recv-Process Interval: 10000033 count: 243 min: 0 mean: 0.341564 max: 48
+[ 2022-01-16 16:10:24.436882 ] trace:          Report Interval: 10000033 count: 14377468 min: 0 mean: 9.80006e-05 max: 149
+[ 2022-01-16 16:10:24.436888 ] trace:            Send Interval: 10000033 count: 14377468 min: 0 mean: 8.55505e-05 max: 110
+[ 2022-01-16 16:10:24.436893 ] trace:       Send-Mesg Interval: 10000033 count: 6 min: 11 mean: 27 max: 92
+[ 2022-01-16 16:10:24.436898 ] trace:        UpdateDB Interval: 10000033 count: 14377468 min: 0 mean: 0.000178265 max: 17
+[ 2022-01-16 16:10:24.436903 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:10:24.436908 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:10:24.436924 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 217
+[ 2022-01-16 16:10:24.436931 ] trace: 134 BLOCKS IN DATABASE 217 USED 351 351 TOTAL 
+[ 2022-01-16 16:10:24.436936 ] trace: RESULT MANAGER REPORT: 209 BUNDLES, 209 RESERVATIONS
+[ 2022-01-16 16:10:34.436946 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:10:34.436989 ] trace:        Generate Interval: 10000033 count: 5 min: 15 mean: 16 max: 18
+[ 2022-01-16 16:10:34.437002 ] trace:            Recv Interval: 10000033 count: 14427003 min: 0 mean: 0.000569349 max: 2491
+[ 2022-01-16 16:10:34.437008 ] trace: Recv-Assimilate Interval: 10000033 count: 237 min: 1 mean: 14.6498 max: 2339
+[ 2022-01-16 16:10:34.437014 ] trace:    Recv-Extract Interval: 10000033 count: 237 min: 0 mean: 2.83544 max: 63
+[ 2022-01-16 16:10:34.437019 ] trace:       Recv-Mesg Interval: 10000033 count: 237 min: 5 mean: 23.443 max: 2481
+[ 2022-01-16 16:10:34.437024 ] trace:    Recv-Process Interval: 10000033 count: 237 min: 0 mean: 0.139241 max: 7
+[ 2022-01-16 16:10:34.437029 ] trace:          Report Interval: 10000033 count: 14427003 min: 0 mean: 0.000162196 max: 1145
+[ 2022-01-16 16:10:34.437034 ] trace:            Send Interval: 10000033 count: 14427003 min: 0 mean: 8.56034e-05 max: 108
+[ 2022-01-16 16:10:34.437039 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 10 mean: 27 max: 89
+[ 2022-01-16 16:10:34.437044 ] trace:        UpdateDB Interval: 10000033 count: 14427003 min: 0 mean: 0.000176475 max: 50
+[ 2022-01-16 16:10:34.437049 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:10:34.437054 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:10:34.437071 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 442
+[ 2022-01-16 16:10:34.437078 ] trace: 134 BLOCKS IN DATABASE 442 USED 576 576 TOTAL 
+[ 2022-01-16 16:10:34.437083 ] trace: RESULT MANAGER REPORT: 222 BUNDLES, 222 RESERVATIONS
+[ 2022-01-16 16:10:44.437094 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:10:44.437141 ] trace:        Generate Interval: 10000034 count: 5 min: 13 mean: 14.6 max: 16
+[ 2022-01-16 16:10:44.437155 ] trace:            Recv Interval: 10000034 count: 14472910 min: 0 mean: 0.000554001 max: 2013
+[ 2022-01-16 16:10:44.437162 ] trace: Recv-Assimilate Interval: 10000034 count: 224 min: 1 mean: 15.3884 max: 1886
+[ 2022-01-16 16:10:44.437167 ] trace:    Recv-Extract Interval: 10000034 count: 224 min: 0 mean: 2.99107 max: 52
+[ 2022-01-16 16:10:44.437172 ] trace:       Recv-Mesg Interval: 10000034 count: 224 min: 6 mean: 24.4598 max: 2004
+[ 2022-01-16 16:10:44.437177 ] trace:    Recv-Process Interval: 10000034 count: 224 min: 0 mean: 0.138393 max: 6
+[ 2022-01-16 16:10:44.437182 ] trace:          Report Interval: 10000034 count: 14472910 min: 0 mean: 9.92889e-05 max: 147
+[ 2022-01-16 16:10:44.437187 ] trace:            Send Interval: 10000034 count: 14472910 min: 0 mean: 8.59537e-05 max: 59
+[ 2022-01-16 16:10:44.437192 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 12 mean: 21.2 max: 44
+[ 2022-01-16 16:10:44.437198 ] trace:        UpdateDB Interval: 10000034 count: 14472910 min: 0 mean: 0.000170733 max: 13
+[ 2022-01-16 16:10:44.437203 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:10:44.437208 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:10:44.437224 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 669
+[ 2022-01-16 16:10:44.437231 ] trace: 134 BLOCKS IN DATABASE 669 USED 803 803 TOTAL 
+[ 2022-01-16 16:10:44.437235 ] trace: RESULT MANAGER REPORT: 222 BUNDLES, 222 RESERVATIONS
+[ 2022-01-16 16:10:54.437246 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:10:54.437291 ] trace:        Generate Interval: 10000033 count: 5 min: 16 mean: 18.8 max: 20
+[ 2022-01-16 16:10:54.437305 ] trace:            Recv Interval: 10000033 count: 14557444 min: 0 mean: 0.000677179 max: 2320
+[ 2022-01-16 16:10:54.437312 ] trace: Recv-Assimilate Interval: 10000033 count: 224 min: 1 mean: 19.0759 max: 2160
+[ 2022-01-16 16:10:54.437317 ] trace:    Recv-Extract Interval: 10000033 count: 224 min: 1 mean: 3.87054 max: 59
+[ 2022-01-16 16:10:54.437322 ] trace:       Recv-Mesg Interval: 10000033 count: 224 min: 7 mean: 32.7009 max: 2305
+[ 2022-01-16 16:10:54.437328 ] trace:    Recv-Process Interval: 10000033 count: 224 min: 0 mean: 0.205357 max: 8
+[ 2022-01-16 16:10:54.437333 ] trace:          Report Interval: 10000033 count: 14557444 min: 0 mean: 0.000100155 max: 152
+[ 2022-01-16 16:10:54.437338 ] trace:            Send Interval: 10000033 count: 14557444 min: 0 mean: 8.97822e-05 max: 126
+[ 2022-01-16 16:10:54.437342 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 12 mean: 34.2 max: 105
+[ 2022-01-16 16:10:54.437347 ] trace:        UpdateDB Interval: 10000033 count: 14557444 min: 0 mean: 0.00019138 max: 18
+[ 2022-01-16 16:10:54.437352 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:10:54.437357 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:10:54.437375 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 927
+[ 2022-01-16 16:10:54.437383 ] trace: 134 BLOCKS IN DATABASE 927 USED 1061 1061 TOTAL 
+[ 2022-01-16 16:10:54.437387 ] trace: RESULT MANAGER REPORT: 190 BUNDLES, 190 RESERVATIONS
+[ 2022-01-16 16:11:04.437399 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:11:04.437443 ] trace:        Generate Interval: 10000036 count: 5 min: 19 mean: 19.2 max: 20
+[ 2022-01-16 16:11:04.437457 ] trace:            Recv Interval: 10000036 count: 14704799 min: 0 mean: 0.000691135 max: 2012
+[ 2022-01-16 16:11:04.437464 ] trace: Recv-Assimilate Interval: 10000036 count: 225 min: 3 mean: 17.36 max: 1862
+[ 2022-01-16 16:11:04.437469 ] trace:    Recv-Extract Interval: 10000036 count: 225 min: 2 mean: 4.46667 max: 52
+[ 2022-01-16 16:11:04.437475 ] trace:       Recv-Mesg Interval: 10000036 count: 225 min: 15 mean: 33.0533 max: 1998
+[ 2022-01-16 16:11:04.437480 ] trace:    Recv-Process Interval: 10000036 count: 225 min: 0 mean: 0.262222 max: 11
+[ 2022-01-16 16:11:04.437485 ] trace:          Report Interval: 10000036 count: 14704799 min: 0 mean: 0.000101872 max: 151
+[ 2022-01-16 16:11:04.437490 ] trace:            Send Interval: 10000036 count: 14704799 min: 0 mean: 9.78592e-05 max: 136
+[ 2022-01-16 16:11:04.437495 ] trace:       Send-Mesg Interval: 10000036 count: 5 min: 16 mean: 40.6 max: 115
+[ 2022-01-16 16:11:04.437500 ] trace:        UpdateDB Interval: 10000036 count: 14704799 min: 0 mean: 0.00019361 max: 42
+[ 2022-01-16 16:11:04.437505 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:11:04.437509 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:11:04.437526 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 1153
+[ 2022-01-16 16:11:04.437534 ] trace: 134 BLOCKS IN DATABASE 1153 USED 1287 1287 TOTAL 
+[ 2022-01-16 16:11:04.437538 ] trace: RESULT MANAGER REPORT: 189 BUNDLES, 189 RESERVATIONS
+[ 2022-01-16 16:11:14.437549 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:11:14.437593 ] trace:        Generate Interval: 10000034 count: 5 min: 16 mean: 19.2 max: 21
+[ 2022-01-16 16:11:14.437607 ] trace:            Recv Interval: 10000034 count: 14574025 min: 0 mean: 0.000687525 max: 1705
+[ 2022-01-16 16:11:14.437614 ] trace: Recv-Assimilate Interval: 10000034 count: 224 min: 1 mean: 18.4241 max: 1578
+[ 2022-01-16 16:11:14.437619 ] trace:    Recv-Extract Interval: 10000034 count: 224 min: 1 mean: 4.22768 max: 47
+[ 2022-01-16 16:11:14.437624 ] trace:       Recv-Mesg Interval: 10000034 count: 224 min: 6 mean: 32.692 max: 1696
+[ 2022-01-16 16:11:14.437629 ] trace:    Recv-Process Interval: 10000034 count: 224 min: 0 mean: 0.308036 max: 19
+[ 2022-01-16 16:11:14.437634 ] trace:          Report Interval: 10000034 count: 14574025 min: 0 mean: 0.000100521 max: 150
+[ 2022-01-16 16:11:14.437639 ] trace:            Send Interval: 10000034 count: 14574025 min: 0 mean: 8.6661e-05 max: 100
+[ 2022-01-16 16:11:14.437644 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 15 mean: 38.6 max: 83
+[ 2022-01-16 16:11:14.437649 ] trace:        UpdateDB Interval: 10000034 count: 14574025 min: 0 mean: 0.000185879 max: 29
+[ 2022-01-16 16:11:14.437654 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:11:14.437659 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:11:14.437676 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 1391
+[ 2022-01-16 16:11:14.437683 ] trace: 134 BLOCKS IN DATABASE 1391 USED 1525 1525 TOTAL 
+[ 2022-01-16 16:11:14.437688 ] trace: RESULT MANAGER REPORT: 176 BUNDLES, 176 RESERVATIONS
+[ 2022-01-16 16:11:24.437699 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:11:24.437751 ] trace:        Generate Interval: 10000035 count: 5 min: 15 mean: 15.4 max: 16
+[ 2022-01-16 16:11:24.437770 ] trace:            Recv Interval: 10000035 count: 14384798 min: 0 mean: 0.000579431 max: 1582
+[ 2022-01-16 16:11:24.437780 ] trace: Recv-Assimilate Interval: 10000035 count: 225 min: 1 mean: 15.2489 max: 1469
+[ 2022-01-16 16:11:24.437789 ] trace:    Recv-Extract Interval: 10000035 count: 225 min: 1 mean: 3.70667 max: 44
+[ 2022-01-16 16:11:24.437794 ] trace:       Recv-Mesg Interval: 10000035 count: 225 min: 6 mean: 25.4044 max: 1575
+[ 2022-01-16 16:11:24.437799 ] trace:    Recv-Process Interval: 10000035 count: 225 min: 0 mean: 0.195556 max: 7
+[ 2022-01-16 16:11:24.437804 ] trace:          Report Interval: 10000035 count: 14384798 min: 0 mean: 8.87743e-05 max: 150
+[ 2022-01-16 16:11:24.437809 ] trace:            Send Interval: 10000035 count: 14384798 min: 0 mean: 8.49508e-05 max: 61
+[ 2022-01-16 16:11:24.437814 ] trace:       Send-Mesg Interval: 10000035 count: 5 min: 13 mean: 25.2 max: 44
+[ 2022-01-16 16:11:24.437819 ] trace:        UpdateDB Interval: 10000035 count: 14384798 min: 0 mean: 0.000169624 max: 13
+[ 2022-01-16 16:11:24.437824 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:11:24.437829 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:11:24.437846 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 1610
+[ 2022-01-16 16:11:24.437853 ] trace: 134 BLOCKS IN DATABASE 1610 USED 1744 1744 TOTAL 
+[ 2022-01-16 16:11:24.437858 ] trace: RESULT MANAGER REPORT: 184 BUNDLES, 184 RESERVATIONS
+[ 2022-01-16 16:11:34.437869 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:11:34.437912 ] trace:        Generate Interval: 10000034 count: 5 min: 12 mean: 15.2 max: 17
+[ 2022-01-16 16:11:34.437926 ] trace:            Recv Interval: 10000034 count: 14668771 min: 0 mean: 0.000559352 max: 1089
+[ 2022-01-16 16:11:34.437933 ] trace: Recv-Assimilate Interval: 10000034 count: 226 min: 1 mean: 15.7345 max: 1005
+[ 2022-01-16 16:11:34.437938 ] trace:    Recv-Extract Interval: 10000034 count: 226 min: 1 mean: 3.55752 max: 31
+[ 2022-01-16 16:11:34.437943 ] trace:       Recv-Mesg Interval: 10000034 count: 226 min: 6 mean: 25.7212 max: 1084
+[ 2022-01-16 16:11:34.437948 ] trace:    Recv-Process Interval: 10000034 count: 226 min: 0 mean: 0.181416 max: 7
+[ 2022-01-16 16:11:34.437953 ] trace:          Report Interval: 10000034 count: 14668771 min: 0 mean: 9.59862e-05 max: 169
+[ 2022-01-16 16:11:34.437958 ] trace:            Send Interval: 10000034 count: 14668771 min: 0 mean: 8.18064e-05 max: 64
+[ 2022-01-16 16:11:34.437963 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 12 mean: 24.2 max: 50
+[ 2022-01-16 16:11:34.437968 ] trace:        UpdateDB Interval: 10000034 count: 14668771 min: 0 mean: 0.000172271 max: 28
+[ 2022-01-16 16:11:34.437973 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:11:34.437978 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:11:34.437994 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 1831
+[ 2022-01-16 16:11:34.438001 ] trace: 134 BLOCKS IN DATABASE 1831 USED 1965 1965 TOTAL 
+[ 2022-01-16 16:11:34.438006 ] trace: RESULT MANAGER REPORT: 189 BUNDLES, 189 RESERVATIONS
+[ 2022-01-16 16:11:44.438017 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:11:44.438056 ] trace:        Generate Interval: 10000034 count: 6 min: 14 mean: 15.5 max: 17
+[ 2022-01-16 16:11:44.438069 ] trace:            Recv Interval: 10000034 count: 14609814 min: 0 mean: 0.000620816 max: 1134
+[ 2022-01-16 16:11:44.438075 ] trace: Recv-Assimilate Interval: 10000034 count: 230 min: 1 mean: 15.6435 max: 1040
+[ 2022-01-16 16:11:44.438081 ] trace:    Recv-Extract Interval: 10000034 count: 230 min: 1 mean: 3.76087 max: 32
+[ 2022-01-16 16:11:44.438086 ] trace:       Recv-Mesg Interval: 10000034 count: 230 min: 6 mean: 25.887 max: 1122
+[ 2022-01-16 16:11:44.438091 ] trace:    Recv-Process Interval: 10000034 count: 230 min: 0 mean: 0.2 max: 17
+[ 2022-01-16 16:11:44.438096 ] trace:          Report Interval: 10000034 count: 14609814 min: 0 mean: 0.000123273 max: 147
+[ 2022-01-16 16:11:44.438101 ] trace:            Send Interval: 10000034 count: 14609814 min: 0 mean: 0.000103013 max: 75
+[ 2022-01-16 16:11:44.438106 ] trace:       Send-Mesg Interval: 10000034 count: 6 min: 12 mean: 33.6667 max: 57
+[ 2022-01-16 16:11:44.438111 ] trace:        UpdateDB Interval: 10000034 count: 14609814 min: 0 mean: 0.000204383 max: 99
+[ 2022-01-16 16:11:44.438115 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:11:44.438120 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:11:44.438136 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 2056
+[ 2022-01-16 16:11:44.438144 ] trace: 134 BLOCKS IN DATABASE 2056 USED 2190 2190 TOTAL 
+[ 2022-01-16 16:11:44.438149 ] trace: RESULT MANAGER REPORT: 196 BUNDLES, 196 RESERVATIONS
+[ 2022-01-16 16:11:54.438160 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:11:54.438202 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 16.2 max: 18
+[ 2022-01-16 16:11:54.438215 ] trace:            Recv Interval: 10000034 count: 14417362 min: 0 mean: 0.000548367 max: 1573
+[ 2022-01-16 16:11:54.438222 ] trace: Recv-Assimilate Interval: 10000034 count: 236 min: 1 mean: 13.1822 max: 1461
+[ 2022-01-16 16:11:54.438227 ] trace:    Recv-Extract Interval: 10000034 count: 236 min: 1 mean: 3.66949 max: 41
+[ 2022-01-16 16:11:54.438232 ] trace:       Recv-Mesg Interval: 10000034 count: 236 min: 6 mean: 23.0805 max: 1559
+[ 2022-01-16 16:11:54.438237 ] trace:    Recv-Process Interval: 10000034 count: 236 min: 0 mean: 0.165254 max: 9
+[ 2022-01-16 16:11:54.438242 ] trace:          Report Interval: 10000034 count: 14417362 min: 0 mean: 9.52324e-05 max: 142
+[ 2022-01-16 16:11:54.438247 ] trace:            Send Interval: 10000034 count: 14417362 min: 0 mean: 9.39839e-05 max: 54
+[ 2022-01-16 16:11:54.438252 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 12 mean: 21.6 max: 37
+[ 2022-01-16 16:11:54.438257 ] trace:        UpdateDB Interval: 10000034 count: 14417362 min: 0 mean: 0.000169865 max: 45
+[ 2022-01-16 16:11:54.438262 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:11:54.438267 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:11:54.438284 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 2243
+[ 2022-01-16 16:11:54.438291 ] trace: 134 BLOCKS IN DATABASE 2243 USED 2377 2377 TOTAL 
+[ 2022-01-16 16:11:54.438296 ] trace: RESULT MANAGER REPORT: 245 BUNDLES, 245 RESERVATIONS
+[ 2022-01-16 16:12:04.438306 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:12:04.438350 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 15.6 max: 17
+[ 2022-01-16 16:12:04.438363 ] trace:            Recv Interval: 10000034 count: 14413166 min: 0 mean: 0.000597232 max: 1487
+[ 2022-01-16 16:12:04.438370 ] trace: Recv-Assimilate Interval: 10000034 count: 231 min: 1 mean: 16.6623 max: 1386
+[ 2022-01-16 16:12:04.438375 ] trace:    Recv-Extract Interval: 10000034 count: 231 min: 1 mean: 3.61039 max: 41
+[ 2022-01-16 16:12:04.438380 ] trace:       Recv-Mesg Interval: 10000034 count: 231 min: 7 mean: 26.7532 max: 1480
+[ 2022-01-16 16:12:04.438385 ] trace:    Recv-Process Interval: 10000034 count: 231 min: 0 mean: 0.177489 max: 7
+[ 2022-01-16 16:12:04.438390 ] trace:          Report Interval: 10000034 count: 14413166 min: 0 mean: 9.08197e-05 max: 147
+[ 2022-01-16 16:12:04.438395 ] trace:            Send Interval: 10000034 count: 14413166 min: 0 mean: 8.90158e-05 max: 93
+[ 2022-01-16 16:12:04.438400 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 15 mean: 32.6 max: 76
+[ 2022-01-16 16:12:04.438405 ] trace:        UpdateDB Interval: 10000034 count: 14413166 min: 0 mean: 0.000166098 max: 84
+[ 2022-01-16 16:12:04.438410 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:12:04.438415 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:12:04.438432 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 2493
+[ 2022-01-16 16:12:04.438439 ] trace: 134 BLOCKS IN DATABASE 2493 USED 2627 2627 TOTAL 
+[ 2022-01-16 16:12:04.438444 ] trace: RESULT MANAGER REPORT: 226 BUNDLES, 226 RESERVATIONS
+[ 2022-01-16 16:12:14.438455 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:12:14.438497 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 15.8 max: 17
+[ 2022-01-16 16:12:14.438511 ] trace:            Recv Interval: 10000034 count: 14394795 min: 0 mean: 0.00058014 max: 1584
+[ 2022-01-16 16:12:14.438518 ] trace: Recv-Assimilate Interval: 10000034 count: 227 min: 1 mean: 16.2467 max: 1463
+[ 2022-01-16 16:12:14.438524 ] trace:    Recv-Extract Interval: 10000034 count: 227 min: 1 mean: 3.76652 max: 43
+[ 2022-01-16 16:12:14.438529 ] trace:       Recv-Mesg Interval: 10000034 count: 227 min: 6 mean: 26.6652 max: 1564
+[ 2022-01-16 16:12:14.438534 ] trace:    Recv-Process Interval: 10000034 count: 227 min: 0 mean: 0.198238 max: 7
+[ 2022-01-16 16:12:14.438539 ] trace:          Report Interval: 10000034 count: 14394795 min: 0 mean: 8.80874e-05 max: 148
+[ 2022-01-16 16:12:14.438544 ] trace:            Send Interval: 10000034 count: 14394795 min: 0 mean: 9.71184e-05 max: 91
+[ 2022-01-16 16:12:14.438549 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 14 mean: 33.4 max: 73
+[ 2022-01-16 16:12:14.438554 ] trace:        UpdateDB Interval: 10000034 count: 14394795 min: 0 mean: 0.000171729 max: 17
+[ 2022-01-16 16:12:14.438559 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:12:14.438564 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:12:14.438580 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 2727
+[ 2022-01-16 16:12:14.438587 ] trace: 134 BLOCKS IN DATABASE 2727 USED 2861 2861 TOTAL 
+[ 2022-01-16 16:12:14.438592 ] trace: RESULT MANAGER REPORT: 221 BUNDLES, 221 RESERVATIONS
+[ 2022-01-16 16:12:24.438603 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:12:24.438645 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 15.6 max: 16
+[ 2022-01-16 16:12:24.438659 ] trace:            Recv Interval: 10000034 count: 14493273 min: 0 mean: 0.000604142 max: 1502
+[ 2022-01-16 16:12:24.438665 ] trace: Recv-Assimilate Interval: 10000034 count: 226 min: 1 mean: 18.0088 max: 1390
+[ 2022-01-16 16:12:24.438671 ] trace:    Recv-Extract Interval: 10000034 count: 226 min: 1 mean: 3.9115 max: 40
+[ 2022-01-16 16:12:24.438675 ] trace:       Recv-Mesg Interval: 10000034 count: 226 min: 6 mean: 28.6947 max: 1484
+[ 2022-01-16 16:12:24.438680 ] trace:    Recv-Process Interval: 10000034 count: 226 min: 0 mean: 0.247788 max: 12
+[ 2022-01-16 16:12:24.438685 ] trace:          Report Interval: 10000034 count: 14493273 min: 0 mean: 9.69415e-05 max: 148
+[ 2022-01-16 16:12:24.438690 ] trace:            Send Interval: 10000034 count: 14493273 min: 0 mean: 7.55523e-05 max: 72
+[ 2022-01-16 16:12:24.438695 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 12 mean: 25.4 max: 55
+[ 2022-01-16 16:12:24.438700 ] trace:        UpdateDB Interval: 10000034 count: 14493273 min: 0 mean: 0.000168285 max: 12
+[ 2022-01-16 16:12:24.438705 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:12:24.438710 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:12:24.438726 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 2980
+[ 2022-01-16 16:12:24.438733 ] trace: 134 BLOCKS IN DATABASE 2980 USED 3114 3114 TOTAL 
+[ 2022-01-16 16:12:24.438738 ] trace: RESULT MANAGER REPORT: 196 BUNDLES, 196 RESERVATIONS
+[ 2022-01-16 16:12:34.438748 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:12:34.438792 ] trace:        Generate Interval: 10000033 count: 5 min: 13 mean: 14.8 max: 17
+[ 2022-01-16 16:12:34.438806 ] trace:            Recv Interval: 10000033 count: 14427736 min: 0 mean: 0.000584638 max: 1321
+[ 2022-01-16 16:12:34.438813 ] trace: Recv-Assimilate Interval: 10000033 count: 228 min: 1 mean: 15.9518 max: 1210
+[ 2022-01-16 16:12:34.438819 ] trace:    Recv-Extract Interval: 10000033 count: 228 min: 1 mean: 3.69298 max: 37
+[ 2022-01-16 16:12:34.438824 ] trace:       Recv-Mesg Interval: 10000033 count: 228 min: 7 mean: 26.2412 max: 1300
+[ 2022-01-16 16:12:34.438829 ] trace:    Recv-Process Interval: 10000033 count: 228 min: 0 mean: 0.171053 max: 6
+[ 2022-01-16 16:12:34.438834 ] trace:          Report Interval: 10000033 count: 14427736 min: 0 mean: 8.45594e-05 max: 145
+[ 2022-01-16 16:12:34.438839 ] trace:            Send Interval: 10000033 count: 14427736 min: 0 mean: 9.0936e-05 max: 60
+[ 2022-01-16 16:12:34.438844 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 14 mean: 25.4 max: 35
+[ 2022-01-16 16:12:34.438848 ] trace:        UpdateDB Interval: 10000033 count: 14427736 min: 0 mean: 0.000166624 max: 15
+[ 2022-01-16 16:12:34.438853 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:12:34.438858 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:12:34.438875 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 3217
+[ 2022-01-16 16:12:34.438882 ] trace: 134 BLOCKS IN DATABASE 3217 USED 3351 3351 TOTAL 
+[ 2022-01-16 16:12:34.438887 ] trace: RESULT MANAGER REPORT: 187 BUNDLES, 187 RESERVATIONS
+[ 2022-01-16 16:12:44.438898 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:12:44.438938 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 17.2 max: 22
+[ 2022-01-16 16:12:44.438952 ] trace:            Recv Interval: 10000034 count: 14408050 min: 0 mean: 0.000612713 max: 1052
+[ 2022-01-16 16:12:44.438958 ] trace: Recv-Assimilate Interval: 10000034 count: 227 min: 1 mean: 17.5903 max: 963
+[ 2022-01-16 16:12:44.438964 ] trace:    Recv-Extract Interval: 10000034 count: 227 min: 1 mean: 3.98238 max: 30
+[ 2022-01-16 16:12:44.438969 ] trace:       Recv-Mesg Interval: 10000034 count: 227 min: 6 mean: 28.2159 max: 1037
+[ 2022-01-16 16:12:44.438974 ] trace:    Recv-Process Interval: 10000034 count: 227 min: 0 mean: 0.215859 max: 8
+[ 2022-01-16 16:12:44.438979 ] trace:          Report Interval: 10000034 count: 14408050 min: 0 mean: 9.07132e-05 max: 149
+[ 2022-01-16 16:12:44.438984 ] trace:            Send Interval: 10000034 count: 14408050 min: 0 mean: 8.75205e-05 max: 71
+[ 2022-01-16 16:12:44.438989 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 14 mean: 30.2 max: 53
+[ 2022-01-16 16:12:44.438994 ] trace:        UpdateDB Interval: 10000034 count: 14408050 min: 0 mean: 0.000154775 max: 10
+[ 2022-01-16 16:12:44.438999 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:12:44.439003 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:12:44.439019 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 3466
+[ 2022-01-16 16:12:44.439027 ] trace: 134 BLOCKS IN DATABASE 3466 USED 3600 3600 TOTAL 
+[ 2022-01-16 16:12:44.439032 ] trace: RESULT MANAGER REPORT: 165 BUNDLES, 165 RESERVATIONS
+[ 2022-01-16 16:12:54.439043 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:12:54.439083 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 15.8 max: 17
+[ 2022-01-16 16:12:54.439096 ] trace:            Recv Interval: 10000034 count: 14413766 min: 0 mean: 0.000577503 max: 1165
+[ 2022-01-16 16:12:54.439102 ] trace: Recv-Assimilate Interval: 10000034 count: 226 min: 1 mean: 16.0796 max: 1039
+[ 2022-01-16 16:12:54.439108 ] trace:    Recv-Extract Interval: 10000034 count: 226 min: 1 mean: 3.81858 max: 30
+[ 2022-01-16 16:12:54.439113 ] trace:       Recv-Mesg Interval: 10000034 count: 226 min: 7 mean: 26.5 max: 1143
+[ 2022-01-16 16:12:54.439118 ] trace:    Recv-Process Interval: 10000034 count: 226 min: 0 mean: 0.185841 max: 6
+[ 2022-01-16 16:12:54.439123 ] trace:          Report Interval: 10000034 count: 14413766 min: 0 mean: 9.38686e-05 max: 145
+[ 2022-01-16 16:12:54.439128 ] trace:            Send Interval: 10000034 count: 14413766 min: 0 mean: 9.22035e-05 max: 68
+[ 2022-01-16 16:12:54.439133 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 15 mean: 30 max: 49
+[ 2022-01-16 16:12:54.439138 ] trace:        UpdateDB Interval: 10000034 count: 14413766 min: 0 mean: 0.000163385 max: 87
+[ 2022-01-16 16:12:54.439143 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:12:54.439148 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:12:54.439164 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 3701
+[ 2022-01-16 16:12:54.439171 ] trace: 134 BLOCKS IN DATABASE 3701 USED 3835 3835 TOTAL 
+[ 2022-01-16 16:12:54.439176 ] trace: RESULT MANAGER REPORT: 156 BUNDLES, 156 RESERVATIONS
+[ 2022-01-16 16:13:04.439187 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:13:04.439228 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 15.8 max: 17
+[ 2022-01-16 16:13:04.439241 ] trace:            Recv Interval: 10000033 count: 14403124 min: 0 mean: 0.000579944 max: 1196
+[ 2022-01-16 16:13:04.439247 ] trace: Recv-Assimilate Interval: 10000033 count: 228 min: 1 mean: 15.9342 max: 1105
+[ 2022-01-16 16:13:04.439253 ] trace:    Recv-Extract Interval: 10000033 count: 228 min: 2 mean: 3.86842 max: 31
+[ 2022-01-16 16:13:04.439258 ] trace:       Recv-Mesg Interval: 10000033 count: 228 min: 7 mean: 26.3684 max: 1183
+[ 2022-01-16 16:13:04.439263 ] trace:    Recv-Process Interval: 10000033 count: 228 min: 0 mean: 0.179825 max: 6
+[ 2022-01-16 16:13:04.439268 ] trace:          Report Interval: 10000033 count: 14403124 min: 0 mean: 9.21328e-05 max: 143
+[ 2022-01-16 16:13:04.439273 ] trace:            Send Interval: 10000033 count: 14403124 min: 0 mean: 8.76199e-05 max: 76
+[ 2022-01-16 16:13:04.439278 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 28.2 max: 59
+[ 2022-01-16 16:13:04.439283 ] trace:        UpdateDB Interval: 10000033 count: 14403124 min: 0 mean: 0.000154203 max: 8
+[ 2022-01-16 16:13:04.439288 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:13:04.439293 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:13:04.439308 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 3928
+[ 2022-01-16 16:13:04.439316 ] trace: 134 BLOCKS IN DATABASE 3928 USED 4062 4062 TOTAL 
+[ 2022-01-16 16:13:04.439320 ] trace: RESULT MANAGER REPORT: 157 BUNDLES, 157 RESERVATIONS
+[ 2022-01-16 16:13:14.439331 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:13:14.439373 ] trace:        Generate Interval: 10000032 count: 5 min: 15 mean: 16.2 max: 17
+[ 2022-01-16 16:13:14.439387 ] trace:            Recv Interval: 10000032 count: 14404790 min: 0 mean: 0.000559467 max: 1178
+[ 2022-01-16 16:13:14.439394 ] trace: Recv-Assimilate Interval: 10000032 count: 230 min: 1 mean: 14.9609 max: 1075
+[ 2022-01-16 16:13:14.439399 ] trace:    Recv-Extract Interval: 10000032 count: 230 min: 1 mean: 3.61304 max: 32
+[ 2022-01-16 16:13:14.439404 ] trace:       Recv-Mesg Interval: 10000032 count: 230 min: 6 mean: 25.0565 max: 1156
+[ 2022-01-16 16:13:14.439409 ] trace:    Recv-Process Interval: 10000032 count: 230 min: 0 mean: 0.195652 max: 6
+[ 2022-01-16 16:13:14.439414 ] trace:          Report Interval: 10000032 count: 14404790 min: 0 mean: 8.80957e-05 max: 144
+[ 2022-01-16 16:13:14.439419 ] trace:            Send Interval: 10000032 count: 14404790 min: 0 mean: 9.05254e-05 max: 77
+[ 2022-01-16 16:13:14.439424 ] trace:       Send-Mesg Interval: 10000032 count: 5 min: 12 mean: 26.8 max: 58
+[ 2022-01-16 16:13:14.439429 ] trace:        UpdateDB Interval: 10000032 count: 14404790 min: 0 mean: 0.000156198 max: 8
+[ 2022-01-16 16:13:14.439434 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:13:14.439439 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:13:14.439456 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 4153
+[ 2022-01-16 16:13:14.439463 ] trace: 134 BLOCKS IN DATABASE 4153 USED 4287 4287 TOTAL 
+[ 2022-01-16 16:13:14.439468 ] trace: RESULT MANAGER REPORT: 163 BUNDLES, 163 RESERVATIONS
+[ 2022-01-16 16:13:24.439479 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:13:24.439519 ] trace:        Generate Interval: 10000035 count: 6 min: 14 mean: 15.5 max: 17
+[ 2022-01-16 16:13:24.439532 ] trace:            Recv Interval: 10000035 count: 14398038 min: 0 mean: 0.000581051 max: 1321
+[ 2022-01-16 16:13:24.439539 ] trace: Recv-Assimilate Interval: 10000035 count: 232 min: 1 mean: 15.319 max: 1217
+[ 2022-01-16 16:13:24.439544 ] trace:    Recv-Extract Interval: 10000035 count: 232 min: 1 mean: 3.88793 max: 37
+[ 2022-01-16 16:13:24.439549 ] trace:       Recv-Mesg Interval: 10000035 count: 232 min: 6 mean: 25.806 max: 1311
+[ 2022-01-16 16:13:24.439554 ] trace:    Recv-Process Interval: 10000035 count: 232 min: 0 mean: 0.150862 max: 6
+[ 2022-01-16 16:13:24.439559 ] trace:          Report Interval: 10000035 count: 14398038 min: 0 mean: 8.95261e-05 max: 147
+[ 2022-01-16 16:13:24.439564 ] trace:            Send Interval: 10000035 count: 14398038 min: 0 mean: 9.25126e-05 max: 77
+[ 2022-01-16 16:13:24.439569 ] trace:       Send-Mesg Interval: 10000035 count: 6 min: 11 mean: 32.1667 max: 61
+[ 2022-01-16 16:13:24.439574 ] trace:        UpdateDB Interval: 10000035 count: 14398038 min: 0 mean: 0.000168912 max: 14
+[ 2022-01-16 16:13:24.439579 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:13:24.439584 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:13:24.439599 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 4379
+[ 2022-01-16 16:13:24.439606 ] trace: 134 BLOCKS IN DATABASE 4379 USED 4513 4513 TOTAL 
+[ 2022-01-16 16:13:24.439611 ] trace: RESULT MANAGER REPORT: 169 BUNDLES, 169 RESERVATIONS
+[ 2022-01-16 16:13:34.439622 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:13:34.439667 ] trace:        Generate Interval: 10000033 count: 5 min: 13 mean: 15 max: 16
+[ 2022-01-16 16:13:34.439681 ] trace:            Recv Interval: 10000033 count: 14440060 min: 0 mean: 0.000586978 max: 1096
+[ 2022-01-16 16:13:34.439688 ] trace: Recv-Assimilate Interval: 10000033 count: 230 min: 1 mean: 15.513 max: 1008
+[ 2022-01-16 16:13:34.439694 ] trace:    Recv-Extract Interval: 10000033 count: 230 min: 1 mean: 3.86957 max: 32
+[ 2022-01-16 16:13:34.439699 ] trace:       Recv-Mesg Interval: 10000033 count: 230 min: 7 mean: 26.0348 max: 1086
+[ 2022-01-16 16:13:34.439704 ] trace:    Recv-Process Interval: 10000033 count: 230 min: 0 mean: 0.126087 max: 6
+[ 2022-01-16 16:13:34.439709 ] trace:          Report Interval: 10000033 count: 14440060 min: 0 mean: 9.21741e-05 max: 142
+[ 2022-01-16 16:13:34.439714 ] trace:            Send Interval: 10000033 count: 14440060 min: 0 mean: 8.96811e-05 max: 64
+[ 2022-01-16 16:13:34.439719 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 28.8 max: 49
+[ 2022-01-16 16:13:34.439724 ] trace:        UpdateDB Interval: 10000033 count: 14440060 min: 0 mean: 0.000157548 max: 28
+[ 2022-01-16 16:13:34.439729 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:13:34.439733 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:13:34.439749 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 4605
+[ 2022-01-16 16:13:34.439757 ] trace: 134 BLOCKS IN DATABASE 4605 USED 4739 4739 TOTAL 
+[ 2022-01-16 16:13:34.439761 ] trace: RESULT MANAGER REPORT: 173 BUNDLES, 173 RESERVATIONS
+[ 2022-01-16 16:13:44.439772 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:13:44.439814 ] trace:        Generate Interval: 10000033 count: 5 min: 15 mean: 15.6 max: 16
+[ 2022-01-16 16:13:44.439829 ] trace:            Recv Interval: 10000033 count: 14429059 min: 0 mean: 0.000601495 max: 1149
+[ 2022-01-16 16:13:44.439835 ] trace: Recv-Assimilate Interval: 10000033 count: 232 min: 1 mean: 16.2629 max: 1040
+[ 2022-01-16 16:13:44.439841 ] trace:    Recv-Extract Interval: 10000033 count: 232 min: 2 mean: 4.00862 max: 49
+[ 2022-01-16 16:13:44.439846 ] trace:       Recv-Mesg Interval: 10000033 count: 232 min: 7 mean: 27.1422 max: 1141
+[ 2022-01-16 16:13:44.439851 ] trace:    Recv-Process Interval: 10000033 count: 232 min: 0 mean: 0.185345 max: 8
+[ 2022-01-16 16:13:44.439855 ] trace:          Report Interval: 10000033 count: 14429059 min: 0 mean: 9.77195e-05 max: 149
+[ 2022-01-16 16:13:44.439861 ] trace:            Send Interval: 10000033 count: 14429059 min: 0 mean: 8.64228e-05 max: 47
+[ 2022-01-16 16:13:44.439865 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 12 mean: 19.2 max: 30
+[ 2022-01-16 16:13:44.439870 ] trace:        UpdateDB Interval: 10000033 count: 14429059 min: 0 mean: 0.000174093 max: 57
+[ 2022-01-16 16:13:44.439875 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:13:44.439880 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:13:44.439896 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 4830
+[ 2022-01-16 16:13:44.439903 ] trace: 134 BLOCKS IN DATABASE 4830 USED 4964 4964 TOTAL 
+[ 2022-01-16 16:13:44.439908 ] trace: RESULT MANAGER REPORT: 180 BUNDLES, 180 RESERVATIONS
+[ 2022-01-16 16:13:54.439918 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:13:54.439960 ] trace:        Generate Interval: 10000033 count: 5 min: 13 mean: 15.4 max: 18
+[ 2022-01-16 16:13:54.439974 ] trace:            Recv Interval: 10000033 count: 14444953 min: 0 mean: 0.000592941 max: 1026
+[ 2022-01-16 16:13:54.439980 ] trace: Recv-Assimilate Interval: 10000033 count: 228 min: 1 mean: 16.0921 max: 947
+[ 2022-01-16 16:13:54.439986 ] trace:    Recv-Extract Interval: 10000033 count: 228 min: 1 mean: 3.92105 max: 30
+[ 2022-01-16 16:13:54.439991 ] trace:       Recv-Mesg Interval: 10000033 count: 228 min: 6 mean: 26.7807 max: 1021
+[ 2022-01-16 16:13:54.439996 ] trace:    Recv-Process Interval: 10000033 count: 228 min: 0 mean: 0.214912 max: 9
+[ 2022-01-16 16:13:54.440001 ] trace:          Report Interval: 10000033 count: 14444953 min: 0 mean: 9.83735e-05 max: 146
+[ 2022-01-16 16:13:54.440006 ] trace:            Send Interval: 10000033 count: 14444953 min: 0 mean: 8.99968e-05 max: 43
+[ 2022-01-16 16:13:54.440011 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 17.4 max: 26
+[ 2022-01-16 16:13:54.440016 ] trace:        UpdateDB Interval: 10000033 count: 14444953 min: 0 mean: 0.000174594 max: 46
+[ 2022-01-16 16:13:54.440021 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:13:54.440025 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:13:54.440042 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 5058
+[ 2022-01-16 16:13:54.440049 ] trace: 134 BLOCKS IN DATABASE 5058 USED 5192 5192 TOTAL 
+[ 2022-01-16 16:13:54.440054 ] trace: RESULT MANAGER REPORT: 180 BUNDLES, 180 RESERVATIONS
+[ 2022-01-16 16:14:04.440065 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:14:04.440105 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 15.4 max: 17
+[ 2022-01-16 16:14:04.440119 ] trace:            Recv Interval: 10000034 count: 14473888 min: 0 mean: 0.000532683 max: 959
+[ 2022-01-16 16:14:04.440125 ] trace: Recv-Assimilate Interval: 10000034 count: 223 min: 2 mean: 13.0314 max: 871
+[ 2022-01-16 16:14:04.440130 ] trace:    Recv-Extract Interval: 10000034 count: 223 min: 1 mean: 3.99552 max: 28
+[ 2022-01-16 16:14:04.440136 ] trace:       Recv-Mesg Interval: 10000034 count: 223 min: 7 mean: 23.6368 max: 942
+[ 2022-01-16 16:14:04.440141 ] trace:    Recv-Process Interval: 10000034 count: 223 min: 0 mean: 0.152466 max: 7
+[ 2022-01-16 16:14:04.440146 ] trace:          Report Interval: 10000034 count: 14473888 min: 0 mean: 9.53441e-05 max: 146
+[ 2022-01-16 16:14:04.440151 ] trace:            Send Interval: 10000034 count: 14473888 min: 0 mean: 9.25114e-05 max: 69
+[ 2022-01-16 16:14:04.440155 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 15 mean: 29.4 max: 51
+[ 2022-01-16 16:14:04.440160 ] trace:        UpdateDB Interval: 10000034 count: 14473888 min: 0 mean: 0.00016022 max: 8
+[ 2022-01-16 16:14:04.440165 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:14:04.440170 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:14:04.440186 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 5233
+[ 2022-01-16 16:14:04.440193 ] trace: 134 BLOCKS IN DATABASE 5233 USED 5367 5367 TOTAL 
+[ 2022-01-16 16:14:04.440198 ] trace: RESULT MANAGER REPORT: 229 BUNDLES, 229 RESERVATIONS
+[ 2022-01-16 16:14:14.440208 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:14:14.440251 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 15 max: 16
+[ 2022-01-16 16:14:14.440265 ] trace:            Recv Interval: 10000033 count: 14518559 min: 0 mean: 0.000575677 max: 763
+[ 2022-01-16 16:14:14.440272 ] trace: Recv-Assimilate Interval: 10000033 count: 227 min: 1 mean: 15.978 max: 690
+[ 2022-01-16 16:14:14.440278 ] trace:    Recv-Extract Interval: 10000033 count: 227 min: 1 mean: 4.00441 max: 24
+[ 2022-01-16 16:14:14.440283 ] trace:       Recv-Mesg Interval: 10000033 count: 227 min: 7 mean: 26.7665 max: 753
+[ 2022-01-16 16:14:14.440288 ] trace:    Recv-Process Interval: 10000033 count: 227 min: 0 mean: 0.202643 max: 6
+[ 2022-01-16 16:14:14.440293 ] trace:          Report Interval: 10000033 count: 14518559 min: 0 mean: 9.11247e-05 max: 143
+[ 2022-01-16 16:14:14.440298 ] trace:            Send Interval: 10000033 count: 14518559 min: 0 mean: 9.14003e-05 max: 57
+[ 2022-01-16 16:14:14.440302 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 23.2 max: 40
+[ 2022-01-16 16:14:14.440307 ] trace:        UpdateDB Interval: 10000033 count: 14518559 min: 0 mean: 0.000181767 max: 91
+[ 2022-01-16 16:14:14.440312 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:14:14.440317 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:14:14.440333 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 5462
+[ 2022-01-16 16:14:14.440340 ] trace: 134 BLOCKS IN DATABASE 5462 USED 5596 5596 TOTAL 
+[ 2022-01-16 16:14:14.440345 ] trace: RESULT MANAGER REPORT: 227 BUNDLES, 227 RESERVATIONS
+[ 2022-01-16 16:14:24.440355 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:14:24.440398 ] trace:        Generate Interval: 10000033 count: 5 min: 13 mean: 14.8 max: 16
+[ 2022-01-16 16:14:24.440412 ] trace:            Recv Interval: 10000033 count: 14700083 min: 0 mean: 0.000571902 max: 910
+[ 2022-01-16 16:14:24.440419 ] trace: Recv-Assimilate Interval: 10000033 count: 226 min: 1 mean: 15.3053 max: 828
+[ 2022-01-16 16:14:24.440424 ] trace:    Recv-Extract Interval: 10000033 count: 226 min: 1 mean: 3.9823 max: 29
+[ 2022-01-16 16:14:24.440429 ] trace:       Recv-Mesg Interval: 10000033 count: 226 min: 7 mean: 25.9115 max: 898
+[ 2022-01-16 16:14:24.440435 ] trace:    Recv-Process Interval: 10000033 count: 226 min: 0 mean: 0.19469 max: 7
+[ 2022-01-16 16:14:24.440440 ] trace:          Report Interval: 10000033 count: 14700083 min: 0 mean: 9.21764e-05 max: 146
+[ 2022-01-16 16:14:24.440445 ] trace:            Send Interval: 10000033 count: 14700083 min: 0 mean: 8.55777e-05 max: 53
+[ 2022-01-16 16:14:24.440450 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 23.6 max: 37
+[ 2022-01-16 16:14:24.440455 ] trace:        UpdateDB Interval: 10000033 count: 14700083 min: 0 mean: 0.000171292 max: 17
+[ 2022-01-16 16:14:24.440460 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:14:24.440465 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:14:24.440480 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 5674
+[ 2022-01-16 16:14:24.440488 ] trace: 134 BLOCKS IN DATABASE 5674 USED 5808 5808 TOTAL 
+[ 2022-01-16 16:14:24.440493 ] trace: RESULT MANAGER REPORT: 241 BUNDLES, 241 RESERVATIONS
+[ 2022-01-16 16:14:34.440504 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:14:34.440546 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 15.2 max: 16
+[ 2022-01-16 16:14:34.440560 ] trace:            Recv Interval: 10000034 count: 14687570 min: 0 mean: 0.000584099 max: 1005
+[ 2022-01-16 16:14:34.440566 ] trace: Recv-Assimilate Interval: 10000034 count: 226 min: 1 mean: 17.0398 max: 928
+[ 2022-01-16 16:14:34.440572 ] trace:    Recv-Extract Interval: 10000034 count: 226 min: 1 mean: 3.9115 max: 30
+[ 2022-01-16 16:14:34.440577 ] trace:       Recv-Mesg Interval: 10000034 count: 226 min: 6 mean: 27.677 max: 1001
+[ 2022-01-16 16:14:34.440582 ] trace:    Recv-Process Interval: 10000034 count: 226 min: 0 mean: 0.212389 max: 8
+[ 2022-01-16 16:14:34.440587 ] trace:          Report Interval: 10000034 count: 14687570 min: 0 mean: 0.000103012 max: 148
+[ 2022-01-16 16:14:34.440592 ] trace:            Send Interval: 10000034 count: 14687570 min: 0 mean: 7.89103e-05 max: 64
+[ 2022-01-16 16:14:34.440597 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 16 mean: 27 max: 49
+[ 2022-01-16 16:14:34.440602 ] trace:        UpdateDB Interval: 10000034 count: 14687570 min: 0 mean: 0.000179335 max: 97
+[ 2022-01-16 16:14:34.440607 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:14:34.440612 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:14:34.440628 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 5922
+[ 2022-01-16 16:14:34.440635 ] trace: 134 BLOCKS IN DATABASE 5922 USED 6056 6056 TOTAL 
+[ 2022-01-16 16:14:34.440640 ] trace: RESULT MANAGER REPORT: 220 BUNDLES, 220 RESERVATIONS
+[ 2022-01-16 16:14:44.440651 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:14:44.440692 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 14.8 max: 16
+[ 2022-01-16 16:14:44.440706 ] trace:            Recv Interval: 10000034 count: 14685047 min: 0 mean: 0.000600951 max: 1025
+[ 2022-01-16 16:14:44.440713 ] trace: Recv-Assimilate Interval: 10000034 count: 232 min: 1 mean: 16.1466 max: 942
+[ 2022-01-16 16:14:44.440718 ] trace:    Recv-Extract Interval: 10000034 count: 232 min: 1 mean: 4.06897 max: 30
+[ 2022-01-16 16:14:44.440724 ] trace:       Recv-Mesg Interval: 10000034 count: 232 min: 7 mean: 26.7931 max: 1020
+[ 2022-01-16 16:14:44.440729 ] trace:    Recv-Process Interval: 10000034 count: 232 min: 0 mean: 0.159483 max: 6
+[ 2022-01-16 16:14:44.440734 ] trace:          Report Interval: 10000034 count: 14685047 min: 0 mean: 9.0364e-05 max: 146
+[ 2022-01-16 16:14:44.440739 ] trace:            Send Interval: 10000034 count: 14685047 min: 0 mean: 7.85152e-05 max: 62
+[ 2022-01-16 16:14:44.440744 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 15 mean: 27.8 max: 46
+[ 2022-01-16 16:14:44.440749 ] trace:        UpdateDB Interval: 10000034 count: 14685047 min: 0 mean: 0.00018243 max: 92
+[ 2022-01-16 16:14:44.440754 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:14:44.440759 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:14:44.440776 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 6164
+[ 2022-01-16 16:14:44.440783 ] trace: 134 BLOCKS IN DATABASE 6164 USED 6298 6298 TOTAL 
+[ 2022-01-16 16:14:44.440788 ] trace: RESULT MANAGER REPORT: 210 BUNDLES, 210 RESERVATIONS
+[ 2022-01-16 16:14:54.440798 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:14:54.440839 ] trace:        Generate Interval: 10000034 count: 5 min: 13 mean: 14.4 max: 15
+[ 2022-01-16 16:14:54.440853 ] trace:            Recv Interval: 10000034 count: 14692317 min: 0 mean: 0.00057479 max: 964
+[ 2022-01-16 16:14:54.440860 ] trace: Recv-Assimilate Interval: 10000034 count: 230 min: 1 mean: 15.5174 max: 888
+[ 2022-01-16 16:14:54.440866 ] trace:    Recv-Extract Interval: 10000034 count: 230 min: 1 mean: 3.91739 max: 28
+[ 2022-01-16 16:14:54.440870 ] trace:       Recv-Mesg Interval: 10000034 count: 230 min: 7 mean: 26.0783 max: 959
+[ 2022-01-16 16:14:54.440876 ] trace:    Recv-Process Interval: 10000034 count: 230 min: 0 mean: 0.2 max: 7
+[ 2022-01-16 16:14:54.440881 ] trace:          Report Interval: 10000034 count: 14692317 min: 0 mean: 9.89633e-05 max: 147
+[ 2022-01-16 16:14:54.440886 ] trace:            Send Interval: 10000034 count: 14692317 min: 0 mean: 7.84083e-05 max: 46
+[ 2022-01-16 16:14:54.440891 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 13 mean: 22.2 max: 31
+[ 2022-01-16 16:14:54.440896 ] trace:        UpdateDB Interval: 10000034 count: 14692317 min: 0 mean: 0.000168864 max: 27
+[ 2022-01-16 16:14:54.440901 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:14:54.440906 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:14:54.440922 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 6393
+[ 2022-01-16 16:14:54.440929 ] trace: 134 BLOCKS IN DATABASE 6393 USED 6527 6527 TOTAL 
+[ 2022-01-16 16:14:54.440934 ] trace: RESULT MANAGER REPORT: 211 BUNDLES, 211 RESERVATIONS
+[ 2022-01-16 16:15:04.440944 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:15:04.440985 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 15.2 max: 17
+[ 2022-01-16 16:15:04.440998 ] trace:            Recv Interval: 10000034 count: 14396982 min: 0 mean: 0.000594152 max: 860
+[ 2022-01-16 16:15:04.441005 ] trace: Recv-Assimilate Interval: 10000034 count: 235 min: 1 mean: 15.4979 max: 779
+[ 2022-01-16 16:15:04.441010 ] trace:    Recv-Extract Interval: 10000034 count: 235 min: 1 mean: 3.9617 max: 26
+[ 2022-01-16 16:15:04.441015 ] trace:       Recv-Mesg Interval: 10000034 count: 235 min: 7 mean: 26.1957 max: 846
+[ 2022-01-16 16:15:04.441020 ] trace:    Recv-Process Interval: 10000034 count: 235 min: 0 mean: 0.174468 max: 6
+[ 2022-01-16 16:15:04.441025 ] trace:          Report Interval: 10000034 count: 14396982 min: 0 mean: 8.8074e-05 max: 146
+[ 2022-01-16 16:15:04.441030 ] trace:            Send Interval: 10000034 count: 14396982 min: 0 mean: 9.11302e-05 max: 74
+[ 2022-01-16 16:15:04.441035 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 14 mean: 20.6 max: 33
+[ 2022-01-16 16:15:04.441040 ] trace:        UpdateDB Interval: 10000034 count: 14396982 min: 0 mean: 0.00016052 max: 12
+[ 2022-01-16 16:15:04.441045 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:15:04.441050 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:15:04.441067 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 6620
+[ 2022-01-16 16:15:04.441074 ] trace: 134 BLOCKS IN DATABASE 6620 USED 6754 6754 TOTAL 
+[ 2022-01-16 16:15:04.441078 ] trace: RESULT MANAGER REPORT: 219 BUNDLES, 219 RESERVATIONS
+[ 2022-01-16 16:15:14.441089 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:15:14.441130 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 15.2 max: 17
+[ 2022-01-16 16:15:14.441144 ] trace:            Recv Interval: 10000034 count: 14392513 min: 0 mean: 0.000582595 max: 614
+[ 2022-01-16 16:15:14.441151 ] trace: Recv-Assimilate Interval: 10000034 count: 227 min: 1 mean: 15.5771 max: 560
+[ 2022-01-16 16:15:14.441156 ] trace:    Recv-Extract Interval: 10000034 count: 227 min: 1 mean: 4.03084 max: 30
+[ 2022-01-16 16:15:14.441161 ] trace:       Recv-Mesg Interval: 10000034 count: 227 min: 7 mean: 26.3216 max: 611
+[ 2022-01-16 16:15:14.441166 ] trace:    Recv-Process Interval: 10000034 count: 227 min: 0 mean: 0.220264 max: 7
+[ 2022-01-16 16:15:14.441171 ] trace:          Report Interval: 10000034 count: 14392513 min: 0 mean: 9.93572e-05 max: 143
+[ 2022-01-16 16:15:14.441176 ] trace:            Send Interval: 10000034 count: 14392513 min: 0 mean: 7.92773e-05 max: 63
+[ 2022-01-16 16:15:14.441181 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 16 mean: 28.4 max: 46
+[ 2022-01-16 16:15:14.441186 ] trace:        UpdateDB Interval: 10000034 count: 14392513 min: 0 mean: 0.000162932 max: 72
+[ 2022-01-16 16:15:14.441191 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:15:14.441196 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:15:14.441212 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 6845
+[ 2022-01-16 16:15:14.441220 ] trace: 134 BLOCKS IN DATABASE 6845 USED 6979 6979 TOTAL 
+[ 2022-01-16 16:15:14.441224 ] trace: RESULT MANAGER REPORT: 221 BUNDLES, 221 RESERVATIONS
+[ 2022-01-16 16:15:24.441235 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:15:24.441277 ] trace:        Generate Interval: 10000034 count: 6 min: 14 mean: 15 max: 16
+[ 2022-01-16 16:15:24.441291 ] trace:            Recv Interval: 10000034 count: 14371612 min: 0 mean: 0.000609813 max: 659
+[ 2022-01-16 16:15:24.441298 ] trace: Recv-Assimilate Interval: 10000034 count: 228 min: 1 mean: 15.9342 max: 600
+[ 2022-01-16 16:15:24.441304 ] trace:    Recv-Extract Interval: 10000034 count: 228 min: 1 mean: 4 max: 21
+[ 2022-01-16 16:15:24.441309 ] trace:       Recv-Mesg Interval: 10000034 count: 228 min: 7 mean: 26.9079 max: 656
+[ 2022-01-16 16:15:24.441314 ] trace:    Recv-Process Interval: 10000034 count: 228 min: 0 mean: 0.25 max: 9
+[ 2022-01-16 16:15:24.441319 ] trace:          Report Interval: 10000034 count: 14371612 min: 0 mean: 9.28915e-05 max: 145
+[ 2022-01-16 16:15:24.441324 ] trace:            Send Interval: 10000034 count: 14371612 min: 0 mean: 8.74641e-05 max: 58
+[ 2022-01-16 16:15:24.441329 ] trace:       Send-Mesg Interval: 10000034 count: 6 min: 19 mean: 26 max: 41
+[ 2022-01-16 16:15:24.441334 ] trace:        UpdateDB Interval: 10000034 count: 14371612 min: 0 mean: 0.000188914 max: 32
+[ 2022-01-16 16:15:24.441339 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:15:24.441344 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:15:24.441360 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 7072
+[ 2022-01-16 16:15:24.441367 ] trace: 134 BLOCKS IN DATABASE 7072 USED 7206 7206 TOTAL 
+[ 2022-01-16 16:15:24.441372 ] trace: RESULT MANAGER REPORT: 223 BUNDLES, 223 RESERVATIONS
+[ 2022-01-16 16:15:34.441381 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:15:34.441423 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 15.8 max: 17
+[ 2022-01-16 16:15:34.441437 ] trace:            Recv Interval: 10000033 count: 14438243 min: 0 mean: 0.000583728 max: 845
+[ 2022-01-16 16:15:34.441443 ] trace: Recv-Assimilate Interval: 10000033 count: 227 min: 1 mean: 15.978 max: 774
+[ 2022-01-16 16:15:34.441449 ] trace:    Recv-Extract Interval: 10000033 count: 227 min: 1 mean: 3.82379 max: 26
+[ 2022-01-16 16:15:34.441454 ] trace:       Recv-Mesg Interval: 10000033 count: 227 min: 7 mean: 26.4317 max: 841
+[ 2022-01-16 16:15:34.441459 ] trace:    Recv-Process Interval: 10000033 count: 227 min: 0 mean: 0.207048 max: 6
+[ 2022-01-16 16:15:34.441464 ] trace:          Report Interval: 10000033 count: 14438243 min: 0 mean: 9.44713e-05 max: 147
+[ 2022-01-16 16:15:34.441469 ] trace:            Send Interval: 10000033 count: 14438243 min: 0 mean: 8.22815e-05 max: 58
+[ 2022-01-16 16:15:34.441474 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 22.6 max: 40
+[ 2022-01-16 16:15:34.441479 ] trace:        UpdateDB Interval: 10000033 count: 14438243 min: 0 mean: 0.000168372 max: 45
+[ 2022-01-16 16:15:34.441484 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:15:34.441489 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:15:34.441504 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 7297
+[ 2022-01-16 16:15:34.441511 ] trace: 134 BLOCKS IN DATABASE 7297 USED 7431 7431 TOTAL 
+[ 2022-01-16 16:15:34.441516 ] trace: RESULT MANAGER REPORT: 225 BUNDLES, 225 RESERVATIONS
+[ 2022-01-16 16:15:44.441526 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:15:44.441566 ] trace:        Generate Interval: 10000033 count: 5 min: 15 mean: 16.8 max: 22
+[ 2022-01-16 16:15:44.441580 ] trace:            Recv Interval: 10000033 count: 14414307 min: 0 mean: 0.00056874 max: 829
+[ 2022-01-16 16:15:44.441587 ] trace: Recv-Assimilate Interval: 10000033 count: 223 min: 1 mean: 16.0269 max: 760
+[ 2022-01-16 16:15:44.441592 ] trace:    Recv-Extract Interval: 10000033 count: 223 min: 1 mean: 3.91928 max: 26
+[ 2022-01-16 16:15:44.441597 ] trace:       Recv-Mesg Interval: 10000033 count: 223 min: 7 mean: 26.5785 max: 825
+[ 2022-01-16 16:15:44.441602 ] trace:    Recv-Process Interval: 10000033 count: 223 min: 0 mean: 0.201794 max: 7
+[ 2022-01-16 16:15:44.441607 ] trace:          Report Interval: 10000033 count: 14414307 min: 0 mean: 8.79682e-05 max: 144
+[ 2022-01-16 16:15:44.441612 ] trace:            Send Interval: 10000033 count: 14414307 min: 0 mean: 8.72744e-05 max: 71
+[ 2022-01-16 16:15:44.441617 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 12 mean: 26 max: 48
+[ 2022-01-16 16:15:44.441622 ] trace:        UpdateDB Interval: 10000033 count: 14414307 min: 0 mean: 0.000167056 max: 9
+[ 2022-01-16 16:15:44.441627 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:15:44.441631 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:15:44.441647 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 7520
+[ 2022-01-16 16:15:44.441655 ] trace: 134 BLOCKS IN DATABASE 7520 USED 7654 7654 TOTAL 
+[ 2022-01-16 16:15:44.441659 ] trace: RESULT MANAGER REPORT: 226 BUNDLES, 226 RESERVATIONS
+[ 2022-01-16 16:15:54.441670 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:15:54.441711 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 15.8 max: 17
+[ 2022-01-16 16:15:54.441724 ] trace:            Recv Interval: 10000033 count: 14430233 min: 0 mean: 0.000593199 max: 947
+[ 2022-01-16 16:15:54.441736 ] trace: Recv-Assimilate Interval: 10000033 count: 228 min: 1 mean: 15.8509 max: 865
+[ 2022-01-16 16:15:54.441747 ] trace:    Recv-Extract Interval: 10000033 count: 228 min: 1 mean: 3.98246 max: 29
+[ 2022-01-16 16:15:54.441755 ] trace:       Recv-Mesg Interval: 10000033 count: 228 min: 7 mean: 26.4605 max: 940
+[ 2022-01-16 16:15:54.441763 ] trace:    Recv-Process Interval: 10000033 count: 228 min: 0 mean: 0.192982 max: 6
+[ 2022-01-16 16:15:54.441771 ] trace:          Report Interval: 10000033 count: 14430233 min: 0 mean: 9.14746e-05 max: 143
+[ 2022-01-16 16:15:54.441779 ] trace:            Send Interval: 10000033 count: 14430233 min: 0 mean: 7.95552e-05 max: 57
+[ 2022-01-16 16:15:54.441788 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 12 mean: 23.6 max: 38
+[ 2022-01-16 16:15:54.441796 ] trace:        UpdateDB Interval: 10000033 count: 14430233 min: 0 mean: 0.000171723 max: 26
+[ 2022-01-16 16:15:54.441805 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:15:54.441811 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:15:54.441827 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 7746
+[ 2022-01-16 16:15:54.441834 ] trace: 134 BLOCKS IN DATABASE 7746 USED 7880 7880 TOTAL 
+[ 2022-01-16 16:15:54.441839 ] trace: RESULT MANAGER REPORT: 228 BUNDLES, 228 RESERVATIONS
+[ 2022-01-16 16:16:04.441849 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:16:04.441891 ] trace:        Generate Interval: 10000033 count: 5 min: 15 mean: 16 max: 17
+[ 2022-01-16 16:16:04.441904 ] trace:            Recv Interval: 10000033 count: 14431274 min: 0 mean: 0.000617132 max: 1003
+[ 2022-01-16 16:16:04.441911 ] trace: Recv-Assimilate Interval: 10000033 count: 234 min: 1 mean: 16.8162 max: 925
+[ 2022-01-16 16:16:04.441916 ] trace:    Recv-Extract Interval: 10000033 count: 234 min: 1 mean: 4.00427 max: 37
+[ 2022-01-16 16:16:04.441921 ] trace:       Recv-Mesg Interval: 10000033 count: 234 min: 6 mean: 27.641 max: 998
+[ 2022-01-16 16:16:04.441926 ] trace:    Recv-Process Interval: 10000033 count: 234 min: 0 mean: 0.247863 max: 7
+[ 2022-01-16 16:16:04.441931 ] trace:          Report Interval: 10000033 count: 14431274 min: 0 mean: 9.59028e-05 max: 179
+[ 2022-01-16 16:16:04.441936 ] trace:            Send Interval: 10000033 count: 14431274 min: 0 mean: 9.029e-05 max: 47
+[ 2022-01-16 16:16:04.441941 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 21.6 max: 31
+[ 2022-01-16 16:16:04.441946 ] trace:        UpdateDB Interval: 10000033 count: 14431274 min: 0 mean: 0.000171433 max: 54
+[ 2022-01-16 16:16:04.441951 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:16:04.441956 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:16:04.441971 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 7990
+[ 2022-01-16 16:16:04.441978 ] trace: 134 BLOCKS IN DATABASE 7990 USED 8124 8124 TOTAL 
+[ 2022-01-16 16:16:04.441983 ] trace: RESULT MANAGER REPORT: 218 BUNDLES, 218 RESERVATIONS
+[ 2022-01-16 16:16:14.441994 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:16:14.442036 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 14.8 max: 15
+[ 2022-01-16 16:16:14.442049 ] trace:            Recv Interval: 10000033 count: 14423203 min: 0 mean: 0.000609435 max: 873
+[ 2022-01-16 16:16:14.442056 ] trace: Recv-Assimilate Interval: 10000033 count: 230 min: 1 mean: 16.6609 max: 792
+[ 2022-01-16 16:16:14.442062 ] trace:    Recv-Extract Interval: 10000033 count: 230 min: 1 mean: 4.16957 max: 28
+[ 2022-01-16 16:16:14.442066 ] trace:       Recv-Mesg Interval: 10000033 count: 230 min: 7 mean: 27.4391 max: 859
+[ 2022-01-16 16:16:14.442072 ] trace:    Recv-Process Interval: 10000033 count: 230 min: 0 mean: 0.208696 max: 6
+[ 2022-01-16 16:16:14.442077 ] trace:          Report Interval: 10000033 count: 14423203 min: 0 mean: 9.46392e-05 max: 144
+[ 2022-01-16 16:16:14.442082 ] trace:            Send Interval: 10000033 count: 14423203 min: 0 mean: 9.01325e-05 max: 60
+[ 2022-01-16 16:16:14.442086 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 19 mean: 28.4 max: 45
+[ 2022-01-16 16:16:14.442091 ] trace:        UpdateDB Interval: 10000033 count: 14423203 min: 0 mean: 0.000177977 max: 18
+[ 2022-01-16 16:16:14.442097 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:16:14.442101 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:16:14.442117 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 8231
+[ 2022-01-16 16:16:14.442124 ] trace: 134 BLOCKS IN DATABASE 8231 USED 8365 8365 TOTAL 
+[ 2022-01-16 16:16:14.442129 ] trace: RESULT MANAGER REPORT: 207 BUNDLES, 207 RESERVATIONS
+[ 2022-01-16 16:16:24.442139 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:16:24.442183 ] trace:        Generate Interval: 10000032 count: 5 min: 13 mean: 15.2 max: 16
+[ 2022-01-16 16:16:24.442196 ] trace:            Recv Interval: 10000032 count: 14414970 min: 0 mean: 0.000579536 max: 872
+[ 2022-01-16 16:16:24.442203 ] trace: Recv-Assimilate Interval: 10000032 count: 224 min: 1 mean: 16.1384 max: 798
+[ 2022-01-16 16:16:24.442208 ] trace:    Recv-Extract Interval: 10000032 count: 224 min: 1 mean: 4.20982 max: 27
+[ 2022-01-16 16:16:24.442214 ] trace:       Recv-Mesg Interval: 10000032 count: 224 min: 7 mean: 26.875 max: 868
+[ 2022-01-16 16:16:24.442219 ] trace:    Recv-Process Interval: 10000032 count: 224 min: 0 mean: 0.169643 max: 7
+[ 2022-01-16 16:16:24.442224 ] trace:          Report Interval: 10000032 count: 14414970 min: 0 mean: 9.53176e-05 max: 145
+[ 2022-01-16 16:16:24.442229 ] trace:            Send Interval: 10000032 count: 14414970 min: 0 mean: 8.78254e-05 max: 52
+[ 2022-01-16 16:16:24.442234 ] trace:       Send-Mesg Interval: 10000032 count: 5 min: 13 mean: 26 max: 35
+[ 2022-01-16 16:16:24.442239 ] trace:        UpdateDB Interval: 10000032 count: 14414970 min: 0 mean: 0.000177732 max: 25
+[ 2022-01-16 16:16:24.442244 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:16:24.442248 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:16:24.442264 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 8457
+[ 2022-01-16 16:16:24.442272 ] trace: 134 BLOCKS IN DATABASE 8457 USED 8591 8591 TOTAL 
+[ 2022-01-16 16:16:24.442277 ] trace: RESULT MANAGER REPORT: 206 BUNDLES, 206 RESERVATIONS
+[ 2022-01-16 16:16:34.442288 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:16:34.442329 ] trace:        Generate Interval: 10000035 count: 5 min: 14 mean: 14.4 max: 16
+[ 2022-01-16 16:16:34.442342 ] trace:            Recv Interval: 10000035 count: 14424886 min: 0 mean: 0.000586209 max: 1307
+[ 2022-01-16 16:16:34.442349 ] trace: Recv-Assimilate Interval: 10000035 count: 232 min: 1 mean: 15.306 max: 1203
+[ 2022-01-16 16:16:34.442354 ] trace:    Recv-Extract Interval: 10000035 count: 232 min: 1 mean: 3.96121 max: 36
+[ 2022-01-16 16:16:34.442359 ] trace:       Recv-Mesg Interval: 10000035 count: 232 min: 7 mean: 25.7241 max: 1293
+[ 2022-01-16 16:16:34.442364 ] trace:    Recv-Process Interval: 10000035 count: 232 min: 0 mean: 0.142241 max: 6
+[ 2022-01-16 16:16:34.442369 ] trace:          Report Interval: 10000035 count: 14424886 min: 0 mean: 9.12312e-05 max: 148
+[ 2022-01-16 16:16:34.442374 ] trace:            Send Interval: 10000035 count: 14424886 min: 0 mean: 9.2687e-05 max: 90
+[ 2022-01-16 16:16:34.442379 ] trace:       Send-Mesg Interval: 10000035 count: 5 min: 12 mean: 26.8 max: 63
+[ 2022-01-16 16:16:34.442384 ] trace:        UpdateDB Interval: 10000035 count: 14424886 min: 0 mean: 0.000170123 max: 9
+[ 2022-01-16 16:16:34.442389 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:16:34.442393 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:16:34.442409 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 8681
+[ 2022-01-16 16:16:34.442416 ] trace: 134 BLOCKS IN DATABASE 8681 USED 8815 8815 TOTAL 
+[ 2022-01-16 16:16:34.442421 ] trace: RESULT MANAGER REPORT: 214 BUNDLES, 214 RESERVATIONS
+[ 2022-01-16 16:16:44.442431 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:16:44.442472 ] trace:        Generate Interval: 10000032 count: 5 min: 14 mean: 14.6 max: 15
+[ 2022-01-16 16:16:44.442486 ] trace:            Recv Interval: 10000032 count: 14312796 min: 0 mean: 0.000581717 max: 1346
+[ 2022-01-16 16:16:44.442492 ] trace: Recv-Assimilate Interval: 10000032 count: 231 min: 1 mean: 13.9177 max: 1248
+[ 2022-01-16 16:16:44.442497 ] trace:    Recv-Extract Interval: 10000032 count: 231 min: 1 mean: 3.8355 max: 37
+[ 2022-01-16 16:16:44.442502 ] trace:       Recv-Mesg Interval: 10000032 count: 231 min: 7 mean: 24.2165 max: 1340
+[ 2022-01-16 16:16:44.442507 ] trace:    Recv-Process Interval: 10000032 count: 231 min: 0 mean: 0.164502 max: 7
+[ 2022-01-16 16:16:44.442512 ] trace:          Report Interval: 10000032 count: 14312796 min: 0 mean: 9.69762e-05 max: 142
+[ 2022-01-16 16:16:44.442517 ] trace:            Send Interval: 10000032 count: 14312796 min: 0 mean: 8.67755e-05 max: 58
+[ 2022-01-16 16:16:44.442522 ] trace:       Send-Mesg Interval: 10000032 count: 5 min: 13 mean: 25.2 max: 42
+[ 2022-01-16 16:16:44.442527 ] trace:        UpdateDB Interval: 10000032 count: 14312796 min: 0 mean: 0.000156294 max: 13
+[ 2022-01-16 16:16:44.442532 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:16:44.442537 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:16:44.442553 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 8882
+[ 2022-01-16 16:16:44.442560 ] trace: 134 BLOCKS IN DATABASE 8882 USED 9016 9016 TOTAL 
+[ 2022-01-16 16:16:44.442565 ] trace: RESULT MANAGER REPORT: 244 BUNDLES, 244 RESERVATIONS
+[ 2022-01-16 16:16:54.442575 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:16:54.442617 ] trace:        Generate Interval: 10000033 count: 5 min: 13 mean: 15.2 max: 17
+[ 2022-01-16 16:16:54.442631 ] trace:            Recv Interval: 10000033 count: 14397125 min: 0 mean: 0.000627764 max: 1164
+[ 2022-01-16 16:16:54.442637 ] trace: Recv-Assimilate Interval: 10000033 count: 229 min: 1 mean: 16.9738 max: 1079
+[ 2022-01-16 16:16:54.442642 ] trace:    Recv-Extract Interval: 10000033 count: 229 min: 1 mean: 4.04803 max: 33
+[ 2022-01-16 16:16:54.442647 ] trace:       Recv-Mesg Interval: 10000033 count: 229 min: 7 mean: 27.7031 max: 1158
+[ 2022-01-16 16:16:54.442652 ] trace:    Recv-Process Interval: 10000033 count: 229 min: 0 mean: 0.187773 max: 6
+[ 2022-01-16 16:16:54.442658 ] trace:          Report Interval: 10000033 count: 14397125 min: 0 mean: 9.64776e-05 max: 144
+[ 2022-01-16 16:16:54.442663 ] trace:            Send Interval: 10000033 count: 14397125 min: 0 mean: 9.26574e-05 max: 77
+[ 2022-01-16 16:16:54.442667 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 14 mean: 26.8 max: 59
+[ 2022-01-16 16:16:54.442673 ] trace:        UpdateDB Interval: 10000033 count: 14397125 min: 0 mean: 0.000186426 max: 25
+[ 2022-01-16 16:16:54.442677 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:16:54.442682 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:16:54.442699 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 9130
+[ 2022-01-16 16:16:54.442706 ] trace: 134 BLOCKS IN DATABASE 9130 USED 9264 9264 TOTAL 
+[ 2022-01-16 16:16:54.442711 ] trace: RESULT MANAGER REPORT: 225 BUNDLES, 225 RESERVATIONS
+[ 2022-01-16 16:17:04.442721 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:17:04.442766 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 14.6 max: 15
+[ 2022-01-16 16:17:04.442780 ] trace:            Recv Interval: 10000033 count: 14402220 min: 0 mean: 0.000583591 max: 1046
+[ 2022-01-16 16:17:04.442787 ] trace: Recv-Assimilate Interval: 10000033 count: 225 min: 1 mean: 15.8444 max: 965
+[ 2022-01-16 16:17:04.442792 ] trace:    Recv-Extract Interval: 10000033 count: 225 min: 1 mean: 3.89778 max: 31
+[ 2022-01-16 16:17:04.442797 ] trace:       Recv-Mesg Interval: 10000033 count: 225 min: 7 mean: 26.2489 max: 1040
+[ 2022-01-16 16:17:04.442802 ] trace:    Recv-Process Interval: 10000033 count: 225 min: 0 mean: 0.142222 max: 6
+[ 2022-01-16 16:17:04.442807 ] trace:          Report Interval: 10000033 count: 14402220 min: 0 mean: 9.58186e-05 max: 145
+[ 2022-01-16 16:17:04.442812 ] trace:            Send Interval: 10000033 count: 14402220 min: 0 mean: 8.39454e-05 max: 68
+[ 2022-01-16 16:17:04.442817 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 28.6 max: 52
+[ 2022-01-16 16:17:04.442822 ] trace:        UpdateDB Interval: 10000033 count: 14402220 min: 0 mean: 0.000172821 max: 128
+[ 2022-01-16 16:17:04.442827 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:17:04.442832 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:17:04.442848 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 9357
+[ 2022-01-16 16:17:04.442855 ] trace: 134 BLOCKS IN DATABASE 9357 USED 9491 9491 TOTAL 
+[ 2022-01-16 16:17:04.442860 ] trace: RESULT MANAGER REPORT: 224 BUNDLES, 224 RESERVATIONS
+[ 2022-01-16 16:17:14.442871 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:17:14.442906 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 18 max: 21
+[ 2022-01-16 16:17:14.442919 ] trace:            Recv Interval: 10000034 count: 14379970 min: 0 mean: 0.000727053 max: 1337
+[ 2022-01-16 16:17:14.442926 ] trace: Recv-Assimilate Interval: 10000034 count: 229 min: 1 mean: 20.3493 max: 1232
+[ 2022-01-16 16:17:14.442931 ] trace:    Recv-Extract Interval: 10000034 count: 229 min: 1 mean: 4.53275 max: 37
+[ 2022-01-16 16:17:14.442936 ] trace:       Recv-Mesg Interval: 10000034 count: 229 min: 6 mean: 34.0786 max: 1328
+[ 2022-01-16 16:17:14.442941 ] trace:    Recv-Process Interval: 10000034 count: 229 min: 0 mean: 0.235808 max: 8
+[ 2022-01-16 16:17:14.442946 ] trace:          Report Interval: 10000034 count: 14379970 min: 0 mean: 9.40197e-05 max: 149
+[ 2022-01-16 16:17:14.442951 ] trace:            Send Interval: 10000034 count: 14379970 min: 0 mean: 9.61754e-05 max: 69
+[ 2022-01-16 16:17:14.442956 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 13 mean: 28.6 max: 49
+[ 2022-01-16 16:17:14.442960 ] trace:        UpdateDB Interval: 10000034 count: 14379970 min: 0 mean: 0.000196523 max: 100
+[ 2022-01-16 16:17:14.442965 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:17:14.442970 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:17:14.442986 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 9647
+[ 2022-01-16 16:17:14.442993 ] trace: 134 BLOCKS IN DATABASE 9647 USED 9781 9781 TOTAL 
+[ 2022-01-16 16:17:14.442998 ] trace: RESULT MANAGER REPORT: 163 BUNDLES, 163 RESERVATIONS
+[ 2022-01-16 16:17:24.443008 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:17:24.443049 ] trace:        Generate Interval: 10000033 count: 6 min: 14 mean: 15.3333 max: 16
+[ 2022-01-16 16:17:24.443061 ] trace:            Recv Interval: 10000033 count: 14489122 min: 0 mean: 0.000652351 max: 993
+[ 2022-01-16 16:17:24.443068 ] trace: Recv-Assimilate Interval: 10000033 count: 227 min: 1 mean: 16.8634 max: 915
+[ 2022-01-16 16:17:24.443073 ] trace:    Recv-Extract Interval: 10000033 count: 227 min: 1 mean: 4.46696 max: 29
+[ 2022-01-16 16:17:24.443078 ] trace:       Recv-Mesg Interval: 10000033 count: 227 min: 7 mean: 30.5903 max: 986
+[ 2022-01-16 16:17:24.443083 ] trace:    Recv-Process Interval: 10000033 count: 227 min: 0 mean: 0.211454 max: 7
+[ 2022-01-16 16:17:24.443088 ] trace:          Report Interval: 10000033 count: 14489122 min: 0 mean: 0.000104837 max: 137
+[ 2022-01-16 16:17:24.443093 ] trace:            Send Interval: 10000033 count: 14489122 min: 0 mean: 8.31658e-05 max: 58
+[ 2022-01-16 16:17:24.443098 ] trace:       Send-Mesg Interval: 10000033 count: 6 min: 14 mean: 25.3333 max: 41
+[ 2022-01-16 16:17:24.443103 ] trace:        UpdateDB Interval: 10000033 count: 14489122 min: 0 mean: 0.000194905 max: 13
+[ 2022-01-16 16:17:24.443107 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:17:24.443112 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:17:24.443128 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 9875
+[ 2022-01-16 16:17:24.443135 ] trace: 134 BLOCKS IN DATABASE 9875 USED 10009 10009 TOTAL 
+[ 2022-01-16 16:17:24.443139 ] trace: RESULT MANAGER REPORT: 162 BUNDLES, 162 RESERVATIONS
+[ 2022-01-16 16:17:34.443149 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:17:34.443189 ] trace:        Generate Interval: 10000032 count: 5 min: 13 mean: 14.2 max: 15
+[ 2022-01-16 16:17:34.443202 ] trace:            Recv Interval: 10000032 count: 14434717 min: 0 mean: 0.000596132 max: 968
+[ 2022-01-16 16:17:34.443209 ] trace: Recv-Assimilate Interval: 10000032 count: 228 min: 1 mean: 15.8684 max: 891
+[ 2022-01-16 16:17:34.443214 ] trace:    Recv-Extract Interval: 10000032 count: 228 min: 1 mean: 3.90351 max: 29
+[ 2022-01-16 16:17:34.443219 ] trace:       Recv-Mesg Interval: 10000032 count: 228 min: 6 mean: 26.4561 max: 963
+[ 2022-01-16 16:17:34.443225 ] trace:    Recv-Process Interval: 10000032 count: 228 min: 0 mean: 0.192982 max: 6
+[ 2022-01-16 16:17:34.443230 ] trace:          Report Interval: 10000032 count: 14434717 min: 0 mean: 8.82594e-05 max: 141
+[ 2022-01-16 16:17:34.443235 ] trace:            Send Interval: 10000032 count: 14434717 min: 0 mean: 8.14702e-05 max: 46
+[ 2022-01-16 16:17:34.443240 ] trace:       Send-Mesg Interval: 10000032 count: 5 min: 14 mean: 21.4 max: 30
+[ 2022-01-16 16:17:34.443245 ] trace:        UpdateDB Interval: 10000032 count: 14434717 min: 0 mean: 0.000152202 max: 10
+[ 2022-01-16 16:17:34.443250 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:17:34.443255 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:17:34.443271 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 10100
+[ 2022-01-16 16:17:34.443278 ] trace: 134 BLOCKS IN DATABASE 10100 USED 10234 10234 TOTAL 
+[ 2022-01-16 16:17:34.443283 ] trace: RESULT MANAGER REPORT: 166 BUNDLES, 166 RESERVATIONS
+[ 2022-01-16 16:17:44.443293 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:17:44.443335 ] trace:        Generate Interval: 10000033 count: 5 min: 15 mean: 16.8 max: 19
+[ 2022-01-16 16:17:44.443348 ] trace:            Recv Interval: 10000033 count: 14429389 min: 0 mean: 0.000588729 max: 887
+[ 2022-01-16 16:17:44.443355 ] trace: Recv-Assimilate Interval: 10000033 count: 232 min: 1 mean: 15.3276 max: 811
+[ 2022-01-16 16:17:44.443361 ] trace:    Recv-Extract Interval: 10000033 count: 232 min: 1 mean: 3.77586 max: 27
+[ 2022-01-16 16:17:44.443366 ] trace:       Recv-Mesg Interval: 10000033 count: 232 min: 6 mean: 25.7931 max: 876
+[ 2022-01-16 16:17:44.443371 ] trace:    Recv-Process Interval: 10000033 count: 232 min: 0 mean: 0.181034 max: 7
+[ 2022-01-16 16:17:44.443376 ] trace:          Report Interval: 10000033 count: 14429389 min: 0 mean: 8.91237e-05 max: 144
+[ 2022-01-16 16:17:44.443381 ] trace:            Send Interval: 10000033 count: 14429389 min: 0 mean: 8.72525e-05 max: 50
+[ 2022-01-16 16:17:44.443385 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 20.4 max: 30
+[ 2022-01-16 16:17:44.443390 ] trace:        UpdateDB Interval: 10000033 count: 14429389 min: 0 mean: 0.000171317 max: 25
+[ 2022-01-16 16:17:44.443395 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:17:44.443400 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:17:44.443417 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 10321
+[ 2022-01-16 16:17:44.443424 ] trace: 134 BLOCKS IN DATABASE 10321 USED 10455 10455 TOTAL 
+[ 2022-01-16 16:17:44.443429 ] trace: RESULT MANAGER REPORT: 177 BUNDLES, 177 RESERVATIONS
+[ 2022-01-16 16:17:54.443439 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:17:54.443481 ] trace:        Generate Interval: 10000034 count: 5 min: 13 mean: 14.4 max: 16
+[ 2022-01-16 16:17:54.443494 ] trace:            Recv Interval: 10000034 count: 14427097 min: 0 mean: 0.000503913 max: 486
+[ 2022-01-16 16:17:54.443501 ] trace: Recv-Assimilate Interval: 10000034 count: 226 min: 1 mean: 12.1637 max: 435
+[ 2022-01-16 16:17:54.443506 ] trace:    Recv-Extract Interval: 10000034 count: 226 min: 1 mean: 3.87611 max: 19
+[ 2022-01-16 16:17:54.443511 ] trace:       Recv-Mesg Interval: 10000034 count: 226 min: 7 mean: 22.5 max: 483
+[ 2022-01-16 16:17:54.443516 ] trace:    Recv-Process Interval: 10000034 count: 226 min: 0 mean: 0.168142 max: 6
+[ 2022-01-16 16:17:54.443521 ] trace:          Report Interval: 10000034 count: 14427097 min: 0 mean: 9.35739e-05 max: 146
+[ 2022-01-16 16:17:54.443526 ] trace:            Send Interval: 10000034 count: 14427097 min: 0 mean: 7.66613e-05 max: 40
+[ 2022-01-16 16:17:54.443531 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 14 mean: 19 max: 25
+[ 2022-01-16 16:17:54.443536 ] trace:        UpdateDB Interval: 10000034 count: 14427097 min: 0 mean: 0.000163997 max: 12
+[ 2022-01-16 16:17:54.443541 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:17:54.443546 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:17:54.443562 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 10481
+[ 2022-01-16 16:17:54.443570 ] trace: 134 BLOCKS IN DATABASE 10481 USED 10615 10615 TOTAL 
+[ 2022-01-16 16:17:54.443575 ] trace: RESULT MANAGER REPORT: 243 BUNDLES, 243 RESERVATIONS
+[ 2022-01-16 16:18:04.443585 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:18:04.443626 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 14.6 max: 15
+[ 2022-01-16 16:18:04.443639 ] trace:            Recv Interval: 10000034 count: 14423921 min: 0 mean: 0.000635125 max: 890
+[ 2022-01-16 16:18:04.443646 ] trace: Recv-Assimilate Interval: 10000034 count: 227 min: 1 mean: 18.3436 max: 817
+[ 2022-01-16 16:18:04.443652 ] trace:    Recv-Extract Interval: 10000034 count: 227 min: 1 mean: 4.23348 max: 27
+[ 2022-01-16 16:18:04.443657 ] trace:       Recv-Mesg Interval: 10000034 count: 227 min: 7 mean: 29.4449 max: 886
+[ 2022-01-16 16:18:04.443662 ] trace:    Recv-Process Interval: 10000034 count: 227 min: 0 mean: 0.220264 max: 6
+[ 2022-01-16 16:18:04.443667 ] trace:          Report Interval: 10000034 count: 14423921 min: 0 mean: 8.82562e-05 max: 145
+[ 2022-01-16 16:18:04.443672 ] trace:            Send Interval: 10000034 count: 14423921 min: 0 mean: 8.53443e-05 max: 55
+[ 2022-01-16 16:18:04.443677 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 18 mean: 25.8 max: 39
+[ 2022-01-16 16:18:04.443682 ] trace:        UpdateDB Interval: 10000034 count: 14423921 min: 0 mean: 0.000161884 max: 15
+[ 2022-01-16 16:18:04.443687 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:18:04.443691 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:18:04.443708 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 10746
+[ 2022-01-16 16:18:04.443715 ] trace: 134 BLOCKS IN DATABASE 10746 USED 10880 10880 TOTAL 
+[ 2022-01-16 16:18:04.443720 ] trace: RESULT MANAGER REPORT: 206 BUNDLES, 206 RESERVATIONS
+[ 2022-01-16 16:18:14.443731 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:18:14.443771 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 15.4 max: 17
+[ 2022-01-16 16:18:14.443785 ] trace:            Recv Interval: 10000034 count: 14422002 min: 0 mean: 0.000607544 max: 769
+[ 2022-01-16 16:18:14.443791 ] trace: Recv-Assimilate Interval: 10000034 count: 231 min: 1 mean: 16.4502 max: 702
+[ 2022-01-16 16:18:14.443797 ] trace:    Recv-Extract Interval: 10000034 count: 231 min: 1 mean: 4.09957 max: 26
+[ 2022-01-16 16:18:14.443802 ] trace:       Recv-Mesg Interval: 10000034 count: 231 min: 7 mean: 27.2814 max: 764
+[ 2022-01-16 16:18:14.443807 ] trace:    Recv-Process Interval: 10000034 count: 231 min: 0 mean: 0.190476 max: 7
+[ 2022-01-16 16:18:14.443812 ] trace:          Report Interval: 10000034 count: 14422002 min: 0 mean: 8.57717e-05 max: 145
+[ 2022-01-16 16:18:14.443817 ] trace:            Send Interval: 10000034 count: 14422002 min: 0 mean: 9.18735e-05 max: 47
+[ 2022-01-16 16:18:14.443822 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 15 mean: 22 max: 31
+[ 2022-01-16 16:18:14.443827 ] trace:        UpdateDB Interval: 10000034 count: 14422002 min: 0 mean: 0.000164194 max: 15
+[ 2022-01-16 16:18:14.443832 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:18:14.443836 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:18:14.443853 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 10987
+[ 2022-01-16 16:18:14.443860 ] trace: 134 BLOCKS IN DATABASE 10987 USED 11121 11121 TOTAL 
+[ 2022-01-16 16:18:14.443865 ] trace: RESULT MANAGER REPORT: 196 BUNDLES, 196 RESERVATIONS
+[ 2022-01-16 16:18:24.443875 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:18:24.443921 ] trace:        Generate Interval: 10000034 count: 5 min: 12 mean: 15 max: 17
+[ 2022-01-16 16:18:24.443934 ] trace:            Recv Interval: 10000034 count: 14421854 min: 0 mean: 0.000601032 max: 925
+[ 2022-01-16 16:18:24.443941 ] trace: Recv-Assimilate Interval: 10000034 count: 231 min: 1 mean: 15.5411 max: 851
+[ 2022-01-16 16:18:24.443947 ] trace:    Recv-Extract Interval: 10000034 count: 231 min: 1 mean: 3.74459 max: 27
+[ 2022-01-16 16:18:24.443952 ] trace:       Recv-Mesg Interval: 10000034 count: 231 min: 7 mean: 25.7662 max: 920
+[ 2022-01-16 16:18:24.443957 ] trace:    Recv-Process Interval: 10000034 count: 231 min: 0 mean: 0.168831 max: 9
+[ 2022-01-16 16:18:24.443962 ] trace:          Report Interval: 10000034 count: 14421854 min: 0 mean: 9.58961e-05 max: 145
+[ 2022-01-16 16:18:24.443967 ] trace:            Send Interval: 10000034 count: 14421854 min: 0 mean: 8.25137e-05 max: 47
+[ 2022-01-16 16:18:24.443972 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 13 mean: 19.8 max: 30
+[ 2022-01-16 16:18:24.443977 ] trace:        UpdateDB Interval: 10000034 count: 14421854 min: 0 mean: 0.000182848 max: 60
+[ 2022-01-16 16:18:24.443982 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:18:24.443987 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:18:24.444004 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 11211
+[ 2022-01-16 16:18:24.444011 ] trace: 134 BLOCKS IN DATABASE 11211 USED 11345 11345 TOTAL 
+[ 2022-01-16 16:18:24.444016 ] trace: RESULT MANAGER REPORT: 203 BUNDLES, 203 RESERVATIONS
+[ 2022-01-16 16:18:34.444026 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:18:34.444069 ] trace:        Generate Interval: 10000035 count: 5 min: 14 mean: 14.8 max: 16
+[ 2022-01-16 16:18:34.444083 ] trace:            Recv Interval: 10000035 count: 14503500 min: 0 mean: 0.000597097 max: 886
+[ 2022-01-16 16:18:34.444090 ] trace: Recv-Assimilate Interval: 10000035 count: 227 min: 1 mean: 15.7137 max: 796
+[ 2022-01-16 16:18:34.444095 ] trace:    Recv-Extract Interval: 10000035 count: 227 min: 1 mean: 3.99559 max: 26
+[ 2022-01-16 16:18:34.444100 ] trace:       Recv-Mesg Interval: 10000035 count: 227 min: 7 mean: 26.4097 max: 879
+[ 2022-01-16 16:18:34.444105 ] trace:    Recv-Process Interval: 10000035 count: 227 min: 0 mean: 0.198238 max: 8
+[ 2022-01-16 16:18:34.444110 ] trace:          Report Interval: 10000035 count: 14503500 min: 0 mean: 9.4391e-05 max: 151
+[ 2022-01-16 16:18:34.444116 ] trace:            Send Interval: 10000035 count: 14503500 min: 0 mean: 7.38442e-05 max: 57
+[ 2022-01-16 16:18:34.444120 ] trace:       Send-Mesg Interval: 10000035 count: 5 min: 14 mean: 19.4 max: 39
+[ 2022-01-16 16:18:34.444125 ] trace:        UpdateDB Interval: 10000035 count: 14503500 min: 0 mean: 0.000178715 max: 15
+[ 2022-01-16 16:18:34.444131 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:18:34.444135 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:18:34.444152 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 11433
+[ 2022-01-16 16:18:34.444159 ] trace: 134 BLOCKS IN DATABASE 11433 USED 11567 11567 TOTAL 
+[ 2022-01-16 16:18:34.444164 ] trace: RESULT MANAGER REPORT: 208 BUNDLES, 208 RESERVATIONS
+[ 2022-01-16 16:18:44.444174 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:18:44.444216 ] trace:        Generate Interval: 10000034 count: 5 min: 14 mean: 15 max: 16
+[ 2022-01-16 16:18:44.444230 ] trace:            Recv Interval: 10000034 count: 14672985 min: 0 mean: 0.000565052 max: 865
+[ 2022-01-16 16:18:44.444236 ] trace: Recv-Assimilate Interval: 10000034 count: 229 min: 1 mean: 15.4279 max: 794
+[ 2022-01-16 16:18:44.444242 ] trace:    Recv-Extract Interval: 10000034 count: 229 min: 1 mean: 4.10917 max: 26
+[ 2022-01-16 16:18:44.444247 ] trace:       Recv-Mesg Interval: 10000034 count: 229 min: 7 mean: 26.1441 max: 858
+[ 2022-01-16 16:18:44.444252 ] trace:    Recv-Process Interval: 10000034 count: 229 min: 0 mean: 0.187773 max: 6
+[ 2022-01-16 16:18:44.444257 ] trace:          Report Interval: 10000034 count: 14672985 min: 0 mean: 0.000102024 max: 147
+[ 2022-01-16 16:18:44.444262 ] trace:            Send Interval: 10000034 count: 14672985 min: 0 mean: 7.10149e-05 max: 55
+[ 2022-01-16 16:18:44.444267 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 12 mean: 22.6 max: 38
+[ 2022-01-16 16:18:44.444272 ] trace:        UpdateDB Interval: 10000034 count: 14672985 min: 0 mean: 0.000165202 max: 13
+[ 2022-01-16 16:18:44.444277 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:18:44.444282 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:18:44.444297 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 11654
+[ 2022-01-16 16:18:44.444304 ] trace: 134 BLOCKS IN DATABASE 11654 USED 11788 11788 TOTAL 
+[ 2022-01-16 16:18:44.444309 ] trace: RESULT MANAGER REPORT: 216 BUNDLES, 216 RESERVATIONS
+[ 2022-01-16 16:18:54.444320 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:18:54.444365 ] trace:        Generate Interval: 10000034 count: 5 min: 15 mean: 15.6 max: 16
+[ 2022-01-16 16:18:54.444379 ] trace:            Recv Interval: 10000034 count: 14541496 min: 0 mean: 0.000569543 max: 902
+[ 2022-01-16 16:18:54.444385 ] trace: Recv-Assimilate Interval: 10000034 count: 225 min: 1 mean: 15.28 max: 829
+[ 2022-01-16 16:18:54.444391 ] trace:    Recv-Extract Interval: 10000034 count: 225 min: 1 mean: 3.91556 max: 27
+[ 2022-01-16 16:18:54.444395 ] trace:       Recv-Mesg Interval: 10000034 count: 225 min: 7 mean: 25.8 max: 897
+[ 2022-01-16 16:18:54.444400 ] trace:    Recv-Process Interval: 10000034 count: 225 min: 0 mean: 0.168889 max: 6
+[ 2022-01-16 16:18:54.444406 ] trace:          Report Interval: 10000034 count: 14541496 min: 0 mean: 9.90957e-05 max: 145
+[ 2022-01-16 16:18:54.444411 ] trace:            Send Interval: 10000034 count: 14541496 min: 0 mean: 8.87116e-05 max: 62
+[ 2022-01-16 16:18:54.444416 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 12 mean: 23.8 max: 45
+[ 2022-01-16 16:18:54.444421 ] trace:        UpdateDB Interval: 10000034 count: 14541496 min: 0 mean: 0.00016195 max: 66
+[ 2022-01-16 16:18:54.444426 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:18:54.444431 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:18:54.444447 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 11875
+[ 2022-01-16 16:18:54.444454 ] trace: 134 BLOCKS IN DATABASE 11875 USED 12009 12009 TOTAL 
+[ 2022-01-16 16:18:54.444459 ] trace: RESULT MANAGER REPORT: 220 BUNDLES, 220 RESERVATIONS
+[ 2022-01-16 16:19:04.444471 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:19:04.444516 ] trace:        Generate Interval: 10000036 count: 5 min: 15 mean: 15.2 max: 16
+[ 2022-01-16 16:19:04.444529 ] trace:            Recv Interval: 10000036 count: 14689448 min: 0 mean: 0.000643183 max: 1146
+[ 2022-01-16 16:19:04.444536 ] trace: Recv-Assimilate Interval: 10000036 count: 232 min: 2 mean: 19.5733 max: 1058
+[ 2022-01-16 16:19:04.444541 ] trace:    Recv-Extract Interval: 10000036 count: 232 min: 1 mean: 3.85345 max: 33
+[ 2022-01-16 16:19:04.444546 ] trace:       Recv-Mesg Interval: 10000036 count: 232 min: 7 mean: 30.444 max: 1140
+[ 2022-01-16 16:19:04.444551 ] trace:    Recv-Process Interval: 10000036 count: 232 min: 0 mean: 0.189655 max: 6
+[ 2022-01-16 16:19:04.444556 ] trace:          Report Interval: 10000036 count: 14689448 min: 0 mean: 9.21069e-05 max: 150
+[ 2022-01-16 16:19:04.444561 ] trace:            Send Interval: 10000036 count: 14689448 min: 0 mean: 7.36583e-05 max: 73
+[ 2022-01-16 16:19:04.444566 ] trace:       Send-Mesg Interval: 10000036 count: 5 min: 13 mean: 27.8 max: 56
+[ 2022-01-16 16:19:04.444571 ] trace:        UpdateDB Interval: 10000036 count: 14689448 min: 0 mean: 0.000164812 max: 28
+[ 2022-01-16 16:19:04.444576 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:19:04.444581 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:19:04.444596 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 12164
+[ 2022-01-16 16:19:04.444603 ] trace: 134 BLOCKS IN DATABASE 12164 USED 12298 12298 TOTAL 
+[ 2022-01-16 16:19:04.444608 ] trace: RESULT MANAGER REPORT: 163 BUNDLES, 163 RESERVATIONS
+[ 2022-01-16 16:19:14.444619 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:19:14.444662 ] trace:        Generate Interval: 10000033 count: 5 min: 14 mean: 15.4 max: 17
+[ 2022-01-16 16:19:14.444676 ] trace:            Recv Interval: 10000033 count: 14679059 min: 0 mean: 0.000559232 max: 1118
+[ 2022-01-16 16:19:14.444682 ] trace: Recv-Assimilate Interval: 10000033 count: 228 min: 1 mean: 15.5395 max: 1019
+[ 2022-01-16 16:19:14.444688 ] trace:    Recv-Extract Interval: 10000033 count: 228 min: 1 mean: 3.83772 max: 34
+[ 2022-01-16 16:19:14.444692 ] trace:       Recv-Mesg Interval: 10000033 count: 228 min: 7 mean: 26.1009 max: 1102
+[ 2022-01-16 16:19:14.444698 ] trace:    Recv-Process Interval: 10000033 count: 228 min: 0 mean: 0.188596 max: 6
+[ 2022-01-16 16:19:14.444703 ] trace:          Report Interval: 10000033 count: 14679059 min: 0 mean: 9.14909e-05 max: 147
+[ 2022-01-16 16:19:14.444708 ] trace:            Send Interval: 10000033 count: 14679059 min: 0 mean: 7.95691e-05 max: 69
+[ 2022-01-16 16:19:14.444713 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 11 mean: 26 max: 50
+[ 2022-01-16 16:19:14.444718 ] trace:        UpdateDB Interval: 10000033 count: 14679059 min: 0 mean: 0.000170719 max: 81
+[ 2022-01-16 16:19:14.444723 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:19:14.444727 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:19:14.444743 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 12394
+[ 2022-01-16 16:19:14.444750 ] trace: 134 BLOCKS IN DATABASE 12394 USED 12528 12528 TOTAL 
+[ 2022-01-16 16:19:14.444755 ] trace: RESULT MANAGER REPORT: 161 BUNDLES, 161 RESERVATIONS
+[ 2022-01-16 16:19:24.444766 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:19:24.444808 ] trace:        Generate Interval: 10000033 count: 6 min: 13 mean: 14.5 max: 16
+[ 2022-01-16 16:19:24.444822 ] trace:            Recv Interval: 10000033 count: 14531836 min: 0 mean: 0.000568132 max: 1197
+[ 2022-01-16 16:19:24.444828 ] trace: Recv-Assimilate Interval: 10000033 count: 227 min: 1 mean: 15.8062 max: 1105
+[ 2022-01-16 16:19:24.444834 ] trace:    Recv-Extract Interval: 10000033 count: 227 min: 1 mean: 3.73568 max: 35
+[ 2022-01-16 16:19:24.444839 ] trace:       Recv-Mesg Interval: 10000033 count: 227 min: 6 mean: 26.1145 max: 1192
+[ 2022-01-16 16:19:24.444844 ] trace:    Recv-Process Interval: 10000033 count: 227 min: 0 mean: 0.15859 max: 6
+[ 2022-01-16 16:19:24.444849 ] trace:          Report Interval: 10000033 count: 14531836 min: 0 mean: 8.95276e-05 max: 147
+[ 2022-01-16 16:19:24.444854 ] trace:            Send Interval: 10000033 count: 14531836 min: 0 mean: 8.6018e-05 max: 68
+[ 2022-01-16 16:19:24.444859 ] trace:       Send-Mesg Interval: 10000033 count: 6 min: 12 mean: 29.1667 max: 53
+[ 2022-01-16 16:19:24.444864 ] trace:        UpdateDB Interval: 10000033 count: 14531836 min: 0 mean: 0.0001666 max: 60
+[ 2022-01-16 16:19:24.444869 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:19:24.444874 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:19:24.444890 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 12624
+[ 2022-01-16 16:19:24.444897 ] trace: 134 BLOCKS IN DATABASE 12624 USED 12758 12758 TOTAL 
+[ 2022-01-16 16:19:24.444902 ] trace: RESULT MANAGER REPORT: 158 BUNDLES, 158 RESERVATIONS
+[ 2022-01-16 16:19:34.444913 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:19:34.444958 ] trace:        Generate Interval: 10000033 count: 5 min: 15 mean: 16 max: 17
+[ 2022-01-16 16:19:34.444972 ] trace:            Recv Interval: 10000033 count: 14534479 min: 0 mean: 0.000504387 max: 994
+[ 2022-01-16 16:19:34.444979 ] trace: Recv-Assimilate Interval: 10000033 count: 232 min: 1 mean: 11.3405 max: 915
+[ 2022-01-16 16:19:34.444985 ] trace:    Recv-Extract Interval: 10000033 count: 232 min: 1 mean: 3.61638 max: 29
+[ 2022-01-16 16:19:34.444990 ] trace:       Recv-Mesg Interval: 10000033 count: 232 min: 7 mean: 21.3793 max: 989
+[ 2022-01-16 16:19:34.444995 ] trace:    Recv-Process Interval: 10000033 count: 232 min: 0 mean: 0.181034 max: 6
+[ 2022-01-16 16:19:34.445000 ] trace:          Report Interval: 10000033 count: 14534479 min: 0 mean: 9.66667e-05 max: 146
+[ 2022-01-16 16:19:34.445005 ] trace:            Send Interval: 10000033 count: 14534479 min: 0 mean: 7.90534e-05 max: 52
+[ 2022-01-16 16:19:34.445010 ] trace:       Send-Mesg Interval: 10000033 count: 5 min: 13 mean: 18 max: 35
+[ 2022-01-16 16:19:34.445015 ] trace:        UpdateDB Interval: 10000033 count: 14534479 min: 0 mean: 0.000175032 max: 86
+[ 2022-01-16 16:19:34.445020 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:19:34.445024 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:19:34.445041 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 12775
+[ 2022-01-16 16:19:34.445048 ] trace: 134 BLOCKS IN DATABASE 12775 USED 12909 12909 TOTAL 
+[ 2022-01-16 16:19:34.445053 ] trace: RESULT MANAGER REPORT: 240 BUNDLES, 240 RESERVATIONS
+[ 2022-01-16 16:19:44.445063 ] trace: ==================== BEGIN EXECUTION TIMER REPORT =====================
+[ 2022-01-16 16:19:44.445102 ] trace:        Generate Interval: 10000034 count: 5 min: 13 mean: 14.2 max: 16
+[ 2022-01-16 16:19:44.445116 ] trace:            Recv Interval: 10000034 count: 14418489 min: 0 mean: 0.000573014 max: 1132
+[ 2022-01-16 16:19:44.445122 ] trace: Recv-Assimilate Interval: 10000034 count: 226 min: 1 mean: 15.6018 max: 1040
+[ 2022-01-16 16:19:44.445128 ] trace:    Recv-Extract Interval: 10000034 count: 226 min: 1 mean: 3.67257 max: 32
+[ 2022-01-16 16:19:44.445133 ] trace:       Recv-Mesg Interval: 10000034 count: 226 min: 7 mean: 25.7699 max: 1119
+[ 2022-01-16 16:19:44.445138 ] trace:    Recv-Process Interval: 10000034 count: 226 min: 0 mean: 0.181416 max: 7
+[ 2022-01-16 16:19:44.445143 ] trace:          Report Interval: 10000034 count: 14418489 min: 0 mean: 9.05088e-05 max: 150
+[ 2022-01-16 16:19:44.445148 ] trace:            Send Interval: 10000034 count: 14418489 min: 0 mean: 9.12717e-05 max: 75
+[ 2022-01-16 16:19:44.445153 ] trace:       Send-Mesg Interval: 10000034 count: 5 min: 13 mean: 27 max: 60
+[ 2022-01-16 16:19:44.445158 ] trace:        UpdateDB Interval: 10000034 count: 14418489 min: 0 mean: 0.000167909 max: 12
+[ 2022-01-16 16:19:44.445163 ] trace: ==================== END TIMER REPORT =====================
+[ 2022-01-16 16:19:44.445168 ] trace: PENDING TASK REQUESTS: 0
+[ 2022-01-16 16:19:44.445183 ] trace: CURRENT HEAD: 0 17011423561894747068 1 0 1 false true true 12998
+[ 2022-01-16 16:19:44.445190 ] trace: 134 BLOCKS IN DATABASE 12998 USED 13132 13132 TOTAL 
+[ 2022-01-16 16:19:44.445195 ] trace: RESULT MANAGER REPORT: 243 BUNDLES, 243 RESERVATIONS
