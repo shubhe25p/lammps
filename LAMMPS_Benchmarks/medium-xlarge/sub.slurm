@@ -4,8 +4,8 @@
 #SBATCH -C gpu
 #SBATCH -q early_science
 #SBATCH -A m3916_g
-#SBATCH -n 600
-#SBATCH --ntasks-per-node=60
+#SBATCH -n 640
+#SBATCH --ntasks-per-node=64
 #SBATCH -c 2
 #SBATCH --gpus-per-node=4 
 #SBATCH --gpu-bind=map_gpu:0,1,2,3
