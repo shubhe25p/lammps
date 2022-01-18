@@ -6,7 +6,7 @@
 <Placement>
 
 <Type> Inhomogeneous </Type>
-<RanksPerNode> 4 </RanksPerNode>
+<RanksPerNode> 60 </RanksPerNode>
 <TemplatesPerManager> 20 </TemplatesPerManager>
 
 
