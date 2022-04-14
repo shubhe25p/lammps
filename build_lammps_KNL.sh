@@ -7,9 +7,10 @@ export CRAYPE_LINK_TYPE=dynamic
 if [ ! -d lammps ]; then
 git clone --single-branch --branch master https://github.com/lammps/lammps.git
 
+export CRAYPE_LINK_TYPE=dynamic
 cd lammps
 # Checkout the commit from 09/02/2020.
-git checkout 2cd0e9edc4fc820db21f0ac4bb6b9cd3be9fd50e
+#git checkout 2cd0e9edc4fc820db21f0ac4bb6b9cd3be9fd50e
 
 cd ../
 fi
@@ -31,7 +32,6 @@ cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_knl/ \
   -D PKG_KOKKOS=ON -D DOWNLOAD_KOKKOS=ON -D Kokkos_ARCH_KNL=ON \
   -D PKG_SNAP=ON \
   -D CMAKE_POSITION_INDEPENDENT_CODE=ON \
-  -D CMAKE_EXE_FLAGS="-dynamic" \
   ../cmake
 
 # A second cmake command is needed because a few local variables need to be overwritten.
