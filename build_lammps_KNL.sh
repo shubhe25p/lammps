@@ -26,11 +26,16 @@ cd build_knl
 
 # CMake build statement
 cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_knl/ \
-  -D CMAKE_CXX_COMPILER=CC -D CMAKE_Fortran_COMPILER=ftn \
+  -D CMAKE_CXX_COMPILER=CC \
+  -D CMAKE_Fortran_COMPILER=ftn \
   -D PKG_USER-OMP=ON \
-  -D PKG_USER-INTEL=ON -D TBB_MALLOC_LIBRARY=/opt/intel/compilers_and_libraries_2019.3.199/linux/tbb/lib/intel64/gcc4.7/libtbbmalloc.so.2 \
-  -D PKG_KOKKOS=ON -D DOWNLOAD_KOKKOS=ON -D Kokkos_ARCH_KNL=ON \
-  -D PKG_SNAP=ON \
+  -D PKG_USER-INTEL=ON \
+  -D TBB_MALLOC_LIBRARY=/opt/intel/compilers_and_libraries_2019.3.199/linux/tbb/lib/intel64/gcc4.7/libtbbmalloc.so.2 \
+  -D PKG_KOKKOS=ON \
+  -D DOWNLOAD_KOKKOS=ON \
+  -D Kokkos_ARCH_KNL=yes \
+  -D Kokkos_ENABLE_OPENMP=yes \
+  -D PKG_ML-SNAP=ON \
   -D CMAKE_POSITION_INDEPENDENT_CODE=ON \
   ../cmake
 
