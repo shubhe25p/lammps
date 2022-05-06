@@ -1,5 +1,5 @@
 spec=medium
-nn=256
+nn=512
 BENCH_SPEC="\
         -in common/in.snap.test \
         -var snapdir common/2J8_W.SNAP \

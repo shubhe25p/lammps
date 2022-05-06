@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH --nodes=1
+#SBATCH --nodes=4096
 #SBATCH -C knl
 #SBATCH -S 4
-#SBATCH --time=00:30:00
+#SBATCH --time=24:00:00
 #SBATCH --qos=debug
 #SBATCH -A m888
 #SBATCH -J lmp_xlbench
