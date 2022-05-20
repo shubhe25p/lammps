@@ -45,7 +45,7 @@ displace_atoms all random ${atomjiggle} ${atomjiggle} ${atomjiggle} 87287 units 
 # 1/2 fmsec timestep
 # coupling constant = 50 steps
 
-velocity        all create 800.0 4928459
+velocity        all create 800.0 4928459 loop local
 timestep        0.5e-3          
 fix             1 all nve
 fix             2 all langevin 800.0 800.0 0.025 398928
