@@ -59,19 +59,19 @@ to facilitate profiling at different scales (e.g. socket, node, blade or rack),
 and extraplation to larger sizes.
 The collection of problems form a weak scaling series
 where each successivly larger problem simulates eight times as many atoms as the previous one.
-Computational and memory requirements are expected to scale linearly with the number of atoms.
+Computational requirements are expected to scale linearly with the number of atoms.
 The following table lists the approximate system resoures
 needed to run each of these jobs on Perlmutter.
 
-|Index | Size    |  #atoms |    C   |  #PM nodes | #time(sec) |
-|----- | ----    |  ------ | ------ | ---------- | ---------  |
-|0     | nano    |     65k |   8^-5 |    0.25    |      3     |
-|1     | micro   |    524k |   8^-4 |    0.25    |     25     |
-|2     | tiny    |   4.19M |   8^-3 |       1    |     54     |
-|3     | small   |   33.6M |   8^-2 |       1    |    424     |
-|4     | medium  |   268.M |  0.125 |       8    |    405     |
-|5     | large   |   2.15B |    1   |      32    |    853     |
-|6     | xlbench |   17.2B |    8   |     N/A    |    N/A     |
+|Index | Size    |  #atoms |    C   |  #PM nodes | Total Mem(GB) | #time(sec) |
+|----- | ----    |  ------ | ------ | ---------- | ------------- | ---------  |
+|0     | nano    |     65k |   8^-5 |    0.25    |      0.14     |      3     |
+|1     | micro   |    524k |   8^-4 |    0.25    |      0.23     |     25     |
+|2     | tiny    |   4.19M |   8^-3 |       1    |      1.33     |     54     |
+|3     | small   |   33.6M |   8^-2 |       1    |      7.32     |    424     |
+|4     | medium  |   268.M |  0.125 |       8    |      58.6     |    405     |
+|5     | large   |   2.15B |    1   |      32    |      453.     |    853     |
+|6     | xlbench |   17.2B |    8   |     N/A    |      N/A      |    N/A     |
 
 Each problem has its own subdirectory within the benchmarks directory.
 Within those directories, the run_<size>_A100.sh script shows
