@@ -3,9 +3,11 @@
 A fundamental challenge for molecular dynamics (MD) simulation is to propagate the dynamics for a sufficiently long simulated time to sample all of the relevant molecular configurations.  Historical MD workflows have therefore consisted of long-running jobs (or sequences of jobs), where each time-step may be accelerated by disributing atoms across parallel processing units, but the series of time-steps progresses sequentially. Recent advances in MD sampling effectivly provide route to parallelize the time dimension of the simulation as well.  
 
 EXAALT is an ECP project aimed at enabling long-timescale MD through a combination of software optimization to enable excellent performance on exascale architectures and the advanced sampling methods mentioned above. 
-One of the possible EXAALT workflows uses ParSplice to manages multiple instances of the LAMMPS MD.
-<img width="500" alt="EXAALT workflow"    src="figures/exaalt_workflow.png"    title="EXAALT workflow" >
-<img width="500" alt="EXAALT decorrelate" src="figures/exaalt_decorrelate.png" title="EXAALT decorrelate" >
+One of the possible EXAALT workflows uses ParSplice to manages multiple instances of the LAMMPS MD engine.
+
+<img width="49%" alt="EXAALT workflow"    src="figures/exaalt_workflow.png"    title="EXAALT workflow" >
+<img width="49%" alt="EXAALT decorrelate" src="figures/exaalt_decorrelate.png" title="EXAALT decorrelate" >
+
 An individual LAMMPS job is relatively brief, and ParSplice provides a hierarchical task management layer that uses physics-based criteria to select which configurations to in order to efficiently explore the potential energy survace.  More information about EXAALT, ParSplice and LAMMPS can be found at:
 EXAALT: https://www.exascaleproject.org/research-project/exaalt/
 ParSplice: https://doi.org/10.1021/acs.jctc.5b00916
