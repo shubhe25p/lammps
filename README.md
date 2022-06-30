@@ -1,38 +1,43 @@
 
-# Introduction
+# 0. Materials by Design Overview
+A fundamental challenge for molecular dynamics (MD) simulation is to propagate the dynamics for a sufficiently long simulated time to sample all of the relevant molecular configurations.  Historical MD workflows have therefore consisted of long-running jobs (or sequences of jobs), where each time-step may be accelerated by disributing atoms across parallel processing units, but the series of time-steps progresses sequentially. Recent advances in MD sampling effectivly provide route to parallelize the time dimension of the simulation as well.  
 
-This is a Readme for the EXAALT Workflow Simulation
-The main component in this workflow is the LAMMPS MD package.
+EXAALT is an ECP project aimed at enabling long-timescale MD through a combination of software optimization to enable excellent performance on exascale architectures and the advanced sampling methods mentioned above. 
+One of the possible EXAALT workflows uses ParSplice to manages multiple instances of the LAMMPS MD.
+<img width="500" alt="EXAALT workflow"    src="figures/exaalt_workflow.png"    title="EXAALT workflow" >
+<img width="500" alt="EXAALT decorrelate" src="figures/exaalt_decorrelate.png" title="EXAALT decorrelate" >
+An individual LAMMPS job is relatively brief, and ParSplice provides a hierarchical task management layer that uses physics-based criteria to select which configurations to in order to efficiently explore the potential energy survace.  More information about EXAALT, ParSplice and LAMMPS can be found at:
+EXAALT: https://www.exascaleproject.org/research-project/exaalt/
+ParSplice: https://doi.org/10.1021/acs.jctc.5b00916
+LAMMPS: https://doi.org/10.1016/j.cpc.2021.108171
 
-EXAALT is an ECP project aimed at enabling long-timescale moledular dynamics through a combination of software optimization 
-to enable excellent performance on exascale architectures and advanced sampling techniques to accelerate exploration of phase space. This benchmark instantiates one of the possible EXAALT workflows wherein the ParSplice manages multiple instances of the LAMMPS MD code as illustrated below.
-More information about EXAALT, ParSplice and LAMMPS can be found at FIXME.
+The Materials by Design workflow benchmark is based on  the ParSplice +  LAMMPS workflow, 
+but the ParSplice workflow engine is not involved in the benchmark because it would add significant complexity compiling, running and performance analysis of the simulations.  Instead, the benchmark consists of a single run of the LAMMPS MD package, which is the performance critical component of the workflow, typically using over 95% of the EXAALT runtime. The benchmark problem simulates the high-pressure BC8 phase of carbon using the Spectral Neighbor Analysis Potential (SNAP). LAMMPS' highly optimized implementation of the SNAP potential was written using the Kokkos portability layer, as described in: https://doi.org/10.1145/3458817.3487400
 
-# Building
-The process of building the EXAALT benchmark has three basic steps: obtaining the source code, configuring the build system, and compiling the source code.  
-Both of these steps are performed by the `build_lammps_KNL.sh` and `build_lammps_V100.sh` scripts;  
-these are suitable for building on NERSC's Cori system and can be used as templates to guild the build process on other systems.
+# 1. Code Access and Compilation Details
+The process of building the EXAALT benchmark has three basic steps: obtaining the source code, configuring the build system, and compiling the source code.   All of these steps are performed by the `build_lammps_KNL.sh`, `build_lammps_V100.sh` and `build_lammps_PM.sh` scripts; these are suitable for building on NERSC's Cori, Cori-GPU and Perlmutter systems and can be used as templates to guild the build process on other systems.
 
-## Obtaining LAMMPS source code
-The following three commands will clone a 03/31/2020 version of the LAMMPS repo.
-Optimized runs of the benchmark may use custom code or newer versions of LAMMPS, but NERSC supports only the tested version.
+## 1.1 Obtaining LAMMPS source code
+The following three commands will clone a 03/31/2020 version of the LAMMPS repo. This is the required version for baseline runs of the benchmark. Optimized runs may use custom code or newer versions of LAMMPS, but NERSC supports only the tested version.
 ```
     git clone --single-branch --branch master https://github.com/lammps/lammps.git
     cd lammps
     git checkout 2cd0e9edc4fc820db21f0ac4bb6b9cd3be9fd50e
 ```
 
-## Configuring the LAMMPS build system
+## 1.2 Configuring the LAMMPS build system
 LAMMPS uses the Cmake tool to prepare the makefiles.
-From within the `lammps` directory, run *one* of the following cmake commands that is most appropriate for your compute architecture. More cmake options that may be useful when customizing for other systems/architectures can be found in chapter 3 of the LAMMPS User Guide: https://lammps.sandia.gov/doc/Build.html.
+From within the `lammps` directory, run the cmake commands
+that is most appropriate for your compute architecture.
+The example below is suitable for generic Linux workstation without a GPU accelerator.
+```
+cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_gcc/ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_CXX_COMPILER=g++ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_Fortran_COMPILER=gfortran \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D BUILD_MPI=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D MPI_CXX_COMPILER=mpicxx \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_USER-OMP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D DOWNLOAD_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D Kokkos_ARCH_FIXME=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_SNAP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_POSITION_INDEPENDENT_CODE=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_EXE_FLAGS="-dynamic" \ <br>&nbsp;&nbsp;&nbsp;&nbsp; ../cmake
+```
+Examples for NERSC's Cori-KNL and Perlmutter systems can be found in the build_lammps_KNL.sh and build_lammps_PM.sh scripts.
+More cmake options that may be useful when customizing for other systems/architectures can be found in chapter 3 of the LAMMPS User Guide: https://lammps.sandia.gov/doc/Build.html.
 
-| Host | cmake |
-| ---- | ----- |
-| Cori KNL | cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_knl/ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_CXX_COMPILER=CC  \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D CMAKE_Fortran_COMPILER=ftn \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D PKG_USER-OMP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D PKG_USER-INTEL=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D TBB_MALLOC_LIBRARY=**/path/to/libtbbmalloc.so.2** \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D PKG_KOKKOS=ON -D DOWNLOAD_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D Kokkos_ARCH_KNL=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D PKG_SNAP=ON  \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D CMAKE_POSITION_INDEPENDENT_CODE=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    -D CMAKE_EXE_FLAGS="-dynamic" \ <br>&nbsp;&nbsp;&nbsp;&nbsp;    ../cmake |
-| Cori V100 | cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_V100 \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D Kokkos_ARCH_VOLTA70=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D CMAKE_BUILD_TYPE=Release \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D MPI_CXX_COMPILER=mpicxx \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D BUILD_MPI=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D CMAKE_CXX_COMPILER=$PWD/../lib/kokkos/bin/nvcc_wrapper \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D PKG_SNAP=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D PKG_GPU=no \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D PKG_KOKKOS=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  -D Kokkos_ENABLE_CUDA=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp;  ../cmake |
-| Generic Linux | cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_gcc/ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_CXX_COMPILER=g++ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_Fortran_COMPILER=gfortran \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D BUILD_MPI=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D MPI_CXX_COMPILER=mpicxx \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_USER-OMP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D DOWNLOAD_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D Kokkos_ARCH_FIXME=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_SNAP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_POSITION_INDEPENDENT_CODE=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_EXE_FLAGS="-dynamic" \ <br>&nbsp;&nbsp;&nbsp;&nbsp; ../cmake |
 
-## Compiling LAMMPS
+## 1.3  Compiling LAMMPS
 Again from the `lammps` directory, the following commands will compile LAMMPS and install the executable at `lammps/install_ARCH/bin/lmp`.
 ```
 make
@@ -42,24 +47,56 @@ For convenience in later steps (when running the benchmark), you may want to cre
 ```
 cd ../LAMMPS_benchmarks
 ln -s ../lammps/install_knl/bin/lmp  ./lmp_knl
-ln -s ../lammps/install_cgpu/bin/lmp ./lmp_cgpu
 ```
 
-# Running the EXAALT benchmark
-Input files and batch scipts for N-FIXME problem sizes are provided in the LAMMPS_benchmarks directory.
-The small problem is intended for build validation and profiling node-level performance characteristics.
-A medium sized problem is provided to enable performance analysis for 
-The large problem is meant to reflect performance at scale
-The following table describes the approximate system resoures needed to run each of these jobs.
+# 2. Running the benchmark
 
-How can the concurrency be adjusted?
+Input files and batch scipts for seven (7)  problem sizes are provided in the benchmarks directory.
+NERSC-10 RFP responses should provide results (measured or projected) for the "xlbench" problem size.
+SSI reference values from NERSC's Perlutter system were evaluated using the "large" problem size.
+Other problem sizes  have been provided as a convenience,
+to facilitate profiling at different scales (e.g. socket, node, blade or rack),
+and extraplation to larger sizes.
+The collection of problems form a weak scaling series
+where each successivly larger problem simulates eight times as many atoms as the previous one.
+Computational and memory requirements are expected to scale linearly with the number of atoms.
+The following table lists the approximate system resoures
+needed to run each of these jobs on Perlmutter.
 
-| Problem Size | Memory (GB) | V100 Sockets | Walltime (hours) |
-| ------       | ------      | ------       | ------           |
-| Small        | cell        | cell         | cell             |
-| Medium       | cell        | cell         | cell             |
-| Large        | cell        | cell         | cell             |
+|Index | Size    |  #atoms |    C   |  #PM nodes | #time(sec) |
+|----- | ----    |  ------ | ------ | ---------- | ---------  |
+|0     | nano    |     65k |   8^-5 |    0.25    |      3     |
+|1     | micro   |    524k |   8^-4 |    0.25    |     25     |
+|2     | tiny    |   4.19M |   8^-3 |       1    |     54     |
+|3     | small   |   33.6M |   8^-2 |       1    |    424     |
+|4     | medium  |   268.M |  0.125 |       8    |    405     |
+|5     | large   |   2.15B |    1   |      32    |    853     |
+|6     | xlbench |   17.2B |    8   |     N/A    |    N/A     |
 
-In the LAMMPS_Benchmarks directory batch.sh launches a single node job for the 2J14 problem size and the the expected results are shown in orignal-results.out
+Each problem has its own subdirectory within the benchmarks directory.
+Within those directories, the run_<size>_A100.sh script shows
+how the jobs was executed on Perlmutter. 
 
-# Reporting
+The essential  steps are to
+1. add a link to the data that are common to all problem sizes: `ln -s ../../common`
+2. load the size-specific simulation parameters into the BENCH_SPEC variable: `source <size>_spec.txt`
+3. run the job: `srun -n #ranks  /path/to/lammps/lmp  <lammps_options>  ${BENCH_SPEC}
+The recommended lammps_options for Perlmutter (and similar systems) are:
+"-k on g 1 -sf kk -pk kokkos newton on neigh half" 
+
+# 3. Results
+## 3.1 Correctness
+Correctness can be verified by comparing the total energy per unit cell after 100 time-steps to the expected value on computed on Perlmutter ( -8.7471832 ). The relative error must be less than 50 ppm.
+
+## 3.2 Figure of Merit
+The Figure of Merit is the walltime of the job,
+and can found in the LAMMPS output:
+grep "Total wall time:" [format 'h:mm:ss]
+
+The reported FOM values must be paired with a description of the (i.e. node-type and node-count) used to acheive the FOM.
+
+## 3.3 Reporting
+For the electronic submission, include all the source and makefiles used to build on the target platform and input files and runscripts. Include all standard output files.
+
+
+
