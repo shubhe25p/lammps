@@ -9,9 +9,9 @@ One of the possible EXAALT workflows uses ParSplice to manages multiple instance
 <img width="49%" alt="EXAALT decorrelate" src="figures/exaalt_decorrelate.png" title="EXAALT decorrelate" >
 
 An individual LAMMPS job is relatively brief, and ParSplice provides a hierarchical task management layer that uses physics-based criteria to select which configurations to in order to efficiently explore the potential energy survace.  More information about EXAALT, ParSplice and LAMMPS can be found at:
-EXAALT: https://www.exascaleproject.org/research-project/exaalt/
-ParSplice: https://doi.org/10.1021/acs.jctc.5b00916
-LAMMPS: https://doi.org/10.1016/j.cpc.2021.108171
+- EXAALT:    https://www.exascaleproject.org/research-project/exaalt/
+- ParSplice: https://doi.org/10.1021/acs.jctc.5b00916
+- LAMMPS:     https://doi.org/10.1016/j.cpc.2021.108171 
 
 The Materials by Design workflow benchmark is based on  the ParSplice +  LAMMPS workflow, 
 but the ParSplice workflow engine is not involved in the benchmark because it would add significant complexity compiling, running and performance analysis of the simulations.  Instead, the benchmark consists of a single run of the LAMMPS MD package, which is the performance critical component of the workflow, typically using over 95% of the EXAALT runtime. The benchmark problem simulates the high-pressure BC8 phase of carbon using the Spectral Neighbor Analysis Potential (SNAP). LAMMPS' highly optimized implementation of the SNAP potential was written using the Kokkos portability layer, as described in: https://doi.org/10.1145/3458817.3487400
