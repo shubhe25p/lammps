@@ -16,14 +16,14 @@ INSTALL_PREFIX="${HOME_BASE}/install_V100"
 # Clone just the stable branch of LAMMPS if not already cloned.
 if [ ! -d ${LAMMPS_SRC} ]; then
     git clone --single-branch --branch stable https://github.com/lammps/lammps.git ${LAMMPS_SRC}
-
-    # The build instructions have been verified for the following git sha.
-    # LAMMPS version - 23 June 2022
-    git checkout 7d5fc356fe
 fi
 
 # Enter the lammps directory.
 cd ${LAMMPS_SRC}
+
+# The build instructions have been verified for the following git sha.
+# LAMMPS version - 23 June 2022
+git checkout 7d5fc356fe
 
 # Create the build dir .
 if [ ! -d build_V100 ]; then

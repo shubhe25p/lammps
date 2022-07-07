@@ -2,60 +2,59 @@
 
 set -xe
 
-
 module rm darshan
 module rm xalt
 
 module load PrgEnv-gnu
 module load cudatoolkit
 module load craype-accel-nvidia80
+export MPICH_GPU_SUPPORT_ENABLED=1
 
 threads=64
 
-HOME=$(pwd)
-SRC=${HOME}/mainline_lammps
-INSTALL_PREFIX="${HOME}/build_pm"
-export CRAYPE_LINK_TYPE=dynamic
+HOME_BASE=$(pwd)
+LAMMPS_SRC="${HOME_BASE}/lammps_src"
+INSTALL_PREFIX="${HOME_BASE}/install_PM"
 
-export MPICH_GPU_SUPPORT_ENABLED=1
-
-# Check if I am using my latest cmake
-echo $(cmake --version)
-
-# git clone lammps
-if [ ! -d ${SRC} ]; then
-  git clone https://github.com/lammps/lammps.git ${SRC}
-  cd ${SRC}
-  git pull
-  cd ..
+# Clone just the stable branch of LAMMPS if not already cloned.
+if [ ! -d ${LAMMPS_SRC} ]; then
+    git clone --single-branch --branch stable https://github.com/lammps/lammps.git ${LAMMPS_SRC}
 fi
-cd ${SRC}
 
-if [ ! -d build ]; then
-    mkdir build
+# Enter the lammps directory.
+cd ${LAMMPS_SRC}
+
+# The build instructions have been verified for the following git sha.
+# LAMMPS version - 23 June 2022
+git checkout 7d5fc356fe
+
+# Create the build dir .
+if [ ! -d build_PM ]; then
+    mkdir build_PM
 fi
-cd build
+cd build_PM
 rm -rf *
 
 cmake \
--D CMAKE_BUILD_TYPE=Release \
--D CMAKE_Fortran_COMPILER=ftn \
--D CMAKE_C_COMPILER=cc \
--D CMAKE_CXX_COMPILER=CC \
--D CMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
--D LAMMPS_EXCEPTIONS=on \
--D BUILD_SHARED_LIBS=on \
--D PKG_KOKKOS=yes -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes \
--D PKG_MANYBODY=yes \
--D PKG_REPLICA=yes \
--D PKG_ML-SNAP=yes \
--D PKG_EXTRA-FIX=yes \
--D PKG_MPIIO=yes \
--D LAMMPS_SIZES=BIGBIG \
-../cmake
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_Fortran_COMPILER=ftn \
+    -D CMAKE_C_COMPILER=cc \
+    -D CMAKE_CXX_COMPILER=CC \
+    -D CMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
+    -D LAMMPS_EXCEPTIONS=on \
+    -D BUILD_SHARED_LIBS=on \
+    -D PKG_KOKKOS=yes -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes \
+    -D PKG_MANYBODY=yes \
+    -D PKG_REPLICA=yes \
+    -D PKG_ML-SNAP=yes \
+    -D PKG_EXTRA-FIX=yes \
+    -D PKG_MPIIO=yes \
+    -D LAMMPS_SIZES=BIGBIG \
+    ../cmake
 
 make -j${threads}
 make install -j${threads}
 
-cd ${HOME}
-rm -rf ${SRC}
+# Only keep the install dir not the source and build dir.
+cd ${HOME_BASE}
+rm -rf ${LAMMPS_SRC}
