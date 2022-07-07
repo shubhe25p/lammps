@@ -2,30 +2,31 @@
 
 set -xe
 export CRAYPE_LINK_TYPE=dynamic
+HOME_BASE=$(pwd)
+LAMMPS_SRC="${HOME_BASE}/lammps_src"
+INSTALL_PREFIX="${HOME_BASE}/install_knl"
 
-# Clone the lammps github repo if not already cloned.
-if [ ! -d lammps ]; then
-git clone --single-branch --branch master https://github.com/lammps/lammps.git
+# Clone just the stable branch of LAMMPS if not already cloned.
+if [ ! -d ${LAMMPS_SRC} ]; then
+    git clone --single-branch --branch stable https://github.com/lammps/lammps.git ${LAMMPS_SRC}
 
-export CRAYPE_LINK_TYPE=dynamic
-cd lammps
-# Checkout the commit from 09/02/2020.
-#git checkout 2cd0e9edc4fc820db21f0ac4bb6b9cd3be9fd50e
-
-cd ../
+    # The build instructions have been verified for the following git sha.
+    # LAMMPS version - 23 June 2022
+    git checkout 7d5fc356fe
 fi
 
 # Enter the lammps directory.
-cd lammps
+cd ${LAMMPS_SRC}
 
 # Create the build dir .
 if [ ! -d build_knl ]; then
-mkdir build_knl
+    mkdir build_knl
 fi
 cd build_knl
+rm -rf *
 
 # CMake build statement
-cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_knl/ \
+cmake -D CMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
   -D CMAKE_CXX_COMPILER=CC \
   -D CMAKE_Fortran_COMPILER=ftn \
   -D PKG_USER-OMP=ON \
@@ -41,8 +42,12 @@ cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_knl/ \
 
 # A second cmake command is needed because a few local variables need to be overwritten.
 # Looks like a bug in the current commit.
-cmake ../cmake
+#cmake ../cmake
 
 # make && make install
 make -j16
 make install -j16
+
+# Only keep the install dir not the source and build dir.
+cd ${HOME_BASE}
+rm -rf ${LAMMPS_SRC}

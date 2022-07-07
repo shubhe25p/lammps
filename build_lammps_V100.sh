@@ -3,35 +3,38 @@
 set -xe
 
 module purge
-module load esslurm
-module load cuda/11.0.1
-#module load cuda/10.2.89
-module load gcc/8.3.0
-module load openmpi/4.0.2
+module load cgpu
+module load cuda
+module load gcc
+module load openmpi
 
-# Clone the lammps github repo if not already cloned.
-if [ ! -d lammps ]; then
-git clone --single-branch --branch master https://github.com/lammps/lammps.git
+export CRAYPE_LINK_TYPE=dynamic
+HOME_BASE=$(pwd)
+LAMMPS_SRC="${HOME_BASE}/lammps_src"
+INSTALL_PREFIX="${HOME_BASE}/install_V100"
 
-cd lammps
-# Checkout the commit from 09/02/2020.
-git checkout 2cd0e9edc4fc820db21f0ac4bb6b9cd3be9fd50e
+# Clone just the stable branch of LAMMPS if not already cloned.
+if [ ! -d ${LAMMPS_SRC} ]; then
+    git clone --single-branch --branch stable https://github.com/lammps/lammps.git ${LAMMPS_SRC}
 
-cd ../
+    # The build instructions have been verified for the following git sha.
+    # LAMMPS version - 23 June 2022
+    git checkout 7d5fc356fe
 fi
 
 # Enter the lammps directory.
-cd lammps
+cd ${LAMMPS_SRC}
 
 # Create the build dir .
 if [ ! -d build_V100 ]; then
-mkdir build_V100
+    mkdir build_V100
 fi
 cd build_V100
+rm -rf *
 
 # CMake build statement
 cmake \
-  -D CMAKE_INSTALL_PREFIX=$PWD/../install_V100 \
+  -D CMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
   -D Kokkos_ARCH_VOLTA70=ON \
   -D CMAKE_BUILD_TYPE=Release \
   -D MPI_CXX_COMPILER=mpicxx \
@@ -46,3 +49,7 @@ cmake \
 # make && make install
 make -j16
 make install -j16
+
+# Only keep the install dir not the source and build dir.
+cd ${HOME_BASE}
+rm -rf ${LAMMPS_SRC}

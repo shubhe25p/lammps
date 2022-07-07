@@ -4,7 +4,7 @@
 #SBATCH -S 4
 #SBATCH --time=24:00:00
 #SBATCH --qos=debug
-#SBATCH -A m888
+#SBATCH -A m1759
 #SBATCH -J lmp_xlbench
 
 # spec.txt provides the input specification
@@ -20,7 +20,7 @@ cp ../bench_spec.txt .
 NODES=${SLURM_JOB_NUM_NODES}
 MPIPNODE=64
 THREADS=1
-EXE=../../../lammps/build_knl/lmp
+EXE=../../../install_knl/bin/lmp
 
 export OMP_PLACES=threads
 export OMP_PROC_BIND=true

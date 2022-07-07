@@ -20,7 +20,7 @@ cp ../small_spec.txt .
 NODES=${SLURM_JOB_NUM_NODES}
 MPIPNODE=64
 THREADS=1
-EXE=../../../lammps/build_knl/lmp
+EXE=../../../install_knl/bin/lmp
 
 export OMP_PLACES=threads
 export OMP_PROC_BIND=true
