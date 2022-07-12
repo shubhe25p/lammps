@@ -1,16 +1,10 @@
 
-Lmod is automatically replacing "nvidia/21.11" with "gcc/11.2.0".
+The following have been reloaded with a version change:
+  1) libfabric/1.11.0.4.124 => libfabric/1.15.0.0
 
-
-Lmod is automatically replacing "PrgEnv-nvidia/8.3.3" with "PrgEnv-gnu/8.3.3".
-
-
-Due to MODULEPATH changes, the following have been reloaded:
-  1) cray-mpich/8.1.15
-
-srun -n 1 ./../../../perlmutter/build_pm/bin/lmp -k on g 1 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 32 -var ny 32 -var nz 32 -var nsteps 100
-LAMMPS (4 May 2022)
-KOKKOS mode is enabled (src/KOKKOS/kokkos.cpp:105)
+srun -n 1 ./../../../install_PM/bin/lmp -k on g 1 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 32 -var ny 32 -var nz 32 -var nsteps 100
+LAMMPS (23 Jun 2022)
+KOKKOS mode is enabled (src/src/KOKKOS/kokkos.cpp:105)
   will use up to 1 GPU(s) per node
   using 1 OpenMP thread(s) per MPI task
 Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
@@ -48,29 +42,29 @@ Setting up Verlet run ...
   Unit style    : metal
   Current step  : 0
   Time step     : 0.0005
-Per MPI rank memory allocation (min/avg/max) = 138.6 | 138.6 | 138.6 Mbytes
+Per MPI rank memory allocation (min/avg/max) = 71.76 | 71.76 | 71.76 Mbytes
    Step          Temp          E_pair         E_mol          TotEng         Press     
          0   800           -8.909105       0             -8.8056984      5102.515     
-        50   648.90931     -8.8727488      0             -8.788872       11486.356    
-       100   656.39132     -8.8320271      0             -8.7471832      20270.712    
-Loop time of 3.14443 on 1 procs for 100 steps with 65536 atoms
+        50   647.68178     -8.8726526      0             -8.7889344      11494.697    
+       100   656.31947     -8.8320247      0             -8.74719        20282.54     
+Loop time of 3.14565 on 1 procs for 100 steps with 65536 atoms
 
-Performance: 1.374 ns/day, 17.469 hours/ns, 31.802 timesteps/s
-99.9% CPU use with 1 MPI tasks x 1 OpenMP threads
+Performance: 1.373 ns/day, 17.476 hours/ns, 31.790 timesteps/s
+100.0% CPU use with 1 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 3.0282     | 3.0282     | 3.0282     |   0.0 | 96.30
-Neigh   | 0.042589   | 0.042589   | 0.042589   |   0.0 |  1.35
-Comm    | 0.057179   | 0.057179   | 0.057179   |   0.0 |  1.82
-Output  | 0.00013699 | 0.00013699 | 0.00013699 |   0.0 |  0.00
-Modify  | 0.010511   | 0.010511   | 0.010511   |   0.0 |  0.33
-Other   |            | 0.005835   |            |       |  0.19
+Pair    | 3.0288     | 3.0288     | 3.0288     |   0.0 | 96.28
+Neigh   | 0.042433   | 0.042433   | 0.042433   |   0.0 |  1.35
+Comm    | 0.057725   | 0.057725   | 0.057725   |   0.0 |  1.84
+Output  | 0.0001447  | 0.0001447  | 0.0001447  |   0.0 |  0.00
+Modify  | 0.010437   | 0.010437   | 0.010437   |   0.0 |  0.33
+Other   |            | 0.006133   |            |       |  0.19
 
 Nlocal:          65536 ave       65536 max       65536 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
-Nghost:          20215 ave       20215 max       20215 min
+Nghost:          20214 ave       20214 max       20214 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
 Neighs:         851967 ave      851967 max      851967 min
 Histogram: 1 0 0 0 0 0 0 0 0 0

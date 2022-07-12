@@ -20,13 +20,14 @@ cp ${0} .
 cp ../micro_spec.txt .
 
 # This is needed if LAMMPS is built using cmake.
-export LD_LIBRARY_PATH=../../../perlmutter/build_pm/lib64:$LD_LIBRARY_PATH
-EXE=../../../perlmutter/build_pm/bin/lmp
+export LD_LIBRARY_PATH=../../../install_PM/lib64:$LD_LIBRARY_PATH
+EXE=../../../install_PM/bin/lmp
 
 # Match the build env.
 module load PrgEnv-gnu
 module load cudatoolkit
 module load craype-accel-nvidia80
+export MPICH_GPU_SUPPORT_ENABLED=1
 
 gpus_per_node=1
 
