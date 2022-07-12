@@ -32,10 +32,22 @@ LAMMPS uses the CMake tool to configure the build system and generate the makefi
 From within the `lammps` directory, run the CMake commands
 that is most appropriate for your compute architecture.
 The example below is suitable for generic Linux workstation without a GPU accelerator.
-```console
-cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_gcc/ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_CXX_COMPILER=g++ \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_Fortran_COMPILER=gfortran \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D BUILD_MPI=yes \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D MPI_CXX_COMPILER=mpicxx \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_USER-OMP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D DOWNLOAD_KOKKOS=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D Kokkos_ARCH_FIXME=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D PKG_SNAP=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_POSITION_INDEPENDENT_CODE=ON \ <br>&nbsp;&nbsp;&nbsp;&nbsp; -D CMAKE_EXE_FLAGS="-dynamic" \ <br>&nbsp;&nbsp;&nbsp;&nbsp; ../cmake
 ```
-Examples for NERSC's Cori-KNL and Perlmutter systems can be found in the build_lammps_KNL.sh and build_lammps_PM.sh scripts.
+cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_gcc/ \
+      -D CMAKE_CXX_COMPILER=g++ \
+      -D CMAKE_Fortran_COMPILER=gfortran \
+      -D BUILD_MPI=yes \
+      -D MPI_CXX_COMPILER=mpicxx \
+      -D PKG_USER-OMP=ON \
+      -D PKG_KOKKOS=ON \
+      -D DOWNLOAD_KOKKOS=ON \
+      -D Kokkos_ARCH_FIXME=ON \
+      -D PKG_SNAP=ON \
+      -D CMAKE_POSITION_INDEPENDENT_CODE=ON \
+      -D CMAKE_EXE_FLAGS="-dynamic" \
+      ../cmake
+```
+Examples for NERSC's Cori-KNL and Perlmutter (GPU) systems can be found in the build_lammps_KNL.sh and build_lammps_PM.sh scripts.
 More cmake options that may be useful when customizing for other systems/architectures can be found in chapter 3 of the LAMMPS User Guide: https://lammps.sandia.gov/doc/Build.html.
 
 
