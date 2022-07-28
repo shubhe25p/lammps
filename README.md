@@ -99,13 +99,31 @@ The recommended lammps_options for Perlmutter (and similar systems) are:
 "-k on g 1 -sf kk -pk kokkos newton on neigh half" 
 
 # 3. Results
+
 ## 3.1 Correctness
-Correctness can be verified by comparing the total energy per unit cell after 100 time-steps to the expected value on computed on Perlmutter ( -8.7471832 ). The relative error must be less than 50 ppm.
+Correctness can be verified by comparing the total energy per unit cell after 100 time-steps
+to the expected value on computed on Perlmutter ( -8.7467391 ).
+The relevant energy measurement can be extracted by the command
+```grep '       100' lammps.out | awk '{print $5}'```
+The tolerance for the relative error is a function of the problem size
+and is more strict for larger problems.
+The `validate.py` script is provided to perform the comparison.
+```
+$ validate.py --help
+| validate.sh: test output correctness for the NERSC-10 LAMMPS benchmark.
+| Usage: validate.sh <output_file>
+|
+$ validate.py lmp_nano.out
+| Found size: 0_nano
+| Validation: PASSED
+| LAMMPS_walltime(sec): 3.14565
+```
 
 ## 3.2 Figure of Merit
 The Figure of Merit is the walltime of the job,
 and can found in the LAMMPS output:
 grep "Loop time:" which gives the time taken to simulate a loop in seconds.
+It is also printed by `validate.py`.
 
 The reported FOM values must be paired with a description of the (i.e. node-type and node-count) used to acheive the FOM.
 
