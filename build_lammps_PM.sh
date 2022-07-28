@@ -28,6 +28,9 @@ cd ${LAMMPS_SRC}
 # LAMMPS version - 23 June 2022
 git checkout 7d5fc356fe
 
+#patch minor allocation error
+sed -i s/new\ char.7./new\ char[8]/ src/KOKKOS/kokkos.cpp
+
 # Create the build dir .
 if [ ! -d build_PM ]; then
     mkdir build_PM
@@ -56,5 +59,5 @@ make -j${threads}
 make install -j${threads}
 
 # Only keep the install dir not the source and build dir.
-cd ${HOME_BASE}
-rm -rf ${LAMMPS_SRC}
+#cd ${HOME_BASE}
+#rm -rf ${LAMMPS_SRC}
