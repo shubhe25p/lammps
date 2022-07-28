@@ -21,8 +21,9 @@ cp ${0} .
 cp ../large_spec.txt .
 
 # This is needed if LAMMPS is built using cmake.
-export LD_LIBRARY_PATH=../../../install_PM/lib64:$LD_LIBRARY_PATH
-EXE=../../../install_PM/bin/lmp
+install_dir="../../../install_PM"
+export LD_LIBRARY_PATH=${install_dir}/lib64:$LD_LIBRARY_PATH
+EXE=${install_dir}/bin/lmp
 
 # Match the build env.
 module load PrgEnv-gnu
