@@ -129,13 +129,14 @@ The reported FOM values must be paired with a description of the (i.e. node-type
 
 ## 3.3 Figure of Merit
 
-The figure of merit (FOM) in this case is the throughput of LAMMPS application, which is defined as follows.
+The figure of merit (FOM) in this case is the throughput of LAMMPS application that can be computed from the walltime of the job. LAMMPS walltime can be found in its output, you can just grep "Loop time:" which gives the time taken to simulate a loop in seconds. It is also printed by `validate.py`. Throughput can be computed as follows:
+
 - The application throughput for each node type is ( c * Total_Nodes) / ( Nodes_Used * Walltime).
 - Summing over node types give the total throughput of the application. In this case we just have one node type.
 
 <!-- This FOM can be optimized by minimizing the resources (e.g. node-hours) used by each application / node-type pair. -->
 A sample FOM calculation is illustrated in the following table.
-This example uses timing measurements for the large problem (c=1.0) on NERSC's Perlmutter system.
+This example uses timing measurements for the large problem (c=1.0) on NERSC's Perlmutter system (GPU nodes).
 Responses should provide timing and FOM esimates for the extra large problem size (17.2B atoms) (c=8.0) on the proposed system. 
 
 | Application | Node<br>Type | Total<br>Nodes | Nodes Used <br> per Job | Walltime<br>(sec) |  Application<br>Throughput<br>(jobs/hour) | Workflow<br>Throughput<br>(&lt;flows/hour&gt;) | 
