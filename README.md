@@ -143,8 +143,6 @@ Responses should provide timing and FOM esimates for the extra large problem siz
 | ---         | :---:        | :---:          | :---:                   | :---:             | :---:                                     |:---:                                    |
 | **Epsilon** | PM-GPU       |  1536         | 128                     |  853          |  50.84                                   |                                         |
 |             | Total        |                |                         |                   |  **50.84**                                | &#8628;                                 |
-|             |              |                |                         |                   |                                           |                                         |
-|             |              |                |                         |                   |                                           |                                         |
 | **FOM**     |              |                |                         |                   |                                           | **50.84**                               |
 
 
