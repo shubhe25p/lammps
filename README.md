@@ -119,13 +119,13 @@ $ validate.py lmp_nano.out
 | LAMMPS_walltime(sec): 3.14565
 ```
 
-## 3.2 Figure of Merit
+<!-- ## 3.2 Figure of Merit
 The Figure of Merit is the walltime of the job,
 and can found in the LAMMPS output:
 grep "Loop time:" which gives the time taken to simulate a loop in seconds.
 It is also printed by `validate.py`.
 
-The reported FOM values must be paired with a description of the (i.e. node-type and node-count) used to acheive the FOM.
+The reported FOM values must be paired with a description of the (i.e. node-type and node-count) used to acheive the FOM. -->
 
 ## 3.3 Figure of Merit
 
