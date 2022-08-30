@@ -141,7 +141,7 @@ Responses should provide timing and FOM esimates for the extra large problem siz
 
 | Application | Node<br>Type | Total<br>Nodes | Nodes Used <br> per Job | Walltime<br>(sec) |  Application<br>Throughput<br>(jobs/hour) | Workflow<br>Throughput<br>(&lt;flows/hour&gt;) | 
 | ---         | :---:        | :---:          | :---:                   | :---:             | :---:                                     |:---:                                    |
-| **Epsilon** | PM-GPU       |  1536         | 128                     |  853          |  50.84                                   |                                         |
+| **LAMMPS** | PM-GPU       |  1536         | 128                     |  853          |  50.84                                   |                                         |
 |             | Total        |                |                         |                   |  **50.84**                                | &#8628;                                 |
 | **FOM**     |              |                |                         |                   |                                           | **50.84**                               |
 
