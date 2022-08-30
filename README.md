@@ -127,6 +127,29 @@ It is also printed by `validate.py`.
 
 The reported FOM values must be paired with a description of the (i.e. node-type and node-count) used to acheive the FOM.
 
+## 3.3 Figure of Merit
+
+The figure of merit (FOM) in this case is the throughput of LAMMPS application, which is defined as follows.
+- The application throughput for each node type is ( c * Total_Nodes) / ( Nodes_Used * Walltime).
+- Summing over node types give the total throughput of the application. In this case we just have one node type.
+
+<!-- This FOM can be optimized by minimizing the resources (e.g. node-hours) used by each application / node-type pair. -->
+A sample FOM calculation is illustrated in the following table.
+This example uses timing measurements for the large problem (c=1.0) on NERSC's Perlmutter system.
+Responses should provide timing and FOM esimates for the extra large problem size (17.2B atoms) (c=8.0) on the proposed system. 
+
+| Application | Node<br>Type | Total<br>Nodes | Nodes Used <br> per Job | Walltime<br>(sec) |  Application<br>Throughput<br>(jobs/hour) | Workflow<br>Throughput<br>(&lt;flows/hour&gt;) | 
+| ---         | :---:        | :---:          | :---:                   | :---:             | :---:                                     |:---:                                    |
+| **Epsilon** | PM-GPU       |  1536         | 128                     |  853          |  50.84                                   |                                         |
+<!-- |             | PM-CPU       |  3072          | 128                     |  832.22           |  103.8                                    |                                         | -->
+|             | Total        |                |                         |                   |  **50.84**                                | &#8628;                                 |
+|             |              |                |                         |                   |                                           |                                         |
+|             |              |                |                         |                   |                                           |                                         |
+| **FOM**     |              |                |                         |                   |                                           | **50.84**                               |
+
+
+
+
 ## 3.3 Reporting
 For the electronic submission, include all the source and makefiles used to build on the target platform and input files and runscripts. Include all standard output files.
 
