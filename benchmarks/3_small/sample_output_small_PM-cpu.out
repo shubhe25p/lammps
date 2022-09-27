@@ -1,0 +1,73 @@
+srun -n 64 ./../../../install_PM_cpu/bin/lmp -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 256 -var ny 256 -var nz 256 -var nsteps 100
+LAMMPS (23 Jun 2022)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
+Created orthogonal box = (0 0 0) to (814.1568 814.1568 814.1568)
+  4 by 4 by 4 MPI processor grid
+Created 33554432 atoms
+  using lattice units in orthogonal box = (0 0 0) to (814.1568 814.1568 814.1568)
+  create_atoms CPU = 0.054 seconds
+SNAP Element = W, Radius 0.5, Weight 1
+SNAP keyword rcutfac 4.87644
+SNAP keyword twojmax 8
+SNAP keyword rfac0 0.99363
+SNAP keyword rmin0 0
+SNAP keyword bzeroflag 1
+SNAP keyword quadraticflag 0
+Displacing atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.87644
+  ghost atom cutoff = 4.87644
+  binsize = 2.43822, bins = 334 334 334
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair zbl, perpetual, half/full from (2)
+      attributes: half, newton on
+      pair build: halffull/newton
+      stencil: none
+      bin: none
+  (2) pair snap, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0005
+Per MPI rank memory allocation (min/avg/max) = 640.3 | 640.3 | 640.3 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   800           -8.909105       0             -8.8056969      5102.6159    
+        50   650.5561      -8.8725397      0             -8.7884487      11545.192    
+       100   657.00184     -8.8316649      0             -8.7467408      20357.366    
+Loop time of 10369.6 on 64 procs for 100 steps with 33554432 atoms
+
+Performance: 0.000 ns/day, 57608.962 hours/ns, 0.010 timesteps/s
+100.0% CPU use with 64 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 9841.6     | 9922.3     | 10313      |  97.5 | 95.69
+Neigh   | 43.517     | 45.683     | 101.72     | 104.7 |  0.44
+Comm    | 4.3585     | 394.7      | 476.78     | 487.7 |  3.81
+Output  | 0.029769   | 0.030448   | 0.031643   |   0.2 |  0.00
+Modify  | 5.108      | 5.2419     | 5.487      |   3.5 |  0.05
+Other   |            | 1.607      |            |       |  0.02
+
+Nlocal:         524288 ave      524288 max      524288 min
+Histogram: 64 0 0 0 0 0 0 0 0 0
+Nghost:        77239.2 ave       77242 max       77238 min
+Histogram: 20 0 24 0 0 12 0 4 0 4
+Neighs:    6.81574e+06 ave 6.81631e+06 max 6.81528e+06 min
+Histogram: 3 4 12 10 11 7 7 5 2 3
+FullNghs:  1.36315e+07 ave 1.36315e+07 max 1.36315e+07 min
+Histogram: 2 1 7 1 9 11 10 13 6 4
+
+Total # of neighbors = 8.7241504e+08
+Ave neighs/atom = 25.999994
+Neighbor list builds = 100
+Dangerous builds = 100
+Total wall time: 2:55:32
