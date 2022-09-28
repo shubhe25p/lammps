@@ -26,6 +26,7 @@ The following three commands will clone the stable branch of LAMMPS from version
     cd lammps
     git checkout 7d5fc356fe
 ```
+Kokkos version 3.6.1 is used in this lammps version (https://github.com/lammps/lammps/releases/tag/stable_23Jun2022_update1)
 
 ## 1.2 Configuring the LAMMPS build system
 LAMMPS uses the CMake tool to configure the build system and generate the makefiles.
