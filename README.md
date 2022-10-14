@@ -26,7 +26,11 @@ The following three commands will clone the stable branch of LAMMPS from version
     cd lammps
     git checkout 7d5fc356fe
 ```
-Kokkos version 3.6.1 is used in this lammps version (https://github.com/lammps/lammps/releases/tag/stable_23Jun2022_update1)
+
+<!-- The kokkos version number was obtained from 
+ https://github.com/lammps/lammps/releases/tag/stable_23Jun2022_update1 -->
+Kokkos version 3.6.1 is distributed with and used by this LAMMPS version.
+
 
 ## 1.2 Configuring the LAMMPS build system
 LAMMPS uses the CMake tool to configure the build system and generate the makefiles.
@@ -89,7 +93,7 @@ needed to run each of these jobs on Perlmutter.
 |6     | xlbench |   17.2B |       8         |     N/A    |     3700 (est)|    N/A     |
 
 Each problem has its own subdirectory within the benchmarks directory.
-Within those directories, the run_<size>_A100.sh script shows
+Within those directories, the `run_<size>_A100.sh` script shows
 how the jobs were executed on Perlmutter. 
 
 The essential  steps are to
@@ -120,37 +124,28 @@ $ validate.py lmp_nano.out
 | LAMMPS_walltime(sec): 3.14565
 ```
 
-<!-- ## 3.2 Figure of Merit
-The Figure of Merit is the walltime of the job,
-and can found in the LAMMPS output:
-grep "Loop time:" which gives the time taken to simulate a loop in seconds.
+## 3.2 Timing
+
+The  walltime of the job can be extracted from the LAMMPS output by the command
+```grep "Loop time:" lammps.out```
 It is also printed by `validate.py`.
-
-The reported FOM values must be paired with a description of the (i.e. node-type and node-count) used to acheive the FOM. -->
-
-## 3.3 Figure of Merit
-
-The figure of merit (FOM) in this case is the throughput of LAMMPS application that can be computed from the walltime of the job. LAMMPS walltime can be found in its output, you can just grep "Loop time:" which gives the time taken to simulate a loop in seconds. It is also printed by `validate.py`. Throughput can be computed as follows:
-
-- The application throughput for each node type is ( c * Total_Nodes) / ( Nodes_Used * Walltime).
-- Summing over node types give the total throughput of the application. In this case we just have one node type.
-
-<!-- This FOM can be optimized by minimizing the resources (e.g. node-hours) used by each application / node-type pair. -->
-A sample FOM calculation is illustrated in the following table.
-This example uses timing measurements for the large problem (c=1.0) on NERSC's Perlmutter system (GPU nodes).
-Responses should provide timing and FOM esimates for the extra large problem size (17.2B atoms) (c=8.0) on the proposed system. 
-
-| Application | Node<br>Type | Total<br>Nodes | Nodes Used <br> per Job | Walltime<br>(sec) |  Application<br>Throughput<br>(jobs/hour) | Workflow<br>Throughput<br>(&lt;flows/hour&gt;) | 
-| ---         | :---:        | :---:          | :---:                   | :---:             | :---:                                     |:---:                                    |
-| **LAMMPS** | PM-GPU       |  1536         | 128                     |  853          |  50.84                                   |                                         |
-|             | Total        |                |                         |                   |  **50.84**                                | &#8628;                                 |
-| **FOM**     |              |                |                         |                   |                                           | **50.84**                               |
-
-
 
 
 ## 3.3 Reporting
-For the electronic submission, include all the source and makefiles used to build on the target platform and input files and runscripts. Include all standard output files.
+
+Benchmark results should include projections of the walltime xlbench problem size for the workflow. 
+The hardware configuration 
+(i.e. the number of elements from each pool of computational resources) 
+needed to achieve the estimated timings must also be provided. 
+For example, if proposing a system with more than one type of compute node, 
+then report the number and type of nodes used to run each stage of the workflow. 
+If the proposed system enables disaggregation/ composability, 
+a finer grained resource list is needed, as described in the [Workflow-SSI document](link).
+
+For the electronic submission, 
+include all the source and makefiles used to build on the target platform 
+and input files and runscripts. 
+Include all standard output files.
 
 
 
