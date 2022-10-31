@@ -3,7 +3,7 @@
 #SBATCH -C cpu
 #SBATCH -t 00:30:00
 #SBATCH -J lmp_micro_PM_cpu
-#SBATCH -o lmp__PM_cpu.o%j
+#SBATCH -o lmp_micro_PM_cpu.o%j
 #SBATCH -A nstaff
 #SBATCH -q regular
 #SBATCH -n 64
@@ -20,7 +20,7 @@ cp ${0} .
 cp ../micro_spec.txt .
 
 # This is needed if LAMMPS is built using cmake.
-install_dir="../../../install_PM"
+install_dir="../../../install_PMcpu"
 export LD_LIBRARY_PATH=${install_dir}/lib64:$LD_LIBRARY_PATH
 EXE=${install_dir}/bin/lmp
 
@@ -29,7 +29,7 @@ module load PrgEnv-gnu
 
 input="${BENCH_SPEC} " 
 
-command="srun -n $SLURM_NTASKS ./$EXE $input"
+command="srun -n $SLURM_NTASKS $EXE $input"
 
 echo $command
 
