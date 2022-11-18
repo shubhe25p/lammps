@@ -1,3 +1,19 @@
+This repository describes the Materials by Design benchmark
+from the [NERSC-10 Workflow benchmark suite](URL-tbd).<br>
+The [NERSC-10 benchmark run rules](URL-tbd) should be reviewed before running this benchmark.<br>
+Note, in particular:
+- The NERSC-10 run rules apply to the Materials by Design benchmark except where explicitly noted within this README.
+- The run rules define "baseline", "ported" and "optimized" categories of performance optimization.
+- Responses to the NERSC-10 RFP should include performance estimates for the "baseline" category;
+  results for the "ported" and "optimized" categories are optional.
+- RFP responses should estimate the performance for the "xlbench" problem on the proposed architecture.
+- The projected walltime for the "xlbench" problem on the proposed system
+  must not exceed the "reference time" measured by runnning  the "large" problem on Perlmutter.
+  Concurrency adjustments (i.e. weak- or strong-scaling) may be needed to match the reference time.
+- The "capability factor" (c) descibes the increase in
+computational work (e.g. flops) between the large and xlbench problems,
+and may be used to guide resource requirments for the xlbench problem.
+The capability factor is also used  to compute  the [SSI metric](URL-tbd).
 
 # 0. Materials by Design Overview
 A fundamental challenge for molecular dynamics (MD) simulation is to propagate the dynamics for a sufficiently long simulated time to sample all of the relevant molecular configurations.  Historical MD workflows have therefore consisted of long-running jobs (or sequences of jobs), where each time-step may be accelerated by disributing atoms across parallel processing units, but the series of time-steps progresses sequentially. Recent advances in MD sampling effectivly provide route to parallelize the time dimension of the simulation as well.  
@@ -89,7 +105,7 @@ needed to run each of these jobs on Perlmutter.
 The C parameter is an estimate of the compuational complexity of the problem relative to the "large" problem.
 
 
-|Index | Size    |  #atoms |    C            |
+|Index | Size    |  #atoms |    Capability <bf> Factor (c)            |
 |----- | ----    |  ------ | ------          |
 |0     | nano    |     65k |  8<sup>-5</sup> |
 |1     | micro   |    524k |  8<sup>-4</sup> |
