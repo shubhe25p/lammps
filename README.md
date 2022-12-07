@@ -45,7 +45,7 @@ the build_lammps_PMcpu.sh and build_lammps_PM.sh scripts.
 ## 1.1 Obtaining LAMMPS source code
 The following three commands will clone the stable branch of LAMMPS from version 23 June 2022. This is the required version for baseline runs of the benchmark. Optimized runs may use custom code or newer versions of LAMMPS, but NERSC supports only the tested version.
 ```console
-    git clone --single-branch --branch master https://github.com/lammps/lammps.git
+    git clone --single-branch --branch stable https://github.com/lammps/lammps.git
     cd lammps_src
     git checkout 7d5fc356fe
 ```
@@ -167,9 +167,18 @@ GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 | tiny    |       1    |      1.33     |     54     |
 | small   |       1    |      7.32     |    424     |
 | medium  |       8    |      58.6     |    405     |
-| large   |      32    |      453.     |    853     |
+| large   |      32    |      453.     |    805     |
+| large   |      64    |      453.     |    445
+| large   |     128    |      453.     |    213     |
+| large   |     256    |      453.     |    130     |
+| large   |     512    |      453.     |     55     |
+| large   |    1024    |      453.     |    TBD*    |
 | xlbench |     N/A    |     3700 (est)|    N/A     |
 
+The reference time from NERSC's Perlmutter system was evaluated
+using 1024 GPU-nodes and is marked by a *.
+The projected walltime for the "xlbench" problem on the proposed system
+must not exceed this value.
 
 ## 3.4 Reporting
 
