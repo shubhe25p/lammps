@@ -171,8 +171,8 @@ GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 | large   |      64    |      453.     |    445
 | large   |     128    |      453.     |    213     |
 | large   |     256    |      453.     |    130     |
-| large   |     512    |      453.     |     55     |
-| large   |    1024    |      453.     |    TBD*    |
+| large   |    512     |     453.      |     55     |
+| large   |    1024    |     453.      |     31     |
 | xlbench |     N/A    |     3700 (est)|    N/A     |
 
 The reference time from NERSC's Perlmutter system was evaluated
