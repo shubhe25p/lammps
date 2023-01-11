@@ -159,6 +159,8 @@ It is also printed by `validate.py`.
 The sample data in the table below are measured runtimes from NERSC's Perlmutter GPU system.
 Perlmutter's  GPU nodes have one AMD EPYC 7763 CPU and four NVIDIA A100 GPUs;
 GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
+The upper rows of the table describe the weak-scaling performance of LAMMPS.
+Lower rows desribe the strong-scaling performance of LAMMPS when running the large problem.
 
 | Size    |  #PM nodes | Total Mem(GB) | #time(sec) |
 | ----    | ---------- | ------------- | ---------  |
@@ -168,15 +170,15 @@ GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 | small   |       1    |      7.32     |    424     |
 | medium  |       8    |      58.6     |    405     |
 | large   |      32    |      453.     |    805     |
-| large   |      64    |      453.     |    445
+| large   |      64    |      453.     |    445     |
 | large   |     128    |      453.     |    213     |
 | large   |     256    |      453.     |    130     |
-| large   |    512     |     453.      |     55     |
-| large   |    1024    |     453.      |     31     |
-| xlbench |     N/A    |     3700 (est)|    N/A     |
+| large   |     512    |     453.      |     55     |
+| large   |    1024    |     453.      |     31*    |
 
-The reference time from NERSC's Perlmutter system was evaluated
-using 1024 GPU-nodes and is marked by a *.
+The reference time was determined
+by running the large problem on 1024 Perlmutter GPU-nodes
+and is marked by a *.
 The projected walltime for the "xlbench" problem on the proposed system
 must not exceed this value.
 
@@ -187,7 +189,7 @@ The hardware configuration
 (i.e. the number of elements from each pool of computational resources) 
 needed to achieve the estimated timings must also be provided. 
 For example, if proposing a system with more than one type of compute node, 
-then report the number and type of nodes used to run each stage of the workflow. 
+then report the number and type of nodes used to run the workflow. 
 If the proposed system enables disaggregation/ composability, 
 a finer grained resource list is needed, as described in the [Workflow-SSI document](link).
 
