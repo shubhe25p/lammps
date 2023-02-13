@@ -41,12 +41,12 @@ The build instructions in this sections follow the `build_lammps_cpu.sh` script,
 which is suitable for a generic Linux workstation without a GPU accelerator,
 can be used as templates to guild the build process on other systems.
 Examples for NERSC's Perlmutter-CPU and Perlmutter-GPU systems can be found in
-the build_lammps_PMcpu.sh and build_lammps_PM.sh scripts.
+the `build_lammps_PMcpu.sh` and `build_lammps_PM.sh` scripts.
 
 
 ## 1.1 Obtaining LAMMPS source code
 The following three commands will clone the stable branch of LAMMPS from version 23 June 2022. This is the required version for baseline runs of the benchmark. Optimized runs may use custom code or newer versions of LAMMPS, but NERSC supports only the tested version.
-```console
+```
     git clone --single-branch --branch stable https://github.com/lammps/lammps.git lammps_src
     cd lammps_src
     git checkout 7d5fc356fe
@@ -86,7 +86,7 @@ cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_cpu/ \
 
 ## 1.3  Building LAMMPS
 The build scripts configure, build and install the lammps library in the repo's main directory path. The following commands will compile LAMMPS and install the executable at `lammps_src/install_<ARCH>/bin/lmp`.
-```console
+```
 make
 make install
 ```
@@ -104,7 +104,8 @@ where each successively larger problem simulates eight times as many atoms as th
 Computational requirements are expected to scale linearly with the number of atoms.
 The following table lists the approximate system resoures
 needed to run each of these jobs on Perlmutter.
-The C parameter is an estimate of the compuational complexity of the problem relative to the "reference" problem.
+The capability factor (c) parameter is an estimate of the compuational complexity
+of the problem relative to the "reference" problem.
 
 
 |Index | Size     |  #atoms | Capability <bf> Factor (c)|
@@ -121,6 +122,27 @@ Each problem has its own subdirectory within the benchmarks directory.
 Within those directories, the `run_<size>_A100.sh` script shows
 how the jobs were executed on Perlmutter. 
 
+## 2.1 Parallel decomposition
+
+LAMMPS uses a 3-D spatial domain decomposition to distribute atoms among MPI processes.
+The default decomposition divides the simulated space into rectangular bricks.
+The proportions of the bricks are autmatically computed to minimizes surface-to-volume ratio of the bricks.
+LAMMPS will run correctly with any number of MPI processes,
+but better performance is often obtained when
+the number of MPI processes is the product of three near-equal integers.
+
+If additional control of the domain composition is needed,
+the `processors` command may (optionally) be added to the file `benchmarks/common/in.step.test`.
+The parameters of the `in.step.test` file may not be modified **except** for the addition of a `processors` command.
+This command requires three integer parameters that correspond to the x,y,z dimensions of the process grid.
+Changes to `processors` may require updates to the job submission script
+so that the correct number of MPI processes is started.
+Refer to the LAMMPS documentation for more information about the
+[`processors` command]( https://docs.lammps.org/processors.html ).
+
+
+## 2.2 Job submission
+
 The essential  steps are to
 1. add a link to the data that are common to all problem sizes: `ln -s ../../common`
 2. load the size-specific simulation parameters into the BENCH_SPEC variable: `source <size>_spec.txt`
@@ -131,32 +153,28 @@ The recommended lammps_options for Perlmutter-GPU (and similar systems) are:
 
 # 3. Results
 
-## 3.1 Correctness
-Correctness can be verified by comparing the total energy per unit cell after 100 time-steps
+## 3.1 Correctness & Timing 
+Correctness can be verified using the `benchmarks/validate.py` script,
+which compares the total energy per unit cell after 100 time-steps
 to the expected value on computed on Perlmutter ( -8.7467391 ).
-The relevant energy measurement can be extracted by the command
-```grep '       100' lammps.out | awk '{print $5}'```
 The tolerance for the relative error is a physics-motivated function of the problem size
 and is more strict for larger problems.
-The `validate.py` script is provided to perform the comparison.
+The result of the validation test is printed on the second line of the script output.
+For example:
 ```
-$ validate.py --help
+> validate.py --help
 | validate.sh: test output correctness for the NERSC-10 LAMMPS benchmark.
 | Usage: validate.sh <output_file>
 |
-$ validate.py lmp_nano.out
+> validate.py lmp_nano.out
 | Found size: 0_nano
 | Validation: PASSED
 | LAMMPS_walltime(sec): 3.14565
 ```
+In addition, `validate.py` will also print the LAMMPS_walltime,
+which is the sole performance measurement for the benchmark.
 
-## 3.2 Timing
-
-The  walltime of the job can be extracted from the LAMMPS output by the command
-```grep "Loop time:" lammps.out```
-It is also printed by `validate.py`.
-
-## 3.3 Reference Performance on Perlmutter
+## 3.2 Reference Performance on Perlmutter
 
 The sample data in the table below are measured runtimes from NERSC's Perlmutter GPU system.
 Perlmutter's  GPU nodes have one AMD EPYC 7763 CPU and four NVIDIA A100 GPUs;
@@ -164,7 +182,7 @@ GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 The upper rows of the table describe the weak-scaling performance of LAMMPS.
 Lower rows desribe the strong-scaling performance of LAMMPS when running the reference problem.
 
-| Size      |  #PM nodes | Total Mem(GB) | #time(sec) |
+| Size      |  #PM nodes | Total Mem(GB) | #LAMMPS<br>walltime(sec) |
 | ----      | ---------- | ------------- | ---------  |
 | nano      |    0.25    |      0.14     |      3     |
 | micro     |    0.25    |      0.23     |     25     |
@@ -184,9 +202,9 @@ and is marked by a *.
 The projected walltime for the target problem on the target system
 must not exceed this value.
 
-## 3.4 Reporting
+## 3.3 Reporting
 
-Benchmark results should include projections of the walltime target problem size for the workflow. 
+Benchmark results should include projections of the LAMMPS_walltime for the target problem size of the workflow. 
 The hardware configuration 
 (i.e. the number of elements from each pool of computational resources) 
 needed to achieve the estimated timings must also be provided. 
