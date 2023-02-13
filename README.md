@@ -1,6 +1,7 @@
 This repository describes the Materials by Design benchmark
-from the [NERSC-10 Workflow benchmark suite](URL-tbd).<br>
-The [NERSC-10 benchmark run rules](URL-tbd) should be reviewed before running this benchmark.<br>
+from the [NERSC-10 Workflow benchmark suite]( https://www.nersc.gov/systems/nersc-10/tbd ).<br>
+The [NERSC-10 benchmark run rules]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/N10_Benchmark_RunRules.pdf )
+should be reviewed before running this benchmark.<br>
 Note, in particular:
 - The NERSC-10 run rules apply to the Materials by Design benchmark except where explicitly noted within this README.
 - The run rules define "baseline", "ported" and "optimized" categories of performance optimization.
@@ -13,7 +14,8 @@ Note, in particular:
 - The "capability factor" (c) descibes the increase in
 computational work (e.g. flops) between the large and xlbench problems,
 and may be used to guide resource requirments for the xlbench problem.
-The capability factor is also used  to compute  the [SSI metric](URL-tbd).
+The capability factor is also used  to compute  the
+[Sustained System Improvement (SSI) metric]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.tbd ).
 
 # 0. Materials by Design Overview
 A fundamental challenge for molecular dynamics (MD) simulation is to propagate the dynamics for a sufficiently long simulated time to sample all of the relevant molecular configurations.  Historical MD workflows have therefore consisted of long-running jobs (or sequences of jobs), where each time-step may be accelerated by disributing atoms across parallel processing units, but the series of time-steps progresses sequentially. Recent advances in MD sampling effectivly provide route to parallelize the time dimension of the simulation as well.  
@@ -191,7 +193,8 @@ needed to achieve the estimated timings must also be provided.
 For example, if proposing a system with more than one type of compute node, 
 then report the number and type of nodes used to run the workflow. 
 If the proposed system enables disaggregation/ composability, 
-a finer grained resource list is needed, as described in the [Workflow-SSI document](link).
+a finer grained resource list is needed, as described in the
+[Workflow-SSI document]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.tbd ).
 
 For the electronic submission, 
 include all the source and makefiles used to build on the target platform 
