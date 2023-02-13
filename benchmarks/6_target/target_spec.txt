@@ -1,5 +1,5 @@
-spec=large
-nn=1024
+spec=target
+nn=2048
 BENCH_SPEC="\
         -in common/in.snap.test \
         -var snapdir common/2J8_W.SNAP \

@@ -1,24 +1,24 @@
 #!/bin/bash -l
-#SBATCH -N 32
+#SBATCH -N 512
 #SBATCH -C cpu
-#SBATCH -t 00:30:00
-#SBATCH -J lmp_large_PM_cpu
-#SBATCH -o lmp_large_PM_cpu.o%j
+#SBATCH -t 24:00:00
+#SBATCH -J lmp_target_PM_cpu
+#SBATCH -o lmp_target_PM_cpu.o%j
 #SBATCH -A nstaff
 #SBATCH -q regular
-#SBATCH -n 2048
+#SBATCH -n 32768
 #SBATCH --ntasks-per-node=64
 #SBATCH -c 2
 
 # spec.txt provides the input specification
 # by defining the variables spec and BENCH_SPEC
-source large_spec.txt
+source target_spec.txt
 
 mkdir lammps_$spec.$SLURM_JOB_ID
 cd    lammps_$spec.$SLURM_JOB_ID
 ln -s ../../common .
 cp ${0} .
-cp ../large_spec.txt .
+cp ../target_spec.txt .
 
 # This is needed if LAMMPS is built using cmake.
 install_dir="../../../install_PMcpu"

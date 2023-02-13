@@ -7,13 +7,13 @@ Note, in particular:
 - The run rules define "baseline", "ported" and "optimized" categories of performance optimization.
 - Responses to the NERSC-10 RFP should include performance estimates for the "baseline" category;
   results for the "ported" and "optimized" categories are optional.
-- RFP responses should estimate the performance for the "xlbench" problem on the proposed architecture.
-- The projected walltime for the "xlbench" problem on the proposed system
-  must not exceed the "reference time" measured by runnning  the "large" problem on Perlmutter.
+- RFP responses should estimate the performance for the target problem on the target architecture.
+- The projected walltime for the target problem on the target system
+  must not exceed the reference time measured by runnning  the reference problem on Perlmutter.
   Concurrency adjustments (i.e. weak- or strong-scaling) may be needed to match the reference time.
 - The "capability factor" (c) descibes the increase in
-computational work (e.g. flops) between the large and xlbench problems,
-and may be used to guide resource requirments for the xlbench problem.
+computational work (e.g. flops) between the reference and target problems,
+and may be used to guide resource requirments for the target problem.
 The capability factor is also used  to compute  the
 [Sustained System Improvement (SSI) metric]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.tbd ).
 
@@ -94,8 +94,8 @@ make install
 # 2. Running the benchmark
 
 Input files and batch scipts for seven (7) problem sizes are provided in the benchmarks directory.
-NERSC-10 RFP responses should provide results (measured or projected) for the "xlbench" problem size.
-SSI reference values from NERSC's Perlutter system were evaluated using the "large" problem size.
+NERSC-10 RFP responses should provide results (measured or projected) for the "target" problem size.
+SSI reference values from NERSC's Perlutter system were evaluated using the "reference" problem size.
 Other problem sizes  have been provided as a convenience,
 to facilitate profiling at different scales (e.g. socket, node, blade or rack),
 and extraplation to larger sizes.
@@ -104,18 +104,18 @@ where each successively larger problem simulates eight times as many atoms as th
 Computational requirements are expected to scale linearly with the number of atoms.
 The following table lists the approximate system resoures
 needed to run each of these jobs on Perlmutter.
-The C parameter is an estimate of the compuational complexity of the problem relative to the "large" problem.
+The C parameter is an estimate of the compuational complexity of the problem relative to the "reference" problem.
 
 
-|Index | Size    |  #atoms |    Capability <bf> Factor (c)            |
-|----- | ----    |  ------ | ------          |
-|0     | nano    |     65k |  8<sup>-5</sup> |
-|1     | micro   |    524k |  8<sup>-4</sup> |
-|2     | tiny    |   4.19M |  8<sup>-3</sup> |
-|3     | small   |   33.6M |  8<sup>-2</sup> |
-|4     | medium  |   268.M |      0.125      |
-|5     | large   |   2.15B |       1         |
-|6     | xlbench |   17.2B |       8         |
+|Index | Size     |  #atoms | Capability <bf> Factor (c)|
+|----- | ----     |  ------ | ------          |
+|0     | nano     |     65k |  8<sup>-5</sup> |
+|1     | micro    |    524k |  8<sup>-4</sup> |
+|2     | tiny     |   4.19M |  8<sup>-3</sup> |
+|3     | small    |   33.6M |  8<sup>-2</sup> |
+|4     | medium   |   268.M |      0.125      |
+|5     | reference|   2.15B |       1         |
+|6     | target   |   17.2B |       8         |
 
 Each problem has its own subdirectory within the benchmarks directory.
 Within those directories, the `run_<size>_A100.sh` script shows
@@ -162,37 +162,37 @@ The sample data in the table below are measured runtimes from NERSC's Perlmutter
 Perlmutter's  GPU nodes have one AMD EPYC 7763 CPU and four NVIDIA A100 GPUs;
 GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 The upper rows of the table describe the weak-scaling performance of LAMMPS.
-Lower rows desribe the strong-scaling performance of LAMMPS when running the large problem.
+Lower rows desribe the strong-scaling performance of LAMMPS when running the reference problem.
 
-| Size    |  #PM nodes | Total Mem(GB) | #time(sec) |
-| ----    | ---------- | ------------- | ---------  |
-| nano    |    0.25    |      0.14     |      3     |
-| micro   |    0.25    |      0.23     |     25     |
-| tiny    |       1    |      1.33     |     54     |
-| small   |       1    |      7.32     |    424     |
-| medium  |       8    |      58.6     |    405     |
-| large   |      32    |      453.     |    805     |
-| large   |      64    |      453.     |    445     |
-| large   |     128    |      453.     |    213     |
-| large   |     256    |      453.     |    130     |
-| large   |     512    |     453.      |     55     |
-| large   |    1024    |     453.      |     31*    |
+| Size      |  #PM nodes | Total Mem(GB) | #time(sec) |
+| ----      | ---------- | ------------- | ---------  |
+| nano      |    0.25    |      0.14     |      3     |
+| micro     |    0.25    |      0.23     |     25     |
+| tiny      |       1    |      1.33     |     54     |
+| small     |       1    |      7.32     |    424     |
+| medium    |       8    |      58.6     |    405     |
+| reference |      32    |      453.     |    805     |
+| reference |      64    |      453.     |    445     |
+| reference |     128    |      453.     |    213     |
+| reference |     256    |      453.     |    130     |
+| reference |     512    |     453.      |     55     |
+| reference |    1024    |     453.      |     31*    |
 
 The reference time was determined
-by running the large problem on 1024 Perlmutter GPU-nodes
+by running the reference problem on 1024 Perlmutter GPU-nodes
 and is marked by a *.
-The projected walltime for the "xlbench" problem on the proposed system
+The projected walltime for the target problem on the target system
 must not exceed this value.
 
 ## 3.4 Reporting
 
-Benchmark results should include projections of the walltime xlbench problem size for the workflow. 
+Benchmark results should include projections of the walltime target problem size for the workflow. 
 The hardware configuration 
 (i.e. the number of elements from each pool of computational resources) 
 needed to achieve the estimated timings must also be provided. 
-For example, if proposing a system with more than one type of compute node, 
+For example, if the target system includes more than one type of compute node, 
 then report the number and type of nodes used to run the workflow. 
-If the proposed system enables disaggregation/ composability, 
+If the target system enables disaggregation/ composability, 
 a finer grained resource list is needed, as described in the
 [Workflow-SSI document]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.tbd ).
 

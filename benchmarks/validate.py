@@ -65,8 +65,8 @@ def check_Natom( Natom ):
             4194304:(2,'2_tiny'),
            33554432:(3,'3_small'),
           268435456:(4,'4_medium'),
-         2147483648:(5,'5_large'),
-        17179869184:(6,'6_xlbench')
+         2147483648:(5,'5_reference'),
+        17179869184:(6,'6_target')
     }
 
     if( Natom in ref_Natom ):

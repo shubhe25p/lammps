@@ -1,5 +1,5 @@
-spec=xlbench
-nn=2048
+spec=reference
+nn=1024
 BENCH_SPEC="\
         -in common/in.snap.test \
         -var snapdir common/2J8_W.SNAP \

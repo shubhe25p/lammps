@@ -1,24 +1,24 @@
 #!/bin/bash -l
 #SBATCH -C gpu
 #SBATCH -q regular
-#SBATCH -t 00:30:00
-#SBATCH -J lmp_large
-#SBATCH -o lmp_large.o%j
+#SBATCH -t 24:00:00
+#SBATCH -J lmp_target
+#SBATCH -o lmp_target.o%j
 #SBATCH -A nstaff_g
-#SBATCH -n 128
+#SBATCH -n 2048
 #SBATCH -c 32
 #SBATCH --gpus-per-task=1
 #SBATCH --gpu-bind=none
 
 # spec.txt provides the input specification
 # by defining the variables spec and BENCH_SPEC
-source large_spec.txt
+source target_spec.txt
 
 mkdir lammps_$spec.$SLURM_JOB_ID
 cd    lammps_$spec.$SLURM_JOB_ID
 ln -s ../../common .
 cp ${0} .
-cp ../large_spec.txt .
+cp ../target_spec.txt .
 
 # This is needed if LAMMPS is built using cmake.
 install_dir="../../../install_PM"
