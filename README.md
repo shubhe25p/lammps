@@ -47,7 +47,7 @@ the build_lammps_PMcpu.sh and build_lammps_PM.sh scripts.
 ## 1.1 Obtaining LAMMPS source code
 The following three commands will clone the stable branch of LAMMPS from version 23 June 2022. This is the required version for baseline runs of the benchmark. Optimized runs may use custom code or newer versions of LAMMPS, but NERSC supports only the tested version.
 ```console
-    git clone --single-branch --branch stable https://github.com/lammps/lammps.git
+    git clone --single-branch --branch stable https://github.com/lammps/lammps.git lammps_src
     cd lammps_src
     git checkout 7d5fc356fe
 ```
@@ -62,7 +62,7 @@ and may include custom backends optimized for the target architecture.
 
 ## 1.2 Configuring the LAMMPS build system
 LAMMPS uses the CMake tool to configure the build system and generate the makefiles.
-From within the `lammps` directory, run the CMake commands
+From within the `lammps_src` directory, run the CMake commands
 that is most appropriate for your compute architecture.
 The example below is suitable for generic Linux workstation without a GPU accelerator.
 Additional cmake options that may be useful when customizing for other systems/architectures can be found
@@ -85,7 +85,7 @@ cmake -D CMAKE_INSTALL_PREFIX=$PWD/../install_cpu/ \
 ```
 
 ## 1.3  Building LAMMPS
-The build scripts configure, build and install the lammps library in the repo's main directory path. The following commands will compile LAMMPS and install the executable at `lammps/install_<ARCH>/bin/lmp`.
+The build scripts configure, build and install the lammps library in the repo's main directory path. The following commands will compile LAMMPS and install the executable at `lammps_src/install_<ARCH>/bin/lmp`.
 ```console
 make
 make install
