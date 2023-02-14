@@ -1,5 +1,5 @@
 This repository describes the Materials by Design benchmark
-from the [NERSC-10 Workflow benchmark suite]( https://www.nersc.gov/systems/nersc-10/tbd ).<br>
+from the [NERSC-10 Workflow benchmark suite]( https://www.nersc.gov/systems/nersc-10/benchmarks ).<br>
 The [NERSC-10 benchmark run rules]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/N10_Benchmark_RunRules.pdf )
 should be reviewed before running this benchmark.<br>
 Note, in particular:
@@ -15,7 +15,7 @@ Note, in particular:
 computational work (e.g. flops) between the reference and target problems,
 and may be used to guide resource requirments for the target problem.
 The capability factor is also used  to compute  the
-[Sustained System Improvement (SSI) metric]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.tbd ).
+[Sustained System Improvement (SSI) metric]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.pdf ).
 
 # 0. Materials by Design Overview
 A fundamental challenge for molecular dynamics (MD) simulation is to propagate the dynamics for a sufficiently long simulated time to sample all of the relevant molecular configurations.  Historical MD workflows have therefore consisted of long-running jobs (or sequences of jobs), where each time-step may be accelerated by disributing atoms across parallel processing units, but the series of time-steps progresses sequentially. Recent advances in MD sampling effectivly provide route to parallelize the time dimension of the simulation as well.  
@@ -212,7 +212,7 @@ For example, if the target system includes more than one type of compute node,
 then report the number and type of nodes used to run the workflow. 
 If the target system enables disaggregation/ composability, 
 a finer grained resource list is needed, as described in the
-[Workflow-SSI document]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.tbd ).
+[Workflow-SSI document]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/Workflow_SSI.pdf ).
 
 For the electronic submission, 
 include all the source and makefiles used to build on the target platform 
