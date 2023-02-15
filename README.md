@@ -1,5 +1,5 @@
-This repository describes the Materials by Design benchmark
-from the [NERSC-10 Workflow benchmark suite]( https://www.nersc.gov/systems/nersc-10/benchmarks ).<br>
+This repository describes the Materials by Design workflow component benchmark
+from the [NERSC-10 Workflow Benchmark Suite]( https://www.nersc.gov/systems/nersc-10/benchmarks ).<br>
 The [NERSC-10 benchmark run rules]( https://gitlab.com/NERSC/N10-benchmarks/run-rules-and-ssi/-/blob/main/N10_Benchmark_RunRules.pdf )
 should be reviewed before running this benchmark.<br>
 Note, in particular:
@@ -204,7 +204,7 @@ must not exceed this value.
 
 ## 3.3 Reporting
 
-Benchmark results should include projections of the LAMMPS_walltime for the target problem size of the workflow. 
+Benchmark results should include projections of the LAMMPS_walltime for the target problem size 
 The hardware configuration 
 (i.e. the number of elements from each pool of computational resources) 
 needed to achieve the estimated timings must also be provided. 
