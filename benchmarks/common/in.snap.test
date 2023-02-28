@@ -2,7 +2,7 @@
 
 # specify the domain decomposition, if desired
 # Px, Py, Pz determine be the number of MPI processes in each dimension of the process grid
- the proportions of the bricks #processors Px Py Pz
+#processors Px Py Pz
 
 # initialize
 
