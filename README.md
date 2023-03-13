@@ -55,10 +55,12 @@ The following three commands will clone the stable branch of LAMMPS from version
 <!-- The kokkos version number was obtained from 
  https://github.com/lammps/lammps/releases/tag/stable_23Jun2022_update1 -->
 Kokkos version 3.6.1 is distributed with and used by this LAMMPS version.
-Baseline results must use this version of the Kokkos library and backends.
-Optimized results may use other versions of Kokkos 
-and may include custom backends optimized for the target architecture.
-
+Baseline results may use this version or any released version of Kokkos <=3.7.1.
+Ported results may use any released version of Kokkos,
+including versions >3.7.1.
+Optimized results may use other versions of Kokkos,
+custom Kokkos backends optimized for the target architecture,
+as well as code modifications that are expressed in languages or abstractions other than Kokkos.
 
 ## 1.2 Configuring the LAMMPS build system
 LAMMPS uses the CMake tool to configure the build system and generate the makefiles.
