@@ -171,10 +171,12 @@ For example:
 > validate.py lmp_nano.out
 | Found size: 0_nano
 | Validation: PASSED
-| LAMMPS_walltime(sec): 3.14565
+| BenchmarkTime (sec): 3.14565
 ```
-In addition, `validate.py` will also print the LAMMPS_walltime,
+In addition, `validate.py` will also print the BenchmarkTime,
 which is the sole performance measurement for the benchmark.
+The BenchmarkTime printed by `validate.py` corresponds to the "Loop Time" in the LAMMPS output file,
+and excludes the preliminary work needed to set-up the job.
 
 ## 3.2 Reference Performance on Perlmutter
 
@@ -184,7 +186,7 @@ GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 The upper rows of the table describe the weak-scaling performance of LAMMPS.
 Lower rows desribe the strong-scaling performance of LAMMPS when running the reference problem.
 
-| Size      |  #PM nodes | Total Mem(GB) | #LAMMPS<br>walltime(sec) |
+| Size      |  #PM nodes | Total Mem(GB) | #BenchmarkTime(sec) |
 | ----      | ---------- | ------------- | ---------  |
 | nano      |    0.25    |      0.14     |      3     |
 | micro     |    0.25    |      0.23     |     25     |
@@ -201,12 +203,12 @@ Lower rows desribe the strong-scaling performance of LAMMPS when running the ref
 The reference time was determined
 by running the reference problem on 1024 Perlmutter GPU-nodes
 and is marked by a *.
-The projected walltime for the target problem on the target system
+The projected BenchmarkTime for the target problem on the target system
 must not exceed this value.
 
 ## 3.3 Reporting
 
-Benchmark results should include projections of the LAMMPS_walltime for the target problem size 
+Benchmark results should include projections of the BenchmarkTime for the target problem size 
 The hardware configuration 
 (i.e. the number of elements from each pool of computational resources) 
 needed to achieve the estimated timings must also be provided. 

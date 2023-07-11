@@ -123,7 +123,7 @@ def main():
     else:
         print("Validation:", "FAILED")
 
-    print("LAMMPS_walltime(sec):", T_measured )
+    print("BenchmarkTime(sec):", T_measured )
         
 #main
 
