@@ -181,7 +181,7 @@ and excludes the preliminary work needed to set-up the job.
 ## 3.2 Reference Performance on Perlmutter
 
 The sample data in the table below are measured runtimes from NERSC's Perlmutter GPU system.
-Perlmutter's  GPU nodes have one AMD EPYC 7763 CPU and four NVIDIA A100 GPUs;
+Perlmutter's  GPU nodes have one AMD EPYC 7763 CPU and four NVIDIA 40GB A100 GPUs;
 GPU jobs used four MPI tasks per node, each with one GPU and 16 cores.
 The upper rows of the table describe the weak-scaling performance of LAMMPS.
 Lower rows desribe the strong-scaling performance of LAMMPS when running the reference problem.
