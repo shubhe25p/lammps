@@ -8,11 +8,9 @@ Note, in particular:
 - Responses to the NERSC-10 RFP should include performance estimates for the "baseline" category;
   results for the "ported" and "optimized" categories are optional.
 - RFP responses should estimate the performance for the target problem on the target architecture.
-- For the ported and optimized categories,
-  the projected walltime for the target problem on the target system
+- The projected walltime for the target problem on the target system
   must not exceed the reference time measured by runnning  the reference problem on Perlmutter.
   Concurrency adjustments (i.e. weak- or strong-scaling) may be needed to match the reference time.
-  The constraint on the projected walltime does not apply to the baseline category.
 - The "capability factor" (c) descibes the increase in
 computational work (e.g. flops) between the reference and target problems,
 and may be used to guide resource requirments for the target problem.
