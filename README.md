@@ -153,6 +153,27 @@ No lammps_options are needed for CPU-only runs.
 The recommended lammps_options for Perlmutter-GPU (and similar systems) are:
 "-k on g 1 -sf kk -pk kokkos newton on neigh half" 
 
+## 2.3 Numerical reproducibility
+
+The LAMMPS benchmark uses a random number generator (RNG),
+both during initialization and during the simulation loop,
+and can cause non-deterministic results.
+The absence of exact numerial reproducibility
+creats validation challenges when porting or optimizing the code.
+*When debugging*, it may be useful to avoid the effects of the RNG
+by modifying the input file (in.snap.test) as follows:
+```
+> diff in.snap.test in.snap.debug
+52c52
+< velocity        all create 800.0 4928459 loop local
+---
+> velocity        all create 800.0 4928459 loop geom
+55c55
+< fix             2 all langevin 800.0 800.0 0.025 398928
+---
+> fix             2 all langevin   0.0   0.0 0.025 398928
+```
+
 # 3. Results
 
 ## 3.1 Correctness & Timing 
@@ -161,6 +182,8 @@ which compares the total energy per unit cell after 100 time-steps
 to the expected value on computed on Perlmutter ( -8.7467391 ).
 The tolerance for the relative error is a physics-motivated function of the problem size
 and is more strict for larger problems.
+Because this test is based on statistical properties of the simulated system,
+it is not sensitive to this source of variation describe in [Section 2.3](#23-numerical-reproducibility)
 The result of the validation test is printed on the second line of the script output.
 For example:
 ```
