@@ -28,6 +28,9 @@ cd ${LAMMPS_SRC}
 # LAMMPS version - 23 June 2022
 git checkout 7d5fc356fe
 
+#update minimum architecture bc new versions of nvcc (>=12) dont support sm35
+sed -i s/sm_35/sm_80/ ${LAMMPS_SRC}/lib/kokkos/bin/nvcc_wrapper
+
 #patch minor allocation error
 sed -i s/new\ char.7./new\ char[8]/ src/KOKKOS/kokkos.cpp
 
