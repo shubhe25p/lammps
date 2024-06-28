@@ -1,0 +1,102 @@
+
+Note: the module "cray-mpich" cannot be unloaded because it was not loaded.
+
+
+Lmod is automatically replacing "llvm/18.1.0" with "gcc-native/12.3".
+
+
+Lmod is automatically replacing "PrgEnv-llvm/1.0" with "PrgEnv-gnu/8.5.0".
+
+
+Lmod is automatically replacing "cray-mpich/8.1.28" with "openmpi/5.0.3".
+
+srun --mpi=pmix -n 32 ./../../../install_GPU_gnu-ompi/bin/lmp -k on g 4 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 512 -var ny 512 -var nz 512 -var nsteps 100
+[nid003528:641695] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid003528 could be created.
+[nid003528:641695] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002913:716537] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid002913 could be created.
+[nid002913:716537] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001084:572543] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid001084 could be created.
+[nid001084:572543] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002916:715129] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid002916 could be created.
+[nid002916:715129] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid003008:993281] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid003008 could be created.
+[nid003008:993281] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001085:418199] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid001085 could be created.
+[nid001085:418199] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid003529:504484] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid003529 could be created.
+[nid003529:504484] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid003005:995011] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27251421.0/shared_mem_cuda_pool.nid003005 could be created.
+[nid003005:995011] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+LAMMPS (23 Jun 2022)
+KOKKOS mode is enabled (src/src/KOKKOS/kokkos.cpp:105)
+  will use up to 4 GPU(s) per node
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
+Created orthogonal box = (0 0 0) to (1628.3136 1628.3136 1628.3136)
+  2 by 4 by 4 MPI processor grid
+Created 268435456 atoms
+  using lattice units in orthogonal box = (0 0 0) to (1628.3136 1628.3136 1628.3136)
+  create_atoms CPU = 1.922 seconds
+SNAP Element = W, Radius 0.5, Weight 1
+SNAP keyword rcutfac 4.87644
+SNAP keyword twojmax 8
+SNAP keyword rfac0 0.99363
+SNAP keyword rmin0 0
+SNAP keyword bzeroflag 1
+SNAP keyword quadraticflag 0
+Displacing atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.87644
+  ghost atom cutoff = 4.87644
+  binsize = 4.87644, bins = 334 334 334
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair zbl, perpetual, half/full from (2)
+      attributes: half, newton on, kokkos_device
+      pair build: halffull/newton/kk/device
+      stencil: none
+      bin: none
+  (2) pair snap, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0005
+Per MPI rank memory allocation (min/avg/max) = 8779 | 8779 | 8779 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   800           -8.909105       0             -8.8056969      5102.6163    
+        50   650.77811     -8.8725439      0             -8.7884242      11546.321    
+       100   656.92109     -8.8316618      0             -8.7467481      20358.095    
+Loop time of 400.776 on 32 procs for 100 steps with 268435456 atoms
+
+Performance: 0.011 ns/day, 2226.532 hours/ns, 0.250 timesteps/s
+100.0% CPU use with 32 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 394.31     | 394.66     | 395.1      |   1.2 | 98.47
+Neigh   | 2.8876     | 2.9302     | 2.9654     |   0.9 |  0.73
+Comm    | 2.0318     | 2.4778     | 2.8391     |  15.3 |  0.62
+Output  | 0.0016307  | 0.012312   | 0.015606   |   2.3 |  0.00
+Modify  | 0.38462    | 0.39227    | 0.43932    |   1.5 |  0.10
+Other   |            | 0.2999     |            |       |  0.07
+
+Nlocal:    8.38861e+06 ave 8.38861e+06 max 8.38861e+06 min
+Histogram: 32 0 0 0 0 0 0 0 0 0
+Nghost:         500796 ave      500800 max      500791 min
+Histogram: 1 2 3 6 6 4 1 3 3 3
+Neighs:    1.09052e+08 ave 1.09053e+08 max 1.09051e+08 min
+Histogram: 3 6 1 4 4 7 3 3 0 1
+FullNghs:  2.18104e+08 ave 2.18104e+08 max 2.18104e+08 min
+Histogram: 1 2 4 5 4 5 4 1 4 2
+
+Total # of neighbors = 6.9793203e+09
+Ave neighs/atom = 25.999994
+Neighbor list builds = 100
+Dangerous builds = 100
+Total wall time: 0:06:51

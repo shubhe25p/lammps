@@ -1,0 +1,89 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) gpu/1.0
+
+
+Lmod is automatically replacing "gcc-native/12.3" with "llvm/18.1.0".
+
+
+Lmod is automatically replacing "PrgEnv-gnu/8.5.0" with "PrgEnv-llvm/1.0".
+
+
+Lmod is automatically replacing "mpich/4.2.0" with "openmpi/5.0.3".
+
+srun --mpi=pmix -n 4 ./../../../install_PM_GPU_LLVM/bin/lmp -k on g 4 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 128 -var ny 128 -var nz 128 -var nsteps 100
+[nid002960:279011] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242151.0/shared_mem_cuda_pool.nid002960 could be created.
+[nid002960:279011] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+LAMMPS (23 Jun 2022)
+KOKKOS mode is enabled (src/KOKKOS/kokkos.cpp:105)
+  will use up to 4 GPU(s) per node
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
+Created orthogonal box = (0 0 0) to (407.0784 407.0784 407.0784)
+  1 by 2 by 2 MPI processor grid
+Created 4194304 atoms
+  using lattice units in orthogonal box = (0 0 0) to (407.0784 407.0784 407.0784)
+  create_atoms CPU = 0.336 seconds
+SNAP Element = W, Radius 0.5, Weight 1
+SNAP keyword rcutfac 4.87644
+SNAP keyword twojmax 8
+SNAP keyword rfac0 0.99363
+SNAP keyword rmin0 0
+SNAP keyword bzeroflag 1
+SNAP keyword quadraticflag 0
+Displacing atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.87644
+  ghost atom cutoff = 4.87644
+  binsize = 4.87644, bins = 84 84 84
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair zbl, perpetual, half/full from (2)
+      attributes: half, newton on, kokkos_device
+      pair build: halffull/newton/kk/device
+      stencil: none
+      bin: none
+  (2) pair snap, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0005
+Per MPI rank memory allocation (min/avg/max) = 1104 | 1104 | 1104 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   800           -8.909105       0             -8.8056969      5102.6141    
+        50   651.0243      -8.8725513      0             -8.7883998      11546.072    
+       100   657.08923     -8.8316465      0             -8.746711       20359.785    
+Loop time of 58.2709 on 4 procs for 100 steps with 4194304 atoms
+
+Performance: 0.074 ns/day, 323.727 hours/ns, 1.716 timesteps/s
+100.0% CPU use with 4 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 57.358     | 57.388     | 57.413     |   0.3 | 98.49
+Neigh   | 0.47676    | 0.47895    | 0.4834     |   0.4 |  0.82
+Comm    | 0.28215    | 0.30578    | 0.33202    |   3.2 |  0.52
+Output  | 0.0004858  | 0.00053921 | 0.0006054  |   0.0 |  0.00
+Modify  | 0.05643    | 0.056844   | 0.057128   |   0.1 |  0.10
+Other   |            | 0.04032    |            |       |  0.07
+
+Nlocal:    1.04858e+06 ave 1.04858e+06 max 1.04858e+06 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+Nghost:         127544 ave      127546 max      127543 min
+Histogram: 2 0 0 0 0 0 1 0 0 1
+Neighs:    1.36315e+07 ave 1.36319e+07 max 1.36311e+07 min
+Histogram: 1 0 0 1 0 1 0 0 0 1
+FullNghs:   2.7263e+07 ave  2.7263e+07 max  2.7263e+07 min
+Histogram: 1 0 0 1 0 0 1 0 0 1
+
+Total # of neighbors = 1.0905188e+08
+Ave neighs/atom = 25.999993
+Neighbor list builds = 100
+Dangerous builds = 100
+Total wall time: 0:01:00

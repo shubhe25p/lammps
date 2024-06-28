@@ -1,0 +1,151 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) gpu/1.0
+
+
+Lmod is automatically replacing "gcc-native/12.3" with "llvm/18.1.0".
+
+
+Lmod is automatically replacing "PrgEnv-gnu/8.5.0" with "PrgEnv-llvm/1.0".
+
+
+Lmod is automatically replacing "mpich/4.2.0" with "openmpi/5.0.3".
+
+srun --mpi=pmix -n 128 ./../../../install_PM_GPU_LLVM/bin/lmp -k on g 4 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 1024 -var ny 1024 -var nz 1024 -var nsteps 100
+[nid002697:376824] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002697 could be created.
+[nid002697:376824] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002857:376526] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002857 could be created.
+[nid002857:376526] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002593:376985] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002593 could be created.
+[nid002593:376985] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002856:376085] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002856 could be created.
+[nid002856:376085] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002704:402721] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002704 could be created.
+[nid002704:402721] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001137:377003] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid001137 could be created.
+[nid001137:377003] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002808:376312] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002808 could be created.
+[nid002808:376312] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002705:376936] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002705 could be created.
+[nid002705:376936] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002845:377706] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002845 could be created.
+[nid002845:377706] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid003153:289633] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid003153 could be created.
+[nid003153:289633] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001245:377724] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid001245 could be created.
+[nid001245:377724] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002724:376909] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002724 could be created.
+[nid002724:376909] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001705:377420] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid001705 could be created.
+[nid001705:377420] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid003936:288094] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid003936 could be created.
+[nid003936:288094] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001708:377383] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid001708 could be created.
+[nid001708:377383] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002700:377456] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002700 could be created.
+[nid002700:377456] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002721:376678] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002721 could be created.
+[nid002721:376678] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002805:376228] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002805 could be created.
+[nid002805:376228] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid003289:287448] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid003289 could be created.
+[nid003289:287448] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002844:375623] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002844 could be created.
+[nid002844:375623] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002596:376935] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002596 could be created.
+[nid002596:376935] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001140:377969] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid001140 could be created.
+[nid001140:377969] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid001248:377599] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid001248 could be created.
+[nid001248:377599] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid008341:277324] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid008341 could be created.
+[nid008341:277324] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002233:377887] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002233 could be created.
+[nid002233:377887] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002376:376461] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002376 could be created.
+[nid002376:376461] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002197:519956] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002197 could be created.
+[nid002197:519956] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002196:518713] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002196 could be created.
+[nid002196:518713] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002373:377286] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002373 could be created.
+[nid002373:377286] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002237:438918] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002237 could be created.
+[nid002237:438918] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002232:377683] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002232 could be created.
+[nid002232:377683] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+[nid002240:439904] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27242272.0/shared_mem_cuda_pool.nid002240 could be created.
+[nid002240:439904] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+LAMMPS (23 Jun 2022)
+KOKKOS mode is enabled (src/KOKKOS/kokkos.cpp:105)
+  will use up to 4 GPU(s) per node
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
+Created orthogonal box = (0 0 0) to (3256.6272 3256.6272 3256.6272)
+  4 by 4 by 8 MPI processor grid
+Created 2147483648 atoms
+  using lattice units in orthogonal box = (0 0 0) to (3256.6272 3256.6272 3256.6272)
+  create_atoms CPU = 7.832 seconds
+SNAP Element = W, Radius 0.5, Weight 1
+SNAP keyword rcutfac 4.87644
+SNAP keyword twojmax 8
+SNAP keyword rfac0 0.99363
+SNAP keyword rmin0 0
+SNAP keyword bzeroflag 1
+SNAP keyword quadraticflag 0
+Displacing atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.87644
+  ghost atom cutoff = 4.87644
+  binsize = 4.87644, bins = 668 668 668
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair zbl, perpetual, half/full from (2)
+      attributes: half, newton on, kokkos_device
+      pair build: halffull/newton/kk/device
+      stencil: none
+      bin: none
+  (2) pair snap, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0005
+Per MPI rank memory allocation (min/avg/max) = 1.756e+04 | 1.756e+04 | 1.756e+04 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   800           -8.909105       0             -8.8056969      5102.6164    
+        50   650.80329     -8.8725402      0             -8.7884173      11547.291    
+       100   656.94331     -8.8316545      0             -8.746738       20359.849    
+Loop time of 934.296 on 128 procs for 100 steps with 2147483648 atoms
+
+Performance: 0.005 ns/day, 5190.535 hours/ns, 0.107 timesteps/s
+100.0% CPU use with 128 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 908.26     | 918.02     | 922.24     |   5.7 | 98.26
+Neigh   | 7.821      | 7.873      | 7.9536     |   0.8 |  0.84
+Comm    | 2.7999     | 6.192      | 15.502     |  77.5 |  0.66
+Output  | 0.0070004  | 0.023261   | 0.043186   |   7.1 |  0.00
+Modify  | 0.73193    | 0.77329    | 0.82281    |   1.3 |  0.08
+Other   |            | 1.417      |            |       |  0.15
+
+Nlocal:    1.67772e+07 ave 1.67772e+07 max 1.67772e+07 min
+Histogram: 128 0 0 0 0 0 0 0 0 0
+Nghost:         798014 ave      798021 max      798008 min
+Histogram: 10 8 9 27 12 21 18 12 6 5
+Neighs:    2.18104e+08 ave 2.18106e+08 max 2.18102e+08 min
+Histogram: 2 4 12 20 25 19 24 19 2 1
+FullNghs:  4.36208e+08 ave 4.36208e+08 max 4.36207e+08 min
+Histogram: 4 4 3 13 16 31 27 14 14 2
+
+Total # of neighbors = 5.5834563e+10
+Ave neighs/atom = 25.999994
+Neighbor list builds = 100
+Dangerous builds = 100
+Total wall time: 0:16:00

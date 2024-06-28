@@ -3,7 +3,7 @@
 #SBATCH -t 00:10:00
 #SBATCH -J lmp_nano
 #SBATCH -o lmp_nano.o%j
-#SBATCH -A nstaff_g
+#SBATCH -A nintern
 #SBATCH -n 1
 #SBATCH -c 32
 #SBATCH --gpus-per-task=1

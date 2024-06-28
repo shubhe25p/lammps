@@ -1,0 +1,191 @@
+M	lib/kokkos/bin/nvcc_wrapper
+M	src/KOKKOS/kokkos.cpp
+-- The CXX compiler identification is GNU 12.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /global/common/software/nersc/pe/gnu/mpich/4.1.1/bin/mpicxx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/bin/git (found version "2.35.3") 
+-- Running check for auto-generated files from make-based build system
+-- Found MPI_CXX: /global/common/software/nersc/pe/gnu/mpich/4.1.1/bin/mpicxx (found version "4.0") 
+-- Found MPI: TRUE (found version "4.0")  
+-- Looking for C++ include omp.h
+-- Looking for C++ include omp.h - found
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Found JPEG: /usr/lib64/libjpeg.so (found version "62") 
+-- Found PNG: /usr/lib64/libpng.so (found version "1.6.34") 
+-- Found ZLIB: /usr/lib64/libz.so (found version "1.2.11") 
+-- Found GZIP: /usr/bin/gzip  
+-- Found FFMPEG: /usr/bin/ffmpeg  
+-- Looking for C++ include cmath
+-- Looking for C++ include cmath - found
+-- KOKKOS: Enabling CUDA LAMBDA function support
+-- Setting default Kokkos CXX standard to 14
+-- Setting policy CMP0074 to use <Package>_ROOT variables
+-- The project name is: Kokkos
+-- Compiler Version: 11.7.64
+-- kokkos_launch_compiler (/global/homes/s/shubhp/work/exaalt/lammps_src/lib/kokkos/bin/kokkos_launch_compiler) is enabled...
+-- SERIAL backend is being turned on to ensure there is at least one Host space. To change this, you must enable another host execution space and configure with -DKokkos_ENABLE_SERIAL=OFF or change CMakeCache.txt
+-- Using -std=c++14 for C++14 standard as feature
+-- Built-in Execution Spaces:
+--     Device Parallel: Kokkos::Cuda
+--     Host Parallel: NoTypeDefined
+--       Host Serial: SERIAL
+-- 
+-- Architectures:
+--  AMPERE80
+-- Found CUDAToolkit: /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include (found version "11.7.64") 
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found TPLCUDA: TRUE  
+-- Found TPLLIBDL: /usr/lib64/libdl.so  
+-- Kokkos Devices: CUDA;SERIAL, Kokkos Backends: CUDA;SERIAL
+-- Generating style headers...
+-- Generating package headers...
+-- Generating lmpinstalledpkgs.h...
+-- Found Python: /usr/bin/python3.6 (found version "3.6.15") found components: Interpreter 
+-- Could NOT find ClangFormat (missing: ClangFormat_EXECUTABLE) (Required is at least version "8.0")
+-- The following tools and libraries have been found and configured:
+ * Git
+ * MPI
+ * OpenMP
+ * JPEG
+ * PNG
+ * ZLIB
+ * Threads
+ * CUDAToolkit
+ * TPLCUDA
+ * TPLLIBDL
+ * Python
+
+-- <<< Build configuration >>>
+   LAMMPS Version:   20220623
+   Operating System: Linux SLES 15.4
+   Build type:       Release
+   Install path:     /global/homes/s/shubhp/work/exaalt/install_GPU_gnu-mpich
+   Generator:        Unix Makefiles using /usr/bin/gmake
+-- Enabled packages: EXTRA-FIX;KOKKOS;MANYBODY;ML-SNAP;MPIIO;REPLICA
+-- <<< Compilers and Flags: >>>
+-- C++ Compiler:     /global/common/software/nersc/pe/gnu/mpich/4.1.1/bin/mpicxx
+      Type:          GNU
+      Version:       12.3.0
+      C++ Flags:     -O3 -DNDEBUG
+      Defines:       LAMMPS_BIGBIG;LAMMPS_MEMALIGN=64;LAMMPS_EXCEPTIONS;LAMMPS_OMP_COMPAT=4;LAMMPS_JPEG;LAMMPS_PNG;LAMMPS_GZIP;LAMMPS_FFMPEG;LMP_MPIIO;$<BUILD_INTERFACE:LMP_KOKKOS>
+-- <<< Linker flags: >>>
+-- Executable name:  lmp
+-- Shared library flags:    
+-- <<< MPI flags >>>
+-- MPI_defines:      MPICH_SKIP_MPICXX;OMPI_SKIP_MPICXX;_MPICC_H
+-- MPI includes:     
+-- MPI libraries:    ;
+-- Kokkos Arch: 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /global/homes/s/shubhp/work/exaalt/lammps_src/build_PM
+[  0%] Generating includes/lammps/angle.h
+[  0%] Generating includes/lammps/neigh_list.h
+[  0%] Generating includes/lammps/pair.h
+[  0%] Generating includes/lammps/universe.h
+[  0%] Generating includes/lammps/lmptype.h
+[  0%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Profiling.cpp.o
+[  0%] Generating includes/lammps/modify.h
+[  0%] Generating includes/lammps/utils.h
+[  0%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemorySpace.cpp.o
+[  0%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostThreadTeam.cpp.o
+[  0%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/desul/src/Lock_Array_CUDA.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_CudaSpace.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Serial_Task.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemoryPool.cpp.o
+[  2%] Generating includes/lammps/pointers.h
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostBarrier.cpp.o
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Instance.cpp.o
+[  3%] Generating includes/lammps/lammps.h
+[  3%] Generating includes/lammps/bond.h
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_hwloc.cpp.o
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace_deepcopy.cpp.o
+[  3%] Generating includes/lammps/timer.h
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_NumericTraits.cpp.o
+[  3%] Generating includes/lammps/library.h
+[  4%] Generating includes/lammps/citeme.h
+[  4%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Error.cpp.o
+[  4%] Generating includes/lammps/lmppython.h
+[  4%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Core.cpp.o
+[  4%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/desul/src/Lock_Array_HIP.cpp.o
+[  4%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Stacktrace.cpp.o
+[  4%] Generating includes/lammps/lattice.h
+[  5%] Generating includes/lammps/memory.h
+[  5%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_ExecPolicy.cpp.o
+[  5%] Generating includes/lammps/compute.h
+[  5%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Task.cpp.o
+[  5%] Generating includes/lammps/comm.h
+[  5%] Generating includes/lammps/neighbor.h
+[  5%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Locks.cpp.o
+[  6%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_CPUDiscovery.cpp.o
+[  6%] Generating includes/lammps/domain.h
+[  7%] Generating includes/lammps/exceptions.h
+[  7%] Generating includes/lammps/region.h
+[  7%] Generating includes/lammps/update.h
+[  7%] Generating includes/lammps/dihedral.h
+[  7%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_SharedAlloc.cpp.o
+[  8%] Generating includes/lammps/variable.h
+[  9%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace.cpp.o
+[  9%] Generating includes/lammps/atom.h
+[  9%] Generating includes/lammps/output.h
+[  9%] Generating includes/lammps/fix.h
+[  9%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Command_Line_Parsing.cpp.o
+[  9%] Generating includes/lammps/input.h
+[  9%] Generating includes/lammps/kspace.h
+[ 10%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Serial.cpp.o
+-- Git Directory: /global/homes/s/shubhp/work/exaalt/lammps_src/.git
+[ 10%] Generating includes/lammps/force.h
+[ 10%] Generating includes/lammps/group.h
+[ 11%] Generating includes/lammps/improper.h
+[ 11%] Generating includes/lammps/error.h
+[ 11%] Generating includes/lammps/info.h
+[ 11%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Spinwait.cpp.o
+[ 11%] Built target angle.h
+-- Generating lmpgitversion.h...
+[ 11%] Built target utils.h
+[ 11%] Built target universe.h
+[ 11%] Built target neigh_list.h
+[ 11%] Built target lmptype.h
+[ 11%] Built target pair.h
+[ 11%] Built target modify.h
+[ 11%] Built target lmppython.h
+[ 11%] Built target citeme.h
+[ 11%] Built target timer.h
+[ 11%] Built target library.h
+[ 11%] Built target lammps.h
+[ 11%] Built target pointers.h
+[ 11%] Built target bond.h
+[ 11%] Built target compute.h
+[ 11%] Built target variable.h
+[ 11%] Built target neighbor.h
+[ 11%] Built target region.h
+[ 11%] Built target update.h
+[ 11%] Built target input.h
+[ 11%] Built target comm.h
+[ 11%] Built target domain.h
+[ 11%] Built target exceptions.h
+[ 11%] Built target fix.h
+[ 11%] Built target dihedral.h
+[ 11%] Built target kspace.h
+[ 11%] Built target output.h
+[ 11%] Built target lattice.h
+[ 11%] Built target memory.h
+[ 11%] Built target force.h
+[ 11%] Built target atom.h
+[ 11%] Built target info.h
+[ 11%] Built target improper.h
+[ 11%] Built target group.h
+[ 11%] Built target error.h
+[ 11%] Built target gitversion

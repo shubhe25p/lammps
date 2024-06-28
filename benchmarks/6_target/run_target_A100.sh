@@ -4,7 +4,7 @@
 #SBATCH -t 24:00:00
 #SBATCH -J lmp_target
 #SBATCH -o lmp_target.o%j
-#SBATCH -A nstaff_g
+#SBATCH -A nintern
 #SBATCH -n 2048
 #SBATCH -c 32
 #SBATCH --gpus-per-task=1

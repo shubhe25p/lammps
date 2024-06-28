@@ -4,8 +4,8 @@
 #SBATCH -t 00:10:00
 #SBATCH -J lmp_nano_PM_cpu
 #SBATCH -o lmp_nano_PM_cpu.o%j
-#SBATCH -A nstaff
-#SBATCH -q regular
+#SBATCH -A nintern
+#SBATCH -q debug
 #SBATCH -n 64
 #SBATCH -c 2
 

@@ -1,0 +1,251 @@
++ module rm darshan
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "darshan" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module rm xalt
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "xalt" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload cray-mpich
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "cray-mpich" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load PrgEnv-gnu
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "mpich/4.1.1" with "cray-mpich/8.1.28".
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cudatoolkit/11.7
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load mpich/4.1.1
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "cray-mpich/8.1.28" with "mpich/4.1.1".
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ threads=64
+++ pwd
++ HOME_BASE=/global/homes/s/shubhp/work/exaalt
++ LAMMPS_SRC=/global/homes/s/shubhp/work/exaalt/lammps_src
++ INSTALL_PREFIX=/global/homes/s/shubhp/work/exaalt/install_GPU_gnu-mpich
++ '[' '!' -d /global/homes/s/shubhp/work/exaalt/lammps_src ']'
++ cd /global/homes/s/shubhp/work/exaalt/lammps_src
++ git checkout 7d5fc356fe
+HEAD is now at 7d5fc356fe Merge pull request #3311 from akohlmey/next-stable-release
++ sed -i s/sm_35/sm_80/ /global/homes/s/shubhp/work/exaalt/lammps_src/lib/kokkos/bin/nvcc_wrapper
++ sed -i 's/new char.7./new char[8]/' src/KOKKOS/kokkos.cpp
++ '[' '!' -d build_PM ']'
++ cd build_PM
++ rm -rf CMakeCache.txt CMakeFiles cmake_install.cmake etc includes install_manifest.txt LAMMPSConfig.cmake LAMMPSConfigVersion.cmake lib liblammps.pc liblammps.so liblammps.so.0 lmp Makefile python styles
++ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_Fortran_COMPILER=mpifort -D CMAKE_C_COMPILER=mpicc -D CMAKE_CXX_COMPILER=mpicxx -D CMAKE_INSTALL_PREFIX=/global/homes/s/shubhp/work/exaalt/install_GPU_gnu-mpich -D LAMMPS_EXCEPTIONS=on -D BUILD_SHARED_LIBS=on -D BUILD_MPI=yes -D PKG_KOKKOS=yes -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes -D PKG_MANYBODY=yes -D PKG_REPLICA=yes -D PKG_ML-SNAP=yes -D PKG_EXTRA-FIX=yes -D PKG_MPIIO=yes -D LAMMPS_SIZES=BIGBIG ../cmake
+      Options:       -Xcudafe;--diag_suppress=unrecognized_pragma
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_Fortran_COMPILER
+
+
++ make -j64
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:244: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Profiling.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:398: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/desul/src/Lock_Array_CUDA.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:216: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemorySpace.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:188: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostThreadTeam.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:202: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemoryPool.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:272: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Serial_Task.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:174: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace_deepcopy.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:146: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostBarrier.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:356: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Instance.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:230: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_NumericTraits.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:384: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Task.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:76: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_CPUDiscovery.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:314: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Stacktrace.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:118: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Error.cpp.o] Error 1
+In file included from /opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/cuda_runtime.h:83,
+                 from <command-line>:
+/opt/nvidia/hpc_sdk/Linux_x86_64/22.7/cuda/11.7/include/crt/host_config.h:132:2: error: #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+  132 | #error -- unsupported GNU version! gcc versions later than 11 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.
+      |  ^~~~~
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:328: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_hwloc.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:342: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_CudaSpace.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:412: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/desul/src/Lock_Array_HIP.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:90: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Command_Line_Parsing.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:104: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Core.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:300: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Spinwait.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:160: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:132: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_ExecPolicy.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:370: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Locks.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:286: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_SharedAlloc.cpp.o] Error 1
+make[2]: *** [lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/build.make:258: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Serial.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2224: lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

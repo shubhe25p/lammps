@@ -1,9 +1,9 @@
 #!/bin/bash -l
 #SBATCH -C gpu
 #SBATCH -t 00:10:00
-#SBATCH -J lmp_small
-#SBATCH -o lmp_small.o%j
-#SBATCH -A nstaff_g
+#SBATCH -J lmp_gpu
+#SBATCH -o lmp_gpu.o%j
+#SBATCH -A nintern
 #SBATCH -n 4
 #SBATCH -c 32
 #SBATCH --gpus-per-task=1
@@ -13,8 +13,8 @@
 # by defining the variables spec and BENCH_SPEC
 source small_spec.txt
 
-mkdir lammps_$spec.$SLURM_JOB_ID
-cd    lammps_$spec.$SLURM_JOB_ID
+mkdir lmp_gpu_$spec.$SLURM_JOB_ID
+cd    lmp_gpu_$spec.$SLURM_JOB_ID
 ln -s ../../common .
 cp ${0} .
 cp ../small_spec.txt .

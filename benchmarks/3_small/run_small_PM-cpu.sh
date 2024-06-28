@@ -2,9 +2,9 @@
 #SBATCH -N 1
 #SBATCH -C cpu
 #SBATCH -t 04:00:00
-#SBATCH -J lmp_small_PM_cpu
-#SBATCH -o lmp_small_PM_cpu.o%j
-#SBATCH -A nstaff
+#SBATCH -J lmp_cpu
+#SBATCH -o lmp_cpu.o%j
+#SBATCH -A nintern
 #SBATCH -q regular
 #SBATCH -n 64
 #SBATCH -c 2
@@ -13,8 +13,8 @@
 # by defining the variables spec and BENCH_SPEC
 source small_spec.txt
 
-mkdir lammps_$spec.$SLURM_JOB_ID
-cd    lammps_$spec.$SLURM_JOB_ID
+mkdir lmp_cpu_$spec.$SLURM_JOB_ID
+cd    lmp_cpu_$spec.$SLURM_JOB_ID
 ln -s ../../common .
 cp ${0} .
 cp ../small_spec.txt .

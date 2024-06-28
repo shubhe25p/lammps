@@ -4,7 +4,7 @@
 #SBATCH -t 00:30:00
 #SBATCH -J lmp_reference
 #SBATCH -o lmp_reference.o%j
-#SBATCH -A nstaff_g
+#SBATCH -A nintern
 #SBATCH -n 128
 #SBATCH -c 32
 #SBATCH --gpus-per-task=1
