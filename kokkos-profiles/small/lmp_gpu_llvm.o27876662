@@ -1,0 +1,112 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) gpu/1.0
+
+
+Lmod is automatically replacing "gcc-native/12.3" with "llvm/18.1.0".
+
+
+Lmod is automatically replacing "PrgEnv-gnu/8.5.0" with "PrgEnv-llvm/1.0".
+
+
+Lmod is automatically replacing "mpich/4.2.0" with "openmpi/5.0.3".
+
+srun --mpi=pmix -n 4 nsys profile -t nvtx,cuda ./../../../install_PM_GPU_LLVM/bin/lmp -k on g 4 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 256 -var ny 256 -var nz 256 -var nsteps 1
+[nid002329:94370] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27876662.0/shared_mem_cuda_pool.nid002329 could be created.
+[nid002329:94370] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+LAMMPS (23 Jun 2022)
+KOKKOS mode is enabled (src/KOKKOS/kokkos.cpp:105)
+  will use up to 4 GPU(s) per node
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
+Created orthogonal box = (0 0 0) to (814.1568 814.1568 814.1568)
+  1 by 2 by 2 MPI processor grid
+Created 33554432 atoms
+  using lattice units in orthogonal box = (0 0 0) to (814.1568 814.1568 814.1568)
+  create_atoms CPU = 2.535 seconds
+SNAP Element = W, Radius 0.5, Weight 1
+SNAP keyword rcutfac 4.87644
+SNAP keyword twojmax 8
+SNAP keyword rfac0 0.99363
+SNAP keyword rmin0 0
+SNAP keyword bzeroflag 1
+SNAP keyword quadraticflag 0
+Displacing atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.87644
+  ghost atom cutoff = 4.87644
+  binsize = 4.87644, bins = 167 167 167
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair zbl, perpetual, half/full from (2)
+      attributes: half, newton on, kokkos_device
+      pair build: halffull/newton/kk/device
+      stencil: none
+      bin: none
+  (2) pair snap, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0005
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+Per MPI rank memory allocation (min/avg/max) = 8779 | 8779 | 8779 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   800           -8.909105       0             -8.8056969      5102.6159    
+         1   784.17953     -8.9090813      0             -8.8077182      4971.7648    
+Loop time of 5.02865 on 4 procs for 1 steps with 33554432 atoms
+
+Performance: 0.009 ns/day, 2793.697 hours/ns, 0.199 timesteps/s
+99.8% CPU use with 4 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.8913     | 4.8963     | 4.9016     |   0.2 | 97.37
+Neigh   | 0.03772    | 0.037768   | 0.037816   |   0.0 |  0.75
+Comm    | 0.013383   | 0.018619   | 0.023545   |   3.1 |  0.37
+Output  | 0.00072542 | 0.0015529  | 0.0023194  |   1.6 |  0.03
+Modify  | 0.0071371  | 0.0072044  | 0.0072469  |   0.1 |  0.14
+Other   |            | 0.0672     |            |       |  1.34
+
+Nlocal:    8.38861e+06 ave 8.38861e+06 max 8.38861e+06 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+Nghost:         500790 ave      500790 max      500790 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+Neighs:    1.09052e+08 ave 1.09053e+08 max  1.0905e+08 min
+Histogram: 1 0 0 0 1 1 0 0 0 1
+FullNghs:  2.18104e+08 ave 2.18104e+08 max 2.18104e+08 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8.7241523e+08
+Ave neighs/atom = 26
+Neighbor list builds = 1
+Dangerous builds = 1
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/nid002329-94367.dat 
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/nid002329-94362.dat 
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/nid002329-94359.dat 
+Total wall time: 0:00:16
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/nid002329-94370.dat 
+Generating '/tmp/nsys-report-e173.qdstrm'
+Generating '/tmp/nsys-report-5abc.qdstrm'
+Generating '/tmp/nsys-report-7ed7.qdstrm'
+Generating '/tmp/nsys-report-6279.qdstrm'
+[1/1] [0%                          ] report4.nsys-rep[1/1] [0%                          ] report4.nsys-rep[1/1] [5%                          ] report4.nsys-rep[1/1] [=16%                        ] report4.nsys-rep[1/1] [====28%                     ] report4.nsys-rep[1/1] [======35%                   ] report4.nsys-rep[1/1] [==========47%               ] report4.nsys-rep[1/1] [=============60%            ] report4.nsys-rep[1/1] [=================72%        ] report4.nsys-rep[1/1] [=================73%        ] report4.nsys-rep[1/1] [=================74%        ] report4.nsys-rep[1/1] [==================75%       ] report4.nsys-rep[1/1] [==================76%       ] report4.nsys-rep[1/1] [==================77%       ] report4.nsys-rep[1/1] [===================79%      ] report4.nsys-rep[1/1] [===================81%      ] report4.nsys-rep[1/1] [====================83%     ] report4.nsys-rep[1/1] [====================84%     ] report4.nsys-rep[1/1] [========================100%] report4.nsys-rep[1/1] [========================100%] report4.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/report4.nsys-rep
+[1/1] [0%                          ] report2.nsys-rep[1/1] [0%                          ] report2.nsys-rep[1/1] [5%                          ] report2.nsys-rep[1/1] [=16%                        ] report2.nsys-rep[1/1] [====28%                     ] report2.nsys-rep[1/1] [======35%                   ] report2.nsys-rep[1/1] [==========47%               ] report2.nsys-rep[1/1] [=============60%            ] report2.nsys-rep[1/1] [=================72%        ] report2.nsys-rep[1/1] [=================73%        ] report2.nsys-rep[1/1] [=================74%        ] report2.nsys-rep[1/1] [==================75%       ] report2.nsys-rep[1/1] [==================77%       ] report2.nsys-rep[1/1] [===================79%      ] report2.nsys-rep[1/1] [===================81%      ] report2.nsys-rep[1/1] [====================83%     ] report2.nsys-rep[1/1] [====================84%     ] report2.nsys-rep[1/1] [========================100%] report2.nsys-rep[1/1] [========================100%] report2.nsys-rep
+[1/1] [0%                          ] report1.nsys-rep[1/1] [0%                          ] report1.nsys-rep[1/1] [5%                          ] report1.nsys-rep[1/1] [=16%                        ] report1.nsys-rep[1/1] [=====29%                    ] report1.nsys-rep[1/1] [======35%                   ] report1.nsys-rep[1/1] [==========47%               ] report1.nsys-rep[1/1] [=============59%            ] report1.nsys-rep[1/1] [=================72%        ] report1.nsys-rep[1/1] [=================73%        ] report1.nsys-rep[1/1] [=================74%        ] report1.nsys-rep[1/1] [==================76%       ] report1.nsys-rep[1/1] [==================78%       ] report1.nsys-rep[1/1] [===================80%      ] report1.nsys-rep[1/1] [===================81%      ] report1.nsys-rep[1/1] [====================83%     ] report1.nsys-rep[1/1] [====================85%     ] report1.nsys-rep[1/1] [========================100%] report1.nsys-rep[1/1] [========================100%] report1.nsys-rep
+[1/1] [0%                          ] report3.nsys-rep[1/1] [0%                          ] report3.nsys-rep[1/1] [5%                          ] report3.nsys-rep[1/1] [=16%                        ] report3.nsys-rep[1/1] [====28%                     ] report3.nsys-rep[1/1] [======35%                   ] report3.nsys-rep[1/1] [==========47%               ] report3.nsys-rep[1/1] [=============59%            ] report3.nsys-rep[1/1] [=================72%        ] report3.nsys-rep[1/1] [=================73%        ] report3.nsys-rep[1/1] [=================74%        ] report3.nsys-rep[1/1] [==================76%       ] report3.nsys-rep[1/1] [==================78%       ] report3.nsys-rep[1/1] [===================80%      ] report3.nsys-rep[1/1] [===================82%      ] report3.nsys-rep[1/1] [====================83%     ] report3.nsys-rep[1/1] [====================85%     ] report3.nsys-rep[1/1] [========================100%] report3.nsys-rep[1/1] [========================100%] report3.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/report2.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/report1.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_gpu_llvm_small.27876662/report3.nsys-rep

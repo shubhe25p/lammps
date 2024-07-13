@@ -1,0 +1,107 @@
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) gpu/1.0
+
+
+Lmod is automatically replacing "cray-mpich/8.1.28" with "openmpi/5.0.3".
+
+srun --mpi=pmix -n 4 nsys profile ./../../../install_GPU_gnu-ompi/bin/lmp -k on g 4 -sf kk -pk kokkos newton on neigh half -in common/in.snap.test -var snapdir common/2J8_W.SNAP -var nx 256 -var ny 256 -var nz 256 -var nsteps 1
+[nid002361:600762] shmem: mmap: an error occurred while determining whether or not /tmp/spmix_appdir_100889_27876044.0/shared_mem_cuda_pool.nid002361 could be created.
+[nid002361:600762] create_and_attach: unable to create shared memory BTL coordinating structure :: size 134217728 
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+LAMMPS (23 Jun 2022)
+KOKKOS mode is enabled (src/src/KOKKOS/kokkos.cpp:105)
+  will use up to 4 GPU(s) per node
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.1803 3.1803 3.1803
+Created orthogonal box = (0 0 0) to (814.1568 814.1568 814.1568)
+  1 by 2 by 2 MPI processor grid
+Created 33554432 atoms
+  using lattice units in orthogonal box = (0 0 0) to (814.1568 814.1568 814.1568)
+  create_atoms CPU = 1.958 seconds
+SNAP Element = W, Radius 0.5, Weight 1
+SNAP keyword rcutfac 4.87644
+SNAP keyword twojmax 8
+SNAP keyword rfac0 0.99363
+SNAP keyword rmin0 0
+SNAP keyword bzeroflag 1
+SNAP keyword quadraticflag 0
+Displacing atoms ...
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 4.87644
+  ghost atom cutoff = 4.87644
+  binsize = 4.87644, bins = 167 167 167
+  2 neighbor lists, perpetual/occasional/extra = 2 0 0
+  (1) pair zbl, perpetual, half/full from (2)
+      attributes: half, newton on, kokkos_device
+      pair build: halffull/newton/kk/device
+      stencil: none
+      bin: none
+  (2) pair snap, perpetual
+      attributes: full, newton on, kokkos_device
+      pair build: full/bin/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.0005
+KokkosP: Simple Kernel Timer Library Initialized (sequence is 0, version: 20211015)
+Per MPI rank memory allocation (min/avg/max) = 8779 | 8779 | 8779 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   800           -8.909105       0             -8.8056969      5102.6159    
+         1   784.15146     -8.9090813      0             -8.8077218      4971.5237    
+Loop time of 4.56397 on 4 procs for 1 steps with 33554432 atoms
+
+Performance: 0.009 ns/day, 2535.541 hours/ns, 0.219 timesteps/s
+100.2% CPU use with 4 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.4319     | 4.4361     | 4.442      |   0.2 | 97.20
+Neigh   | 0.029745   | 0.029783   | 0.029805   |   0.0 |  0.65
+Comm    | 0.013587   | 0.019478   | 0.023636   |   2.8 |  0.43
+Output  | 0.00069089 | 0.0025967  | 0.0035847  |   2.3 |  0.06
+Modify  | 0.0067691  | 0.0068612  | 0.0070241  |   0.1 |  0.15
+Other   |            | 0.06918    |            |       |  1.52
+
+Nlocal:    8.38861e+06 ave 8.38861e+06 max 8.38861e+06 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+Nghost:         500790 ave      500790 max      500790 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+Neighs:    1.09052e+08 ave 1.09053e+08 max  1.0905e+08 min
+Histogram: 1 0 0 0 1 1 0 0 0 1
+FullNghs:  2.18104e+08 ave 2.18104e+08 max 2.18104e+08 min
+Histogram: 4 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 8.7241523e+08
+Ave neighs/atom = 26
+Neighbor list builds = 1
+Dangerous builds = 1
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/nid002361-600760.dat 
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/nid002361-600765.dat 
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/nid002361-600755.dat 
+Total wall time: 0:00:15
+KokkosP: Kernel timing written to /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/nid002361-600762.dat 
+Generating '/tmp/nsys-report-ffab.qdstrm'
+Generating '/tmp/nsys-report-91ac.qdstrm'
+Generating '/tmp/nsys-report-8f5d.qdstrm'
+Generating '/tmp/nsys-report-7ce9.qdstrm'
+[1/1] [0%                          ] report1.nsys-rep[1/1] [0%                          ] report1.nsys-rep[1/1] [5%                          ] report1.nsys-rep[1/1] [10%                         ] report1.nsys-rep[1/1] [12%                         ] report1.nsys-rep[1/1] [=17%                        ] report1.nsys-rep[1/1] [==18%                       ] report1.nsys-rep[1/1] [==21%                       ] report1.nsys-rep[1/1] [===22%                      ] report1.nsys-rep[1/1] [====28%                     ] report1.nsys-rep[1/1] [=====29%                    ] report1.nsys-rep[1/1] [=====30%                    ] report1.nsys-rep[1/1] [========40%                 ] report1.nsys-rep[1/1] [========42%                 ] report1.nsys-rep[1/1] [===========52%              ] report1.nsys-rep[1/1] [=============60%            ] report1.nsys-rep[1/1] [================68%         ] report1.nsys-rep[1/1] [==================76%       ] report1.nsys-rep[1/1] [====================84%     ] report1.nsys-r[1/1] [0%                          ] report3.nsys-rep[1/1] [0%                          ] report3.nsys-rep[1/1] [5%                          ] report3.nsys-rep[1/1] [10%                         ] report3.nsys-rep[1/1] [12%                         ] report3.nsys-rep[1/1] [==18%                       ] report3.nsys-rep[1/1] [==19%                       ] report3.nsys-rep[1/1] [==21%                       ] report3.nsys-rep[1/1] [===22%                      ] report3.nsys-rep[1/1] [====28%                     ] report3.nsys-rep[1/1] [=====29%                    ] report3.nsys-rep[1/1] [=====30%                    ] report3.nsys-rep[1/1] [========40%                 ] report3.nsys-rep[1/1] [========42%                 ] report3.nsys-rep[1/1] [===========52%              ] report3.nsys-rep[1/1] [=============60%            ] report3.nsys-rep[1/1] [================68%         ] report3.nsys-rep[1/1] [==================76%       ] report3.nsys-rep[1/1] [====================84%     ] report3.nsys-r[1/1] [0%                          ] report2.nsys-rep[1/1] [0%                          ] report2.nsys-rep[1/1] [5%                          ] report2.nsys-rep[1/1] [10%                         ] report2.nsys-rep[1/1] [11%                         ] report2.nsys-rep[1/1] [==20%                       ] report2.nsys-rep[1/1] [===22%                      ] report2.nsys-rep[1/1] [===23%                      ] report2.nsys-rep[1/1] [====25%                     ] report2.nsys-rep[1/1] [=====29%                    ] report2.nsys-rep[1/1] [=====30%                    ] report2.nsys-rep[1/1] [========40%                 ] report2.nsys-rep[1/1] [========42%                 ] report2.nsys-rep[1/1] [===========52%              ] report2.nsys-rep[1/1] [=============60%            ] report2.nsys-rep[1/1] [================68%         ] report2.nsys-rep[1/1] [==================77%       ] report2.nsys-rep[1/1] [====================85%     ] report2.nsys-rep[1/1] [======================90%   ] report2.nsys-r[1/1] [0%                          ] report4.nsys-rep[1/1] [0%                          ] report4.nsys-rep[1/1] [5%                          ] report4.nsys-rep[1/1] [10%                         ] report4.nsys-rep[1/1] [==18%                       ] report4.nsys-rep[1/1] [==19%                       ] report4.nsys-rep[1/1] [==21%                       ] report4.nsys-rep[1/1] [===22%                      ] report4.nsys-rep[1/1] [====28%                     ] report4.nsys-rep[1/1] [=====29%                    ] report4.nsys-rep[1/1] [=====30%                    ] report4.nsys-rep[1/1] [========40%                 ] report4.nsys-rep[1/1] [========42%                 ] report4.nsys-rep[1/1] [===========52%              ] report4.nsys-rep[1/1] [=============60%            ] report4.nsys-rep[1/1] [================68%         ] report4.nsys-rep[1/1] [==================76%       ] report4.nsys-rep[1/1] [====================84%     ] report4.nsys-rep[1/1] [======================90%   ] report4.nsys-rep[1/1] [========================100%] report2.nsys-rep[1/1] [========================100%] report2.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/report2.nsys-rep
+ep[1/1] [======================90%   ] report1.nsys-rep[1/1] [========================100%] report1.nsys-rep[1/1] [========================100%] report1.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/report1.nsys-rep
+ep[1/1] [======================90%   ] report3.nsys-rep[1/1] [========================100%] report3.nsys-rep[1/1] [========================100%] report3.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/report3.nsys-rep
+ep[1/1] [========================100%] report4.nsys-rep[1/1] [========================100%] report4.nsys-rep
+Generated:
+    /pscratch/sd/s/shubhp/exaalt/benchmarks/3_small/lmp_small_gnu_ompi_small.27876044/report4.nsys-rep
+/var/spool/slurmd/job27876044/slurm_script: line 45: ./pscratch/sd/s/shubhp/exaalt/kokkos-tools/build/profiling/simple-kernel-timer/kp_reader: No such file or directory

@@ -25,16 +25,15 @@ export LD_LIBRARY_PATH=${install_dir}/lib64:$LD_LIBRARY_PATH
 EXE=${install_dir}/bin/lmp
 
 # Match the build env.
-# module use /global/common/software/nersc/pe/modulefiles/latest
+module use /global/common/software/nersc/pe/modulefiles/latest
 module load PrgEnv-gnu
-module load mpich/4.1.1
-module load cudatoolkit/11.7
+module load mpich
 
 gpus_per_node=1
 
 input="-k on g $gpus_per_node -sf kk -pk kokkos newton on neigh half ${BENCH_SPEC} " 
 
-command="srun -n $SLURM_NTASKS ./$EXE $input"
+command="srun --mpi=pmix -n $SLURM_NTASKS ./$EXE $input"
 
 echo $command
 

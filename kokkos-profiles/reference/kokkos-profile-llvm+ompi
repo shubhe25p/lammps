@@ -1,0 +1,348 @@
+ (Type)   Total Time, Call Count, Avg. Time per Call, %Total Time in Kernels, %Total Program Time
+-------------------------------------------------------------------------
+
+Regions: 
+
+
+-------------------------------------------------------------------------
+Kernels: 
+
+- ComputeZi
+ (ParFor)   910.418366 131072 0.006946 34.917683 21.368599
+- ComputeYiWithZlist
+ (ParFor)   297.396170 131072 0.002269 11.406168 6.980241
+- ComputeFusedDeidrjLarge<1>
+ (ParFor)   277.762099 131072 0.002119 10.653134 6.519406
+- ComputeFusedDeidrjLarge<0>
+ (ParFor)   277.190407 131072 0.002115 10.631208 6.505988
+- ComputeFusedDeidrjLarge<2>
+ (ParFor)   277.033913 131072 0.002114 10.625206 6.502314
+- ComputeUiLarge
+ (ParFor)   199.861235 131072 0.001525 7.665367 4.690980
+- ComputeBi
+ (ParFor)   101.944701 131072 0.000778 3.909931 2.392763
+- TransformUi
+ (ParFor)   35.798130 131072 0.000273 1.372982 0.840225
+- ComputeNeigh
+ (ParFor)   35.290853 131072 0.000269 1.353526 0.828318
+- LAMMPS_NS::PairSNAPKokkos<Kokkos::Cuda, double, 32>/LAMMPS_NS::TagPairSNAPComputeForce<2, 1>
+ (ParRed)   34.034257 131072 0.000260 1.305331 0.798824
+- LAMMPS_NS::NPairKokkosBuildFunctor<Kokkos::Cuda, 0, 1, 0>
+ (ParFor)   29.180540 384 0.075991 1.119174 0.684902
+- ComputeCayleyKlein
+ (ParFor)   25.794397 131072 0.000197 0.989304 0.605425
+- Kokkos::ViewFill-1D
+ (ParFor)   11.577637 2176 0.005321 0.444042 0.271741
+- PreUi
+ (ParFor)   10.727808 131072 0.000082 0.411448 0.251794
+- LAMMPS_NS::PairComputeFunctor<LAMMPS_NS::PairZBLKokkos<Kokkos::Cuda>, 2, true, void>
+ (ParRed)   10.122456 256 0.039541 0.388231 0.237586
+- LAMMPS_NS::PairVirialFDotRCompute<Kokkos::Cuda>
+ (ParRed)   9.757222 256 0.038114 0.374223 0.229014
+- LAMMPS_NS::FixLangevinKokkosPostForceFunctor<Kokkos::Cuda, 0, 0, 0, 0, 0, 0>
+ (ParFor)   7.388109 256 0.028860 0.283359 0.173408
+- TransformBi
+ (ParFor)   5.510043 131072 0.000042 0.211329 0.129327
+- Kokkos::View::initialization [atom:x] via memset
+ (ParFor)   5.121317 384 0.013337 0.196420 0.120203
+- Kokkos::View::initialization [neigh:xhold_mirror] via memset
+ (ParFor)   5.086725 128 0.039740 0.195093 0.119391
+- Kokkos::View::initialization [atom:f] via memset
+ (ParFor)   5.064995 384 0.013190 0.194260 0.118881
+- Kokkos::View::initialization [atom:v] via memset
+ (ParFor)   5.064795 384 0.013190 0.194252 0.118877
+- ComputeBeta
+ (ParFor)   4.160171 131072 0.000032 0.159557 0.097644
+- Kokkos::View::initialization [neighlist:ilist_mirror] via memset
+ (ParFor)   3.042046 512 0.005941 0.116673 0.071400
+- Kokkos::ViewCopy-1D
+ (ParFor)   2.119265 640 0.003311 0.081281 0.049742
+- Kokkos::View::initialization [Neighbor::d_bins_mirror] via memset
+ (ParFor)   1.961807 128 0.015327 0.075242 0.046046
+- Kokkos::View::initialization [atom:image] via memset
+ (ParFor)   1.840109 384 0.004792 0.070575 0.043190
+- Kokkos::View::initialization [neighlist:numneigh_mirror] via memset
+ (ParFor)   1.758576 256 0.006869 0.067447 0.041276
+- Kokkos::View::initialization [atom:tag] via memset
+ (ParFor)   1.756912 384 0.004575 0.067384 0.041237
+- BuildBorderListFunctor<Kokkos::Cuda>
+ (ParFor)   1.250427 1792 0.000698 0.047958 0.029349
+- PairSNAPKokkos::find_max_neighs
+ (ParRed)   1.197788 256 0.004679 0.045939 0.028113
+- LAMMPS_NS::ComputeTempKokkos<Kokkos::Cuda>/LAMMPS_NS::TagComputeTempScalar<0>
+ (ParRed)   1.184422 384 0.003084 0.045427 0.027800
+- Kokkos::View::initialization [atom:mask] via memset
+ (ParFor)   0.981728 384 0.002557 0.037653 0.023042
+- LAMMPS_NS::NPairHalffullKokkos<Kokkos::Cuda, 1>/LAMMPS_NS::TagNPairHalffullCompute
+ (ParFor)   0.962663 256 0.003760 0.036921 0.022595
+- Kokkos::View::initialization [atom:type] via memset
+ (ParFor)   0.889945 384 0.002318 0.034132 0.020888
+- Kokkos::View::initialization [Neighbor::d_atom2bin_mirror] via memset
+ (ParFor)   0.872653 128 0.006818 0.033469 0.020482
+- Kokkos::View::initialization [comm:k_sendflag] via memset
+ (ParFor)   0.810955 384 0.002112 0.031103 0.019034
+- LAMMPS_NS::FixNVEKokkosInitialIntegrateFunctor<Kokkos::Cuda, 0>
+ (ParFor)   0.691792 128 0.005405 0.026533 0.016237
+- DomainPBCFunctor<Kokkos::Cuda, 1, 0>
+ (ParFor)   0.637249 256 0.002489 0.024441 0.014957
+- Kokkos::View::initialization [Kokkos::View::destruction []]
+ (ParFor)   0.632718 1792 0.000353 0.024267 0.014851
+- Kokkos::View::initialization [comm:k_buf_send_mirror] via memset
+ (ParFor)   0.410760 384 0.001070 0.015754 0.009641
+- LAMMPS_NS::NeighborKokkos/LAMMPS_NS::TagNeighborXhold<Kokkos::Cuda>
+ (ParFor)   0.398867 256 0.001558 0.015298 0.009362
+- Kokkos::View::initialization [comm:k_buf_recv_mirror] via memset
+ (ParFor)   0.381673 384 0.000994 0.014638 0.008958
+- BuildExchangeListFunctor<Kokkos::Cuda>
+ (ParFor)   0.283617 768 0.000369 0.010878 0.006657
+- Kokkos::View::initialization [comm:sendlist] via memset
+ (ParFor)   0.253128 640 0.000396 0.009708 0.005941
+- Zero<Kokkos::View<double* [3], Kokkos::LayoutRight, Kokkos::Cuda, void> >
+ (ParFor)   0.218374 256 0.000853 0.008375 0.005125
+- MemsetZeroFunctor<Kokkos::Cuda>
+ (ParFor)   0.210083 256 0.000821 0.008057 0.004931
+- Kokkos::View::initialization [Neighbor::d_bincount_mirror] via memset
+ (ParFor)   0.205304 128 0.001604 0.007874 0.004819
+- AtomVecKokkos_UnPackReverse<Kokkos::Cuda>
+ (ParFor)   0.203787 1536 0.000133 0.007816 0.004783
+- LAMMPS_NS::NPairKokkosBinAtomsFunctor<Kokkos::Cuda>
+ (ParFor)   0.157151 256 0.000614 0.006027 0.003689
+- LAMMPS_NS::FixNVEKokkosFinalIntegrateFunctor<Kokkos::Cuda, 0>
+ (ParFor)   0.145735 128 0.001139 0.005589 0.003421
+- LAMMPS_NS::NeighborKokkos/LAMMPS_NS::TagNeighborCheckDistance<Kokkos::Cuda>
+ (ParRed)   0.085967 128 0.000672 0.003297 0.002018
+- Kokkos::View::initialization [comm:k_buf_send_pair_mirror] via memset
+ (ParFor)   0.051327 128 0.000401 0.001969 0.001205
+- AtomVecAtomicKokkos_PackBorder<Kokkos::Cuda, 0>
+ (ParFor)   0.049170 1216 0.000040 0.001886 0.001154
+- AtomVecAtomicKokkos_UnpackBorder<Kokkos::Cuda>
+ (ParFor)   0.043540 1536 0.000028 0.001670 0.001022
+- Kokkos::View::initialization [neigh:xhold] via memset
+ (ParFor)   0.039821 128 0.000311 0.001527 0.000935
+- Kokkos::View::initialization [VerletKokkos::f_merge_copy] via memset
+ (ParFor)   0.038984 128 0.000305 0.001495 0.000915
+- Kokkos::ViewCopy-2D
+ (ParFor)   0.026999 640 0.000042 0.001035 0.000634
+- Kokkos::View::initialization [neighlist:ilist] via memset
+ (ParFor)   0.018731 256 0.000073 0.000718 0.000440
+- Kokkos::View::initialization [neighlist:numneigh] via memset
+ (ParFor)   0.018617 256 0.000073 0.000714 0.000437
+- Kokkos::View::initialization [DualView::modified_flags] via memset
+ (ParFor)   0.017876 6656 0.000003 0.000686 0.000420
+- Kokkos::View::initialization [Neighbor::d_bins] via memset
+ (ParFor)   0.016410 128 0.000128 0.000629 0.000385
+- AtomVecAtomicKokkos_PackBorder<Kokkos::Cuda, 1>
+ (ParFor)   0.014700 320 0.000046 0.000564 0.000345
+- Kokkos::View::initialization [comm:sendlist_mirror] via memset
+ (ParFor)   0.012990 128 0.000101 0.000498 0.000305
+- AtomVecAtomicKokkos_PackExchangeFunctor<Kokkos::Cuda>
+ (ParFor)   0.009350 768 0.000012 0.000359 0.000219
+- Kokkos::View::initialization [comm:k_buf_send] via memset
+ (ParFor)   0.008669 384 0.000023 0.000332 0.000203
+- Kokkos::View::initialization [Neighbor::d_atom2bin] via memset
+ (ParFor)   0.008272 128 0.000065 0.000317 0.000194
+- Kokkos::View::initialization [comm:k_buf_recv] via memset
+ (ParFor)   0.007257 384 0.000019 0.000278 0.000170
+- Kokkos::View::initialization [Bitset] via memset
+ (ParFor)   0.007232 1024 0.000007 0.000277 0.000170
+- Kokkos::View::initialization [UnorderedMap keys] via memset
+ (ParFor)   0.006581 1024 0.000006 0.000252 0.000154
+- Kokkos::View::initialization [UnorderedMap values] via memset
+ (ParFor)   0.006207 1024 0.000006 0.000238 0.000146
+- Kokkos::View::initialization [UnorderedMap scalars] via memset
+ (ParFor)   0.006070 1024 0.000006 0.000233 0.000142
+- Kokkos::View::initialization [SNAKokkos::idxz_mirror] via memset
+ (ParFor)   0.005471 128 0.000043 0.000210 0.000128
+- Kokkos::View::initialization [Neighbor::d_bincount] via memset
+ (ParFor)   0.004431 128 0.000035 0.000170 0.000104
+- Kokkos::View::initialization [Kokkos::UniqueToken<Cuda>::m_locks] via memset
+ (ParFor)   0.004229 128 0.000033 0.000162 0.000099
+- Kokkos::View::initialization [Kokkos::Random_XorShift64::locks] via memset
+ (ParFor)   0.003675 128 0.000029 0.000141 0.000086
+- Kokkos::View::initialization [NeighBond:nlist] via memset
+ (ParFor)   0.002822 256 0.000011 0.000108 0.000066
+- Kokkos::View::initialization [NeighBond:fail_flag] via memset
+ (ParFor)   0.002437 256 0.000010 0.000093 0.000057
+- Kokkos::View::initialization [Kokkos::Random_XorShift64::state] via memset
+ (ParFor)   0.002185 128 0.000017 0.000084 0.000051
+- Kokkos::View::initialization [NeighborKokkosFunctor::resize] via memset
+ (ParFor)   0.002021 128 0.000016 0.000077 0.000047
+- Kokkos::View::initialization [comm::k_total_send] via memset
+ (ParFor)   0.001968 128 0.000015 0.000075 0.000046
+- Kokkos::View::initialization [neighlist:stencil] via memset
+ (ParFor)   0.001888 128 0.000015 0.000072 0.000044
+- Kokkos::View::initialization [neigh:cutneighsq] via memset
+ (ParFor)   0.001865 128 0.000015 0.000072 0.000044
+- Kokkos::View::initialization [neighbor:scalars] via memset
+ (ParFor)   0.001527 128 0.000012 0.000059 0.000036
+- Kokkos::View::initialization [PairSNAPKokkos::cutsq] via memset
+ (ParFor)   0.001503 128 0.000012 0.000058 0.000035
+- Kokkos::View::initialization [langevin:gfactor1] via memset
+ (ParFor)   0.001479 128 0.000012 0.000057 0.000035
+- Kokkos::View::initialization [Mass] via memset
+ (ParFor)   0.001476 128 0.000012 0.000057 0.000035
+- Kokkos::View::initialization [comm:k_exchange_lists] via memset
+ (ParFor)   0.001434 128 0.000011 0.000055 0.000034
+- Kokkos::View::initialization [pair_zbl:z  ] via memset
+ (ParFor)   0.001431 128 0.000011 0.000055 0.000034
+- Kokkos::View::initialization [comm:k_buf_send_pair] via memset
+ (ParFor)   0.001431 128 0.000011 0.000055 0.000034
+- Kokkos::View::initialization [comm:k_recv_send_pair] via memset
+ (ParFor)   0.001360 128 0.000011 0.000052 0.000032
+- Kokkos::View::initialization [atom:error_flag] via memset
+ (ParFor)   0.001326 128 0.000010 0.000051 0.000031
+- Kokkos::View::initialization [pair_zbl:d1a] via memset
+ (ParFor)   0.001282 128 0.000010 0.000049 0.000030
+- Kokkos::View::initialization [langevin:gfactor2] via memset
+ (ParFor)   0.001281 128 0.000010 0.000049 0.000030
+- Kokkos::View::initialization [pair_zbl:sw3] via memset
+ (ParFor)   0.001276 128 0.000010 0.000049 0.000030
+- Kokkos::View::initialization [comm:k_buf_send_fix] via memset
+ (ParFor)   0.001268 128 0.000010 0.000049 0.000030
+- Kokkos::View::initialization [pair_zbl:d2a] via memset
+ (ParFor)   0.001265 128 0.000010 0.000049 0.000030
+- Kokkos::View::initialization [atom::k_count] via memset
+ (ParFor)   0.001264 128 0.000010 0.000048 0.000030
+- Kokkos::View::initialization [pair_zbl:sw2] via memset
+ (ParFor)   0.001252 128 0.000010 0.000048 0.000029
+- Kokkos::View::initialization [pair_zbl:sw1] via memset
+ (ParFor)   0.001250 128 0.000010 0.000048 0.000029
+- Kokkos::View::initialization [pair_zbl:zze] via memset
+ (ParFor)   0.001247 128 0.000010 0.000048 0.000029
+- Kokkos::View::initialization [comm:k_recv_send_fix] via memset
+ (ParFor)   0.001243 128 0.000010 0.000048 0.000029
+- Kokkos::View::initialization [comm:k_count] via memset
+ (ParFor)   0.001241 128 0.000010 0.000048 0.000029
+- Kokkos::View::initialization [pair_zbl:sw5] via memset
+ (ParFor)   0.001236 128 0.000010 0.000047 0.000029
+- Kokkos::View::initialization [pair_zbl:cutsq] via memset
+ (ParFor)   0.001234 128 0.000010 0.000047 0.000029
+- Kokkos::View::initialization [pair_zbl:sw4] via memset
+ (ParFor)   0.001226 128 0.000010 0.000047 0.000029
+- Kokkos::View::initialization [langevin:ratio] via memset
+ (ParFor)   0.001224 128 0.000010 0.000047 0.000029
+- Kokkos::View::initialization [pair_zbl:d4a] via memset
+ (ParFor)   0.001216 128 0.000010 0.000047 0.000029
+- Kokkos::View::initialization [pair_zbl:d3a] via memset
+ (ParFor)   0.001215 128 0.000009 0.000047 0.000029
+- Kokkos::View::initialization [NeighBond:nlist_mirror] via memset
+ (ParFor)   0.000644 256 0.000003 0.000025 0.000015
+- Kokkos::View::initialization [NeighBond:fail_flag_mirror] via memset
+ (ParFor)   0.000598 256 0.000002 0.000023 0.000014
+- Kokkos::View::initialization [pair:radelem_mirror] via memset
+ (ParFor)   0.000437 128 0.000003 0.000017 0.000010
+- Kokkos::View::initialization [SNAKokkos::cglist_mirror] via memset
+ (ParFor)   0.000434 128 0.000003 0.000017 0.000010
+- Kokkos::View::initialization [SNAKokkos::idxu_full_half_mirror] via memset
+ (ParFor)   0.000407 128 0.000003 0.000016 0.000010
+- Kokkos::View::initialization [SNAKokkos::idxcg_block_mirror] via memset
+ (ParFor)   0.000394 128 0.000003 0.000015 0.000009
+- Kokkos::View::initialization [PairSNAPKokkos::cutsq_mirror] via memset
+ (ParFor)   0.000388 128 0.000003 0.000015 0.000009
+- Kokkos::View::initialization [comm::k_total_send_mirror] via memset
+ (ParFor)   0.000388 128 0.000003 0.000015 0.000009
+- Kokkos::View::initialization [neighbor:scalars_mirror] via memset
+ (ParFor)   0.000381 128 0.000003 0.000015 0.000009
+- Kokkos::View::initialization [neigh:cutneighsq_mirror] via memset
+ (ParFor)   0.000381 128 0.000003 0.000015 0.000009
+- Kokkos::View::initialization [sna:bzero_mirror] via memset
+ (ParFor)   0.000374 128 0.000003 0.000014 0.000009
+- Kokkos::View::initialization [pair_zbl:z  _mirror] via memset
+ (ParFor)   0.000370 128 0.000003 0.000014 0.000009
+- Kokkos::View::initialization [pair_zbl:sw3_mirror] via memset
+ (ParFor)   0.000368 128 0.000003 0.000014 0.000009
+- Kokkos::View::initialization [NeighborKokkosFunctor::resize_mirror] via memset
+ (ParFor)   0.000368 128 0.000003 0.000014 0.000009
+- Kokkos::View::initialization [SNAKokkos::idxb_block_mirror] via memset
+ (ParFor)   0.000366 128 0.000003 0.000014 0.000009
+- Kokkos::View::initialization [neighlist:stencil_mirror] via memset
+ (ParFor)   0.000365 128 0.000003 0.000014 0.000009
+- Kokkos::View::initialization [pair:dinnerelem_mirror] via memset
+ (ParFor)   0.000360 128 0.000003 0.000014 0.000008
+- Kokkos::View::initialization [atom:f_mirror] via memset
+ (ParFor)   0.000358 128 0.000003 0.000014 0.000008
+- Kokkos::View::initialization [pair_zbl:zze_mirror] via memset
+ (ParFor)   0.000358 128 0.000003 0.000014 0.000008
+- Kokkos::View::initialization [pair_zbl:d1a_mirror] via memset
+ (ParFor)   0.000355 128 0.000003 0.000014 0.000008
+- Kokkos::View::initialization [pair_zbl:d2a_mirror] via memset
+ (ParFor)   0.000354 128 0.000003 0.000014 0.000008
+- Kokkos::View::initialization [SNAKokkos::idxz_block_mirror] via memset
+ (ParFor)   0.000353 128 0.000003 0.000014 0.000008
+- Kokkos::View::initialization [SNAKokkos::idxu_cache_block_mirror] via memset
+ (ParFor)   0.000350 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [SNAKokkos::idxu_half_block_mirror] via memset
+ (ParFor)   0.000349 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [SNAKokkos::idxb_mirror] via memset
+ (ParFor)   0.000348 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair:wjelem_mirror] via memset
+ (ParFor)   0.000344 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair:coeffelem_mirror] via memset
+ (ParFor)   0.000344 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [langevin:gfactor2_mirror] via memset
+ (ParFor)   0.000343 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [SNAKokkos::rootpqarray_mirror] via memset
+ (ParFor)   0.000343 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair_zbl:sw5_mirror] via memset
+ (ParFor)   0.000342 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [atom:x_mirror] via memset
+ (ParFor)   0.000342 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair_zbl:sw2_mirror] via memset
+ (ParFor)   0.000342 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [Mass_mirror] via memset
+ (ParFor)   0.000341 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair:sinnerelem_mirror] via memset
+ (ParFor)   0.000340 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [langevin:gfactor1_mirror] via memset
+ (ParFor)   0.000340 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair_zbl:sw4_mirror] via memset
+ (ParFor)   0.000339 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [SNAKokkos::idxu_block_mirror] via memset
+ (ParFor)   0.000339 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair_zbl:d3a_mirror] via memset
+ (ParFor)   0.000338 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair_zbl:sw1_mirror] via memset
+ (ParFor)   0.000338 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [PairSNAPKokkos::map_mirror] via memset
+ (ParFor)   0.000336 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [langevin:ratio_mirror] via memset
+ (ParFor)   0.000334 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [comm:k_exchange_lists_mirror] via memset
+ (ParFor)   0.000331 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [pair_zbl:d4a_mirror] via memset
+ (ParFor)   0.000330 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [atom:error_flag_mirror] via memset
+ (ParFor)   0.000329 128 0.000003 0.000013 0.000008
+- Kokkos::View::initialization [atom:v_mirror] via memset
+ (ParFor)   0.000325 128 0.000003 0.000012 0.000008
+- Kokkos::View::initialization [comm:k_buf_send_fix_mirror] via memset
+ (ParFor)   0.000322 128 0.000003 0.000012 0.000008
+- Kokkos::View::initialization [comm:k_count_mirror] via memset
+ (ParFor)   0.000322 128 0.000003 0.000012 0.000008
+- Kokkos::View::initialization [atom::k_count_mirror] via memset
+ (ParFor)   0.000321 128 0.000003 0.000012 0.000008
+- Kokkos::View::initialization [comm:k_recv_send_fix_mirror] via memset
+ (ParFor)   0.000320 128 0.000003 0.000012 0.000008
+- Kokkos::View::initialization [atom:image_mirror] via memset
+ (ParFor)   0.000320 128 0.000002 0.000012 0.000008
+- Kokkos::View::initialization [atom:mask_mirror] via memset
+ (ParFor)   0.000315 128 0.000002 0.000012 0.000007
+- Kokkos::View::initialization [comm:k_recv_send_pair_mirror] via memset
+ (ParFor)   0.000311 128 0.000002 0.000012 0.000007
+- Kokkos::View::initialization [atom:tag_mirror] via memset
+ (ParFor)   0.000309 128 0.000002 0.000012 0.000007
+- Kokkos::View::initialization [atom:type_mirror] via memset
+ (ParFor)   0.000306 128 0.000002 0.000012 0.000007
+- Kokkos::View::initialization [comm:k_sendflag_mirror] via memset
+ (ParFor)   0.000302 128 0.000002 0.000012 0.000007
+
+-------------------------------------------------------------------------
+Summary:
+
+Total Execution Time (incl. Kokkos + non-Kokkos):                4260.54317 seconds
+Total Time in Kokkos kernels:                                    2607.32758 seconds
+   -> Time outside Kokkos kernels:                               1653.21559 seconds
+   -> Percentage in Kokkos kernels:                                   61.20 %
+Total Calls to Kokkos Kernels:                                      1882752
+
+-------------------------------------------------------------------------

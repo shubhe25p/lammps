@@ -4,16 +4,15 @@ set -xe
 
 module rm darshan
 module rm xalt
-
-module unload cray-mpich
-# module use /global/common/software/nersc/pe/modulefiles/latest
-module load PrgEnv-gnu
-module load cudatoolkit/11.7
-module load mpich/4.1.1
-
 threads=64
 
 HOME_BASE=$(pwd)
+module unload cray-mpich
+module use /global/common/software/nersc/pe/modulefiles/latest
+module load PrgEnv-gnu
+module load cudatoolkit
+module load mpich
+which mpicc
 LAMMPS_SRC="${HOME_BASE}/lammps_src"
 INSTALL_PREFIX="${HOME_BASE}/install_GPU_gnu-mpich"
 
