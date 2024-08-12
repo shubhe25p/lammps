@@ -1,0 +1,106 @@
++ module rm darshan
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "darshan" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module rm xalt
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "xalt" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload cray-mpich
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module use /global/common/software/nersc/pe/modulefiles/latest
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) gpu/1.0
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load PrgEnv-gnu
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load cudatoolkit
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load openmpi
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "cray-mpich/8.1.28" with "openmpi/5.0.3".
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ threads=64
+++ pwd
++ HOME_BASE=/global/u2/s/shubhp/work/exaalt
++ LAMMPS_SRC=/global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi
++ INSTALL_PREFIX=/global/u2/s/shubhp/work/exaalt/install_latest_gnu+ompi
++ '[' '!' -d /global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi ']'
++ git clone --single-branch --branch stable https://github.com/lammps/lammps.git /global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi
+Cloning into '/global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi'...
+Updating files:   3% (429/12818)Updating files:   4% (513/12818)Updating files:   5% (641/12818)Updating files:   6% (770/12818)Updating files:   6% (860/12818)Updating files:   7% (898/12818)Updating files:   8% (1026/12818)Updating files:   9% (1154/12818)Updating files:  10% (1282/12818)Updating files:  11% (1410/12818)Updating files:  11% (1413/12818)Updating files:  12% (1539/12818)Updating files:  13% (1667/12818)Updating files:  14% (1795/12818)Updating files:  14% (1818/12818)Updating files:  15% (1923/12818)Updating files:  16% (2051/12818)Updating files:  16% (2086/12818)Updating files:  17% (2180/12818)Updating files:  18% (2308/12818)Updating files:  18% (2377/12818)Updating files:  19% (2436/12818)Updating files:  20% (2564/12818)Updating files:  21% (2692/12818)Updating files:  21% (2802/12818)Updating files:  22% (2820/12818)Updating files:  23% (2949/12818)Updating files:  24% (3077/12818)Updating files:  24% (3122/12818)Updating files:  25% (3205/12818)Updating files:  26% (3333/12818)Updating files:  27% (3461/12818)Updating files:  28% (3590/12818)Updating files:  29% (3718/12818)Updating files:  29% (3823/12818)Updating files:  30% (3846/12818)Updating files:  31% (3974/12818)Updating files:  32% (4102/12818)Updating files:  33% (4230/12818)Updating files:  33% (4325/12818)Updating files:  34% (4359/12818)Updating files:  35% (4487/12818)Updating files:  36% (4615/12818)Updating files:  37% (4743/12818)Updating files:  37% (4869/12818)Updating files:  38% (4871/12818)Updating files:  39% (5000/12818)Updating files:  40% (5128/12818)Updating files:  41% (5256/12818)Updating files:  42% (5384/12818)Updating files:  43% (5512/12818)Updating files:  43% (5628/12818)Updating files:  44% (5640/12818)Updating files:  45% (5769/12818)Updating files:  46% (5897/12818)Updating files:  47% (6025/12818)Updating files:  48% (6153/12818)Updating files:  48% (6220/12818)Updating files:  49% (6281/12818)Updating files:  50% (6409/12818)Updating files:  51% (6538/12818)Updating files:  52% (6666/12818)Updating files:  53% (6794/12818)Updating files:  54% (6922/12818)Updating files:  54% (7033/12818)Updating files:  55% (7050/12818)Updating files:  56% (7179/12818)Updating files:  56% (7283/12818)Updating files:  57% (7307/12818)Updating files:  58% (7435/12818)Updating files:  58% (7538/12818)Updating files:  59% (7563/12818)Updating files:  60% (7691/12818)Updating files:  61% (7819/12818)Updating files:  62% (7948/12818)Updating files:  63% (8076/12818)Updating files:  63% (8172/12818)Updating files:  64% (8204/12818)Updating files:  65% (8332/12818)Updating files:  66% (8460/12818)Updating files:  67% (8589/12818)Updating files:  68% (8717/12818)Updating files:  69% (8845/12818)Updating files:  70% (8973/12818)Updating files:  70% (9079/12818)Updating files:  71% (9101/12818)Updating files:  72% (9229/12818)Updating files:  73% (9358/12818)Updating files:  74% (9486/12818)Updating files:  74% (9594/12818)Updating files:  75% (9614/12818)Updating files:  76% (9742/12818)Updating files:  77% (9870/12818)Updating files:  78% (9999/12818)Updating files:  79% (10127/12818)Updating files:  80% (10255/12818)Updating files:  81% (10383/12818)Updating files:  82% (10511/12818)Updating files:  83% (10639/12818)Updating files:  84% (10768/12818)Updating files:  84% (10782/12818)Updating files:  85% (10896/12818)Updating files:  86% (11024/12818)Updating files:  87% (11152/12818)Updating files:  88% (11280/12818)Updating files:  89% (11409/12818)Updating files:  89% (11502/12818)Updating files:  90% (11537/12818)Updating files:  91% (11665/12818)Updating files:  92% (11793/12818)Updating files:  93% (11921/12818)Updating files:  93% (11986/12818)Updating files:  94% (12049/12818)Updating files:  95% (12178/12818)Updating files:  96% (12306/12818)Updating files:  97% (12434/12818)Updating files:  98% (12562/12818)Updating files:  99% (12690/12818)Updating files:  99% (12748/12818)Updating files: 100% (12818/12818)Updating files: 100% (12818/12818), done.
++ cd /global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi
++ '[' '!' -d build_PM ']'
++ mkdir build_PM
++ cd build_PM
++ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_Fortran_COMPILER=mpifort -D CMAKE_C_COMPILER=mpicc -D CMAKE_CXX_COMPILER=mpicxx -D CMAKE_INSTALL_PREFIX=/global/u2/s/shubhp/work/exaalt/install_latest_gnu+ompi -D LAMMPS_EXCEPTIONS=on -D BUILD_SHARED_LIBS=on -D BUILD_MPI=yes -D PKG_KOKKOS=yes -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes -D PKG_MANYBODY=yes -D PKG_REPLICA=yes -D PKG_ML-SNAP=yes -D PKG_EXTRA-FIX=yes -D PKG_MPIIO=yes -D LAMMPS_SIZES=BIGBIG ../cmake
+      Options:       -Xcudafe;--diag_suppress=unrecognized_pragma
++ make -j64
+/global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi/src/KOKKOS/atom_map_kokkos.cpp: In lambda function:
+/global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi/src/KOKKOS/atom_map_kokkos.cpp:218:18: warning: overflow in conversion from ‘long int’ to ‘int’ changes value from ‘9223372036854775807’ to ‘-1’ [-Woverflow]
+  218 |     int i_closest = MAXTAGINT;
+      |                 ~^~~~~~~~~~~~~        
++ make install -j64
++ cd /global/u2/s/shubhp/work/exaalt
++ rm -rf /global/u2/s/shubhp/work/exaalt/lammps_src_latest_ompi

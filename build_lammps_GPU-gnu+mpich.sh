@@ -48,7 +48,7 @@ cmake \
     -D CMAKE_CXX_COMPILER=mpicxx \
     -D CMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} \
     -D LAMMPS_EXCEPTIONS=on \
-    -D BUILD_SHARED_LIBS=on \
+    -D BUILD_SHARED_LIBS=yes \
     -D BUILD_MPI=yes \
     -D PKG_KOKKOS=yes -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes \
     -D PKG_MANYBODY=yes \

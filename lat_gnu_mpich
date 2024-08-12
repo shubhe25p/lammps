@@ -1,0 +1,1263 @@
+-- The CXX compiler identification is GNU 12.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /global/common/software/nersc/pe/gpu/gnu/mpich/4.2.2/bin/mpicxx - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/bin/git (found version "2.35.3") 
+-- Running check for auto-generated files from make-based build system
+-- Found MPI_CXX: /global/common/software/nersc/pe/gpu/gnu/mpich/4.2.2/bin/mpicxx (found version "4.1") 
+-- Found MPI: TRUE (found version "4.1")  
+-- Looking for C++ include omp.h
+-- Looking for C++ include omp.h - found
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+-- Found JPEG: /usr/lib64/libjpeg.so (found version "62") 
+-- Found PNG: /usr/lib64/libpng.so (found version "1.6.34") 
+-- Found ZLIB: /usr/lib64/libz.so (found version "1.2.11") 
+-- Found GZIP: /usr/bin/gzip  
+-- Found FFMPEG: /usr/bin/ffmpeg  
+-- Looking for C++ include cmath
+-- Looking for C++ include cmath - found
+-- KOKKOS: Enabling CUDA LAMBDA function support
+-- Setting default Kokkos CXX standard to 14
+-- The project name is: Kokkos
+-- Compiler Version: 12.2.91
+-- kokkos_launch_compiler (/global/homes/s/shubhp/work/exaalt/lammps_src_latest/lib/kokkos/bin/kokkos_launch_compiler) is enabled...
+-- SERIAL backend is being turned on to ensure there is at least one Host space. To change this, you must enable another host execution space and configure with -DKokkos_ENABLE_SERIAL=OFF or change CMakeCache.txt
+-- Using -std=c++14 for C++14 standard as feature
+-- Built-in Execution Spaces:
+--     Device Parallel: Kokkos::Cuda
+--     Host Parallel: NoTypeDefined
+--       Host Serial: SERIAL
+-- 
+-- Architectures:
+--  AMPERE80
+-- Found CUDAToolkit: /opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/12.2/include (found version "12.2.91") 
+-- Looking for C++ include pthread.h
+-- Looking for C++ include pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found TPLCUDA: TRUE  
+-- Found TPLLIBDL: /usr/include  
+-- Using internal desul_atomics copy
+-- Kokkos Devices: CUDA;SERIAL, Kokkos Backends: CUDA;SERIAL
+-- Generating style headers...
+-- Generating package headers...
+-- Generating lmpinstalledpkgs.h...
+-- Found Python: /usr/bin/python3.6 (found version "3.6.15") found components: Interpreter 
+-- Found ClangFormat: /global/common/software/nersc/pe/gpu/llvm/nightly/bin/clang-format (found suitable version "19.0.0", minimum required is "8.0") 
+-- The following tools and libraries have been found and configured:
+ * Git
+ * MPI
+ * OpenMP
+ * JPEG
+ * PNG
+ * ZLIB
+ * Threads
+ * CUDAToolkit
+ * TPLCUDA
+ * TPLLIBDL
+ * Python
+ * ClangFormat (required version >= 8.0)
+
+-- <<< Build configuration >>>
+   LAMMPS Version:   20230802 stable_2Aug2023_update3
+   Operating System: Linux SLES" 15.4
+   CMake Version:    3.20.4
+   Build type:       Release
+   Install path:     /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich
+   Generator:        Unix Makefiles using /usr/bin/gmake
+-- Enabled packages: EXTRA-FIX;KOKKOS;MANYBODY;ML-SNAP;MPIIO;REPLICA
+-- <<< Compilers and Flags: >>>
+-- C++ Compiler:     /global/common/software/nersc/pe/gpu/gnu/mpich/4.2.2/bin/mpicxx
+      Type:          GNU
+      Version:       12.3.0
+      C++ Flags:     -O3 -DNDEBUG
+      Defines:       LAMMPS_BIGBIG;LAMMPS_MEMALIGN=64;LAMMPS_EXCEPTIONS;LAMMPS_OMP_COMPAT=4;LAMMPS_JPEG;LAMMPS_PNG;LAMMPS_GZIP;LAMMPS_FFMPEG;LMP_MPIIO;$<BUILD_INTERFACE:LMP_KOKKOS>
+-- <<< Linker flags: >>>
+-- Executable name:  lmp
+-- Shared library flags:    
+-- <<< MPI flags >>>
+-- MPI_defines:      MPICH_SKIP_MPICXX;OMPI_SKIP_MPICXX;_MPICC_H
+-- MPI includes:     
+-- MPI libraries:    ;
+-- Kokkos Devices: CUDA;CUDA_LAMBDA;SERIAL
+-- Kokkos Architecture: AMPERE80
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /global/homes/s/shubhp/work/exaalt/lammps_src_latest/build_PM
+[  0%] Generating includes/lammps/fmt/core.h
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_ExecPolicy.cpp.o
+[  1%] Generating includes/lammps/variable.h
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_CPUDiscovery.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Error.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostThreadTeam.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Spinwait.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_CudaSpace.cpp.o
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace_deepcopy.cpp.o
+[  1%] Generating includes/lammps/utils.h
+[  1%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemorySpace.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/__/__/tpls/desul/src/Lock_Array_HIP.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostBarrier.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_SharedAlloc.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Locks.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_HostSpace.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Command_Line_Parsing.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_MemoryPool.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Task.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/__/__/tpls/desul/src/Lock_Array_CUDA.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Core.cpp.o
+[  2%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Stacktrace.cpp.o
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_hwloc.cpp.o
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_Profiling.cpp.o
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Serial/Kokkos_Serial_Task.cpp.o
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/impl/Kokkos_NumericTraits.cpp.o
+[  3%] Generating includes/lammps/update.h
+[  3%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Serial/Kokkos_Serial.cpp.o
+[  4%] Building CXX object lib/kokkos/core/src/CMakeFiles/kokkoscore.dir/Cuda/Kokkos_Cuda_Instance.cpp.o
+[  4%] Generating includes/lammps/timer.h
+[  4%] Generating includes/lammps/domain.h
+[  5%] Generating includes/lammps/pointers.h
+[  5%] Generating includes/lammps/output.h
+[  5%] Generating includes/lammps/universe.h
+[  5%] Generating includes/lammps/region.h
+[  5%] Generating includes/lammps/neigh_list.h
+[  5%] Generating includes/lammps/lmptype.h
+[  5%] Generating includes/lammps/improper.h
+[  5%] Generating includes/lammps/dihedral.h
+[  5%] Generating includes/lammps/compute.h
+[  5%] Generating includes/lammps/bond.h
+[  5%] Generating includes/lammps/input.h
+[  5%] Generating includes/lammps/atom.h
+-- Git Directory: /global/homes/s/shubhp/work/exaalt/lammps_src_latest/.git
+[  6%] Generating includes/lammps/exceptions.h
+[  6%] Generating includes/lammps/pair.h
+[  6%] Generating includes/lammps/angle.h
+[  6%] Generating includes/lammps/fix.h
+[  7%] Generating includes/lammps/citeme.h
+[  7%] Generating includes/lammps/library.h
+[  7%] Built target variable.h
+[  8%] Generating includes/lammps/lammps.h
+[  8%] Built target fmt_core.h
+[  8%] Generating includes/lammps/comm.h
+[  8%] Built target utils.h
+[  9%] Generating includes/lammps/force.h
+[  9%] Built target update.h
+[  9%] Built target domain.h
+[  9%] Generating includes/lammps/error.h
+[  9%] Generating includes/lammps/kspace.h
+[  9%] Generating includes/lammps/group.h
+[  9%] Built target timer.h
+[  9%] Generating includes/lammps/lmppython.h
+[  9%] Generating includes/lammps/lattice.h
+[  9%] Generating includes/lammps/neighbor.h
+[  9%] Built target universe.h
+[  9%] Generating includes/lammps/platform.h
+[  9%] Built target pointers.h
+[  9%] Generating includes/lammps/info.h
+[  9%] Generating includes/lammps/command.h
+[  9%] Built target region.h
+[  9%] Built target output.h
+[  9%] Built target lmptype.h
+[ 10%] Built target improper.h
+[ 10%] Generating includes/lammps/memory.h
+[ 10%] Built target neigh_list.h
+[ 10%] Built target dihedral.h
+[ 10%] Generating includes/lammps/fmt/format.h
+[ 10%] Built target bond.h
+[ 10%] Built target compute.h
+[ 10%] Built target input.h
+[ 10%] Built target atom.h
+[ 10%] Built target exceptions.h
+[ 10%] Built target pair.h
+[ 10%] Built target angle.h
+-- Generating lmpgitversion.h...
+[ 10%] Built target fix.h
+[ 10%] Built target citeme.h
+[ 10%] Built target comm.h
+[ 10%] Built target library.h
+[ 10%] Built target lammps.h
+[ 10%] Built target force.h
+[ 10%] Built target group.h
+[ 10%] Built target kspace.h
+[ 10%] Built target error.h
+[ 10%] Built target info.h
+[ 10%] Built target neighbor.h
+[ 10%] Built target platform.h
+[ 10%] Built target lattice.h
+[ 10%] Built target lmppython.h
+[ 10%] Built target command.h
+[ 10%] Generating includes/lammps/modify.h
+[ 10%] Built target memory.h
+[ 10%] Built target fmt_format.h
+[ 10%] Built target gitversion
+[ 10%] Built target modify.h
+[ 11%] Linking CXX static library libkokkoscore.a
+[ 11%] Built target kokkoscore
+[ 12%] Building CXX object lib/kokkos/containers/src/CMakeFiles/kokkoscontainers.dir/impl/Kokkos_UnorderedMap_impl.cpp.o
+[ 12%] Linking CXX static library libkokkoscontainers.a
+[ 12%] Built target kokkoscontainers
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/angle.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/angle_deprecated.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/angle_hybrid.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_map.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/angle_zero.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_hybrid.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_ellipsoid.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_atomic.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/angle_write.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_body.cpp.o
+[ 12%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_line.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_charge.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/body.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_tri.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_angle.cpp.o
+[ 14%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/atom_vec_sphere.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_com_chunk.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/comm_brick.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/arg_info.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/bond_zero.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_aggregate_atom.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_bond.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_centro_atom.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/bond_deprecated.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute.cpp.o
+[ 15%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/balance.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/comm.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/bond_hybrid.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/citeme.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_bond_local.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/bond.cpp.o
+[ 16%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_com.cpp.o
+[ 18%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/comm_tiled.cpp.o
+[ 18%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_angle_local.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_dipole_chunk.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_chunk_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_count_type.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_ke.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_dihedral.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_heat_flux.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_chunk.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_dihedral_local.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_gyration.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_coord_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_angmom_chunk.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_dipole.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_cna_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/change_box.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_cluster_atom.cpp.o
+[ 19%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_chunk_spread_atom.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_inertia_chunk.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_gyration_chunk.cpp.o
+[ 20%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_improper_local.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_displace_atom.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_centroid_stress_atom.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_erotate_sphere.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_erotate_sphere_atom.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_deprecated.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_group_group.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_global_atom.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_improper.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_fragment_atom.cpp.o
+[ 21%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_ke_atom.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_msd.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_msd_chunk.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_omega_chunk.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_orientorder_atom.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_pair.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_pair_local.cpp.o
+[ 22%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_pe.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_pe_atom.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_pressure.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_property_atom.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_property_chunk.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_property_grid.cpp.o
+[ 23%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_property_local.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_rdf.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_reduce.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_reduce_chunk.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_slice.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_reduce_region.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_stress_atom.cpp.o
+[ 24%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_chunk.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_com.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_deform.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_partial.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_profile.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_ramp.cpp.o
+[ 25%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_region.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_temp_sphere.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_torque_chunk.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_vacf.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/compute_vcm_chunk.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/create_atoms.cpp.o
+[ 26%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/create_bonds.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/create_box.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/delete_atoms.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/delete_bonds.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/deprecated.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dihedral.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dihedral_deprecated.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dihedral_hybrid.cpp.o
+[ 27%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dihedral_zero.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dihedral_write.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/displace_atoms.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/domain.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_atom.cpp.o
+[ 28%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_cfg.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_custom.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_deprecated.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_grid.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_grid_vtk.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_image.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_local.cpp.o
+[ 29%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_xyz.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/dump_movie.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/error.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/finish.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_addforce.cpp.o
+[ 30%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_adapt.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_atom.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_chunk.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_correlate.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_grid.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_histo.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_histo_weight.cpp.o
+[ 31%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_ave_time.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_aveforce.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_balance.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_bond_history.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_box_relax.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_deform.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_deposit.cpp.o
+[ 32%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_deprecated.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_dt_reset.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_dummy.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_efield.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_enforce2d.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_evaporate.cpp.o
+[ 33%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_external.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_gravity.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_group.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_halt.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_heat.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_indent.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_langevin.cpp.o
+[ 34%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_lineforce.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_minimize.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_momentum.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_move.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_neigh_history.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nh.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nh_sphere.cpp.o
+[ 35%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nph.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nph_sphere.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_npt.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_npt_sphere.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nve.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nve_limit.cpp.o
+[ 36%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nve_noforce.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nve_sphere.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nvt.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nvt_sllod.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_nvt_sphere.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_pair.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_planeforce.cpp.o
+[ 37%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_press_berendsen.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_print.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_read_restart.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_property_atom.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_respa.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_recenter.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_restrain.cpp.o
+[ 38%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_setforce.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_spring.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_spring_self.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_spring_chunk.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_store_atom.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_store_force.cpp.o
+[ 39%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_store_global.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_store_local.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_store_state.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_temp_berendsen.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_temp_rescale.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_thermal_conductivity.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_update_special_bonds.cpp.o
+[ 40%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_vector.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_viscous.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_harmonic.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_lj1043.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_lj126.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_lj93.cpp.o
+[ 41%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_morse.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_reflect.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_region.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fix_wall_table.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fmtlib_format.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/fmtlib_os.cpp.o
+[ 42%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/force.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/grid2d.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/grid3d.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/group.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/hashlittle.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/image.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/imbalance.cpp.o
+[ 43%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/imbalance_group.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/imbalance_neigh.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/imbalance_time.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/imbalance_store.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/imbalance_var.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/improper.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/improper_deprecated.cpp.o
+[ 44%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/improper_hybrid.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/improper_zero.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/info.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/input.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/integrate.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/irregular.cpp.o
+[ 45%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/kspace.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/kspace_deprecated.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/label_map.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/lammps.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/lattice.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/library.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/lmppython.cpp.o
+[ 46%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/math_eigen.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/math_extra.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/math_special.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/memory.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_cg.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_deprecated.cpp.o
+[ 47%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_fire.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_hftn.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_linesearch.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_quickmin.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/min_sd.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/minimize.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/modify.cpp.o
+[ 48%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/molecule.cpp.o
+[ 49%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/my_page.cpp.o
+[ 49%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/my_pool_chunk.cpp.o
+[ 49%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nbin.cpp.o
+[ 49%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nbin_multi.cpp.o
+[ 49%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nbin_standard.cpp.o
+[ 49%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/neigh_list.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/neigh_request.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/neighbor.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_copy.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_bin.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_bin_atomonly.cpp.o
+[ 50%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_bin_ghost.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_multi.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_multi_old.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_nsq.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_full_nsq_ghost.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_bin_atomonly_newton.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_bin_newtoff.cpp.o
+[ 51%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_bin_newtoff_ghost.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_bin_newton.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_bin_newton_tri.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_multi_newtoff.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_multi_newton.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_multi_newton_tri.cpp.o
+[ 52%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_multi_old_newtoff.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_multi_old_newton.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_multi_old_newton_tri.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_nsq_newtoff.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_nsq_newtoff_ghost.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_nsq_newton.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_respa_bin_newtoff.cpp.o
+[ 53%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_respa_bin_newton.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_respa_bin_newton_tri.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_respa_nsq_newtoff.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_respa_nsq_newton.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_bin_newtoff.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_bin_newton.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_bin_newton_tri.cpp.o
+[ 54%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_multi_newtoff.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_multi_newton.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_multi_newton_tri.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_multi_old_newtoff.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_multi_old_newton.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_multi_old_newton_tri.cpp.o
+[ 55%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_nsq_newtoff.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_half_size_nsq_newton.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_halffull_newtoff.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_halffull_newtoff_trim.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_halffull_newton.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_halffull_newton_trim.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_skip.cpp.o
+[ 56%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_skip_respa.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_skip_size.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_skip_size_off2on.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_skip_size_off2on_oneside.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/npair_trim.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_bin_2d.cpp.o
+[ 57%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_bin_3d.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_ghost_bin_2d.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_ghost_bin_3d.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_multi_2d.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_multi_3d.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_multi_old_2d.cpp.o
+[ 58%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_full_multi_old_3d.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_bin_2d.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_bin_2d_tri.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_bin_3d.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_bin_3d_tri.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_2d.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_2d_tri.cpp.o
+[ 59%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_3d.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_3d_tri.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_old_2d.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_old_2d_tri.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_old_3d_tri.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/nstencil_half_multi_old_3d.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo.cpp.o
+[ 60%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_angle_all.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_angle_partial.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_angle_template.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_bond_all.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_bond_partial.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_bond_template.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_dihedral_all.cpp.o
+[ 61%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_dihedral_partial.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_dihedral_template.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_improper_all.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_improper_partial.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ntopo_improper_template.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/output.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair.cpp.o
+[ 62%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_buck.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_born.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_buck_coul_cut.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_coul_dsf.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_coul_cut.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_coul_debye.cpp.o
+[ 63%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_coul_wolf.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_deprecated.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_hybrid.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_hybrid_overlay.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_hybrid_scaled.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_lj_cut.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_lj_cut_coul_cut.cpp.o
+[ 64%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_lj_expand.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_morse.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_soft.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_table.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_yukawa.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_zbl.cpp.o
+[ 65%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/pair_zero.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/platform.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/potential_file_reader.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/procmap.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/random_mars.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/random_park.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/rcb.cpp.o
+[ 66%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/read_data.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/read_dump.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/read_restart.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/reader.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/reader_native.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/reader_xyz.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region.cpp.o
+[ 67%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_block.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_cone.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_cylinder.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_deprecated.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_ellipsoid.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_intersect.cpp.o
+[ 68%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_plane.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_prism.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_sphere.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/region_union.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/replicate.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/rerun.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/reset_atoms_id.cpp.o
+[ 69%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/reset_atoms_image.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/reset_atoms_mol.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/respa.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/run.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/set.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/special.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/table_file_reader.cpp.o
+[ 70%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/tabular_function.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/text_file_reader.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/thermo.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/timer.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/tokenizer.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/universe.cpp.o
+[ 71%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/update.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/utils.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/variable.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/velocity.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/verlet.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/write_coeff.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/write_data.cpp.o
+[ 72%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/write_dump.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/write_restart.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_addtorque.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_ave_correlate_long.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_controller.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_drag.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_efield_tip4p.cpp.o
+[ 73%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_electron_stopping.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_electron_stopping_fit.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_ffl.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_filter_corotate.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_flow_gauss.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_gld.cpp.o
+[ 74%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_gle.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_momentum_chunk.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_npt_cauchy.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_numdiff.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_numdiff_virial.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_nvk.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_oneway.cpp.o
+[ 75%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_pafi.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_rhok.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_smd.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_spring_rg.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_temp_csld.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_temp_csvr.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_ti_spring.cpp.o
+[ 76%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_tmd.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_ttm.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_ttm_grid.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_ttm_mod.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_viscosity.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_viscous_sphere.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_wall_ees.cpp.o
+[ 77%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_wall_reflect_stochastic.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/EXTRA-FIX/fix_wall_region_ees.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/fix_qeq_comb.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_adp.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_airebo.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_airebo_morse.cpp.o
+[ 78%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_atm.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_bop.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_comb.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_comb3.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_eam.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_eam_alloy.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_eam_cd.cpp.o
+[ 79%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_eam_fs.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_eam_he.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_edip.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_edip_multi.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_eim.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_extep.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_gw.cpp.o
+[ 80%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_gw_zbl.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_lcbop.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_local_density.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_meam_spline.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_meam_sw_spline.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_nb3b_harmonic.cpp.o
+[ 81%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_polymorphic.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_rebo.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_sw.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_sw_angle_table.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_sw_mod.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_tersoff.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_tersoff_mod.cpp.o
+[ 82%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_tersoff_mod_c.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_tersoff_table.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_tersoff_zbl.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_threebody_table.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_vashishta.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MANYBODY/pair_vashishta_table.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_grid.cpp.o
+[ 83%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_grid_local.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_sna_atom.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_sna_grid_local.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_sna_grid.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_snad_atom.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_snap.cpp.o
+[ 84%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/compute_snav_atom.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/pair_snap.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/ML-SNAP/sna.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MPIIO/dump_atom_mpiio.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MPIIO/dump_cfg_mpiio.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MPIIO/dump_custom_mpiio.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MPIIO/dump_xyz_mpiio.cpp.o
+[ 85%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/MPIIO/restart_mpiio.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/compute_event_displace.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/compute_pressure_alchemy.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/compute_pressure_grem.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_alchemy.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_event.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_event_hyper.cpp.o
+[ 86%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_event_prd.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_event_tad.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_grem.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_hyper.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_hyper_global.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_hyper_local.cpp.o
+[ 87%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_neb.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_pimd_langevin.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/fix_pimd_nvt.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/hyper.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/neb.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/prd.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/tad.cpp.o
+[ 88%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/temper.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/temper_grem.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/temper_npt.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/REPLICA/verlet_split.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/kokkos.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_kokkos.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_map_kokkos.cpp.o
+[ 89%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_vec_kokkos.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/comm_kokkos.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/comm_tiled_kokkos.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/min_kokkos.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/min_linesearch_kokkos.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/neighbor_kokkos.cpp.o
+[ 90%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/neigh_list_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_nh_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/neigh_bond_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/nbin_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/npair_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/npair_halffull_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/domain_kokkos.cpp.o
+[ 91%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/modify_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_vec_atomic_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_vec_charge_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_vec_hybrid_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/atom_vec_sphere_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/compute_coord_atom_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/compute_erotate_sphere_kokkos.cpp.o
+[ 92%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/compute_orientorder_atom_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/compute_temp_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/compute_temp_deform_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_deform_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_dt_reset_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_enforce2d_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_gravity_kokkos.cpp.o
+[ 93%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_langevin_kokkos.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_minimize_kokkos.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_momentum_kokkos.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_neigh_history_kokkos.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_nph_kokkos.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_npt_kokkos.cpp.o
+[ 94%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_nve_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_nve_sphere_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_nvt_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_nvt_sllod_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_property_atom_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_setforce_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_viscous_kokkos.cpp.o
+[ 95%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_wall_lj93_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/fix_wall_reflect_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/verlet_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/min_cg_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/npair_copy_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/npair_skip_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/npair_trim_kokkos.cpp.o
+[ 96%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_buck_kokkos.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_buck_coul_cut_kokkos.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_coul_cut_kokkos.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_coul_debye_kokkos.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_coul_dsf_kokkos.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_coul_wolf_kokkos.cpp.o
+[ 97%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_hybrid_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_hybrid_overlay_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_lj_cut_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_lj_cut_coul_cut_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_lj_expand_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_morse_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_table_kokkos.cpp.o
+[ 98%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_yukawa_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_zbl_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_adp_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_eam_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_eam_alloy_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_eam_fs_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_sw_kokkos.cpp.o
+[ 99%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_tersoff_kokkos.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_tersoff_mod_kokkos.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_tersoff_zbl_kokkos.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_vashishta_kokkos.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/pair_snap_kokkos.cpp.o
+[100%] Building CXX object CMakeFiles/lammps.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/KOKKOS/region_block_kokkos.cpp.o
+[100%] Linking CXX shared library liblammps.so
+[100%] Built target lammps
+[100%] Building CXX object CMakeFiles/lmp.dir/global/homes/s/shubhp/work/exaalt/lammps_src_latest/src/main.cpp.o
+[100%] Linking CXX executable lmp
+[100%] Built target lmp
+[  0%] Built target fmt_core.h
+[  1%] Built target variable.h
+[  1%] Built target update.h
+[  1%] Built target timer.h
+[  1%] Built target region.h
+[  1%] Built target output.h
+[  1%] Built target utils.h
+[  2%] Built target pointers.h
+[  2%] Built target neigh_list.h
+[  2%] Built target lmptype.h
+[  2%] Built target domain.h
+[  2%] Built target universe.h
+-- Git Directory: /global/homes/s/shubhp/work/exaalt/lammps_src_latest/.git
+[  2%] Built target improper.h
+[  2%] Built target dihedral.h
+Consolidate compiler generated dependencies of target kokkoscore
+[  2%] Built target fix.h
+[  2%] Built target atom.h
+[  2%] Built target compute.h
+[  2%] Built target input.h
+[  2%] Built target angle.h
+[  3%] Built target bond.h
+[  3%] Built target exceptions.h
+[  4%] Built target citeme.h
+[  4%] Built target library.h
+[  4%] Built target comm.h
+[  4%] Built target pair.h
+[  5%] Built target lammps.h
+[  6%] Built target kspace.h
+[  6%] Built target force.h
+[  6%] Built target lattice.h
+[  6%] Built target platform.h
+[  6%] Built target error.h
+[  6%] Built target info.h
+[  6%] Built target group.h
+[  7%] Built target memory.h
+[  7%] Built target lmppython.h
+[  7%] Built target command.h
+[  7%] Built target fmt_format.h
+[  7%] Built target neighbor.h
+[  8%] Built target modify.h
+[ 11%] Built target kokkoscore
+Consolidate compiler generated dependencies of target kokkoscontainers
+[ 12%] Built target kokkoscontainers
+-- Generating lmpgitversion.h...
+[ 12%] Built target gitversion
+Consolidate compiler generated dependencies of target lammps
+[100%] Built target lammps
+Consolidate compiler generated dependencies of target lmp
+[100%] Built target lmp
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/bin/lmp
+-- Set runtime path of "/global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/bin/lmp" to ""
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/angle.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/atom.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/bond.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/citeme.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/comm.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/command.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/compute.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/dihedral.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/domain.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/error.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/exceptions.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/fix.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/force.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/group.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/improper.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/input.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/info.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/kspace.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/lammps.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/lattice.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/library.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/lmppython.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/lmptype.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/memory.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/modify.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/neighbor.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/neigh_list.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/output.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/pair.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/platform.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/pointers.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/region.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/timer.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/universe.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/update.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/utils.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/variable.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/fmt/core.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/include/lammps/fmt/format.h
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/liblammps.so.0
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/liblammps.so
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/pkgconfig/liblammps.pc
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/cmake/LAMMPS/LAMMPS_Targets.cmake
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/cmake/LAMMPS/LAMMPS_Targets-release.cmake
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/cmake/LAMMPS/LAMMPSConfig.cmake
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/lib64/cmake/LAMMPS/LAMMPSConfigVersion.cmake
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/man/man1/lmp.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.chain.scaled.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.chute.fixed.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.eam.scaled.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/data.rhodo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.chute
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.chain.fixed.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/data.chute
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.chain.scaled
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.rhodo.fixed.icc.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.rhodo.fixed.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/ffield.reax
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.peri
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.sw.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.spce.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.adp.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.protein.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.tersoff.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/library.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/Si.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.rebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.reaxc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/ffield.comb
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/Ni.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.eam.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.granular.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.rebo.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.dpd
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.spce.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.eff.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.adp
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/Ni.adp
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.reaxc.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.meam.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.protein
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.lj.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.comb
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.protein
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.bop
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.airebo.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.granular
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/CH.airebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.gb.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.tersoff.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.dpd.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.adp.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/CdTe.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.eim.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.fene.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.reaxc
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/ffield.eim
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.lj.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.granular.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.bop.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.rebo.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.gb
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.lj
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.eff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.airebo.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.granular
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.rebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.gb.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.eam.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.airebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.meam.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.peri.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.eim
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.bop.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.sw.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/CH.rebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.eim.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.fene
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.eff.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.peri.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.eim
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.fene.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.spce
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.protein.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.reax
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.comb.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/Cu_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.eff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.sw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.airebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.comb.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/Si.sw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.fene
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/log.9Oct20.dpd.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.gb
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/data.spce
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/POTENTIALS/in.comb
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.eam.fixed.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/data.chain
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.rhodo.scaled.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.chain
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.rhodo.scaled
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.rhodo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.lj
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.chain.fixed.icc.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.lj.fixed.icc.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.chute.scaled.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.lj.fixed.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.lj.scaled.icc.4
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.eam.fixed.icc.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/in.chute.scaled
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/Cu_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/bench/log.6Oct16.chute.fixed.icc.1
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Zuo_JPCA2020.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CuNi.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ti.meam.spline
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Li_Zuo_JPCA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdZnTe_v1.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Zuo_JPCA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WL.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/TiO.meam.spline
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/FeCr.cdeam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/BNCH-old.ILP
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.FC
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CuH.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.edip
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CuZr_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/C_SNAP_2021.10.15.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Fe_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlO.streitz
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Pt_Chapman_2020.agni
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlCu.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ti.rann
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/GaN.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Pd_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.AuO
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdTe.sw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Mo.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_Zuo_JPCA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_mishin1.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.smtbq.Al
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Li_Zuo_JPCA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Zuo_JPCA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/library.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WBe_Wood_PRB2019.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/GaN_sw.poly
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.tersoff.mod
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlFe_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/BNC.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/BNC_MBD_bulk.ILP
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.comb
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/TiZr_2.rann
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/GaN.sw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.pytorch.mliap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.vashishta
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/library.msmeam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta_param.pod
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Al_zhou.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/charmm22.cmap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W_2940_2017_2.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.nn.mliap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Zuo_JPCA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiO.1997.vashishta
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.gw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.nn.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/COH.aip.water.2dm
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta4.mgpt.potin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.lg
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/VFe_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_zhou.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CHAu.ILP
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Zuo_JPCA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni.adp
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.b.meam.sw.spline
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.edip
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CoAl.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Zn.rann
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Li_Zuo_JPCA2020.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.mattsson
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdZnTe_v2.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo5.2.mgpt.README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.V_O_C_H
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo5.2.mgpt.parmin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Al_jpc.agni
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP_JCPA2020.mliap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiCGe.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC_Erhart-Albe.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC_1994.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiO.1994.vashishta
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP_JCPA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CCu_v2.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/HGa.msmeam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC_1990.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP.vashishta
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_Zuo_JPCA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge_Zuo_JPCA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiO.1990.vashishta
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CC.Lebedeva
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.nn.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.comb3
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Zr_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/C.lcbop
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WBe_Wood_PRB2019.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.tersoff.zbl
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W.quadratic.mliap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Zuo_JPCA2020.quadratic.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.mliap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CH.airebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlO.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/MOH.nb3b.harmonic
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta6.8x.mgpt.parmin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/tmd.sw.mod
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdTe.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/He_He_JW2013.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/MoS2.ILP
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ti.meam.sw.spline
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Chen_PRM2017.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Bi.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu.nn.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CuTa.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.budzien
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/FeP_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_1.meam.spline
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CuTa_eam.poly
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/FeCH_BOP_I.poly
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.nn.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/NiAlH_jea.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Zuo_JPCA2020.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/NiAlH_jea.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Li_Zuo_JPCA2020.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.smtbq.TiO2
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Au_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.ZnOH
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge_Zuo_JPCA2020.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.eim
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_Zuo_JPCA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge_Zuo_JPCA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Zr.rann
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_Zuo_JPCA2020.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu-PBE-core-rep.ace
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/BNC_TS_bulk.ILP
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Al_jnp.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WBe_Wood_PRB2019.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WBe_Wood_PRB2019.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mg_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CH.airebo-m
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.cho
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Mo.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Huan_2019_fp1.agni
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Li_Zuo_JPCA2020.quadratic.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_2.meam.spline
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge_Zuo_JPCA2020.quadratic.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/V6.1.mgpt.README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.ci-reax.CH
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Al_Batra_2019.agni
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/charmm36.cmap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Zuo_JPCA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/COH.DMC.aip.water.2dm
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W_2940_2017_2_He_JW2013.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.tersoff.modc
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/BN.extep
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.rdx
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/GaAs.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Zuo_JPCA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlCu.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/acks2_ff.water
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdTeZnSeHgS0.sw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta4.mgpt.parmin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/V6.1.mgpt.potin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ag_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdTeSe.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W_zhou.eam.alloy
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ci-reaxFF_ZBL.dat
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiO.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CH.rebo
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Chen_PRM2017.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_smf7.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP_JCPA2020.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Al_prb.agni
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP_JCPA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/README.reax
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo5.2.mgpt.potin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Zuo_JPCA2020.quadratic.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlCu.adp
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Zuo_JPCA2020.quadratic.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta6.8x.mgpt.README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WBe_Wood_PRB2019.mliap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Chen_PRM2017.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Zuo_JPCA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/MgAl.rann
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_u6.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_Zuo_JPCA2020.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP_JCPA2020.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Zuo_JPCA2020.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/.gitignore
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/C.drip
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/FeCH_BOP_II.poly
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu.snap.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/BNCH.ILP
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlSiMgCuFe.meam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Li_Zuo_JPCA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge_Zuo_JPCA2020.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/AlCuH.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/TlBr_msw.poly
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/C_SNAP_2021.10.15.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/V6.1.mgpt.parmin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC_1989.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/GaN_tersoff.poly
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Mo_Zuo_JPCA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta4.mgpt.README
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Al_mm.eam.fs
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta6.8x.mgpt.potin
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Zuo_JPCA2020.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W_He_JW2013.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.AB
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta_coeff.pod
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge_Zuo_JPCA2020.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W.quadratic.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiC.gw.zbl
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ge.tersoff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/PdHHe.eam.he
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/lib.comb3
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/SiGeH.sw.quip
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.reax.Fe_O_C_H
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CH_taper.KC
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si_Zuo_JPCA2020.quadratic.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CdTeZn.bop.table
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Zuo_JPCA2020.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Huan_2019_fp2.agni
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CH.KC
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Si.sw
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W_2940_2017_2.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/InP_JCPA2020.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CC.KC
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Pt_u3.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/WBe_Wood_PRB2019.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W_2940_2017_2.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_smf7.eam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Cu_Zuo_JPCA2020.quadratic.snapcoeff
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/W.quadratic.mliap.descriptor
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/CC.KC-full
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.snap
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ni_Zuo_JPCA2020.quadratic.snapparam
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/Ta06A.mliap.model
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/share/lammps/potentials/ffield.smtbq.Al2O3
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/etc/profile.d/lammps.sh
+-- Installing: /global/homes/s/shubhp/work/exaalt/install_latest_gnu+mpich/etc/profile.d/lammps.csh

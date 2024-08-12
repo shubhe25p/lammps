@@ -1,2 +1,8 @@
 install*
 common
+static*
+lammps*
+.ipynb_checkpoints
+latest_lmp*
+lmp_latest*
+benchmarks*

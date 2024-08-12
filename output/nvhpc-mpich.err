@@ -1,0 +1,124 @@
++ module rm darshan
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "darshan" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module rm xalt
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Note: the module "xalt" cannot be unloaded because it was not loaded.
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module unload cray-mpich
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module use /global/common/software/nersc/pe/modulefiles/latest
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load PrgEnv-nvhpc
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "nvidia/23.9" with "nvhpc/23.9".
+
+
+Lmod is automatically replacing "PrgEnv-nvidia/8.5.0" with "PrgEnv-nvhpc/8.5.0".
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load mpich
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "cray-mpich/8.1.28" with "mpich/4.2.2".
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ threads=64
+++ pwd
++ HOME_BASE=/global/homes/s/shubhp/work/exaalt
++ LAMMPS_SRC=/global/homes/s/shubhp/work/exaalt/lammps_src
++ INSTALL_PREFIX=/global/homes/s/shubhp/work/exaalt/install_GPU_nvhpc-mpich
++ '[' '!' -d /global/homes/s/shubhp/work/exaalt/lammps_src ']'
++ git clone --single-branch --branch stable https://github.com/lammps/lammps.git /global/homes/s/shubhp/work/exaalt/lammps_src
+Cloning into '/global/homes/s/shubhp/work/exaalt/lammps_src'...
+Updating files:  12% (1554/12818)Updating files:  13% (1667/12818)Updating files:  14% (1795/12818)Updating files:  15% (1923/12818)Updating files:  16% (2051/12818)Updating files:  17% (2180/12818)Updating files:  18% (2308/12818)Updating files:  19% (2436/12818)Updating files:  20% (2564/12818)Updating files:  21% (2692/12818)Updating files:  21% (2745/12818)Updating files:  22% (2820/12818)Updating files:  23% (2949/12818)Updating files:  24% (3077/12818)Updating files:  25% (3205/12818)Updating files:  26% (3333/12818)Updating files:  27% (3461/12818)Updating files:  28% (3590/12818)Updating files:  29% (3718/12818)Updating files:  30% (3846/12818)Updating files:  30% (3849/12818)Updating files:  31% (3974/12818)Updating files:  32% (4102/12818)Updating files:  33% (4230/12818)Updating files:  34% (4359/12818)Updating files:  35% (4487/12818)Updating files:  36% (4615/12818)Updating files:  37% (4743/12818)Updating files:  38% (4871/12818)Updating files:  39% (5000/12818)Updating files:  40% (5128/12818)Updating files:  41% (5256/12818)Updating files:  42% (5384/12818)Updating files:  43% (5512/12818)Updating files:  44% (5640/12818)Updating files:  45% (5769/12818)Updating files:  46% (5897/12818)Updating files:  47% (6025/12818)Updating files:  47% (6111/12818)Updating files:  48% (6153/12818)Updating files:  49% (6281/12818)Updating files:  50% (6409/12818)Updating files:  51% (6538/12818)Updating files:  52% (6666/12818)Updating files:  53% (6794/12818)Updating files:  54% (6922/12818)Updating files:  55% (7050/12818)Updating files:  56% (7179/12818)Updating files:  57% (7307/12818)Updating files:  57% (7428/12818)Updating files:  58% (7435/12818)Updating files:  59% (7563/12818)Updating files:  60% (7691/12818)Updating files:  61% (7819/12818)Updating files:  62% (7948/12818)Updating files:  63% (8076/12818)Updating files:  64% (8204/12818)Updating files:  65% (8332/12818)Updating files:  66% (8460/12818)Updating files:  67% (8589/12818)Updating files:  68% (8717/12818)Updating files:  69% (8845/12818)Updating files:  70% (8973/12818)Updating files:  71% (9101/12818)Updating files:  72% (9229/12818)Updating files:  73% (9358/12818)Updating files:  74% (9486/12818)Updating files:  75% (9614/12818)Updating files:  76% (9742/12818)Updating files:  76% (9762/12818)Updating files:  77% (9870/12818)Updating files:  78% (9999/12818)Updating files:  79% (10127/12818)Updating files:  80% (10255/12818)Updating files:  81% (10383/12818)Updating files:  82% (10511/12818)Updating files:  83% (10639/12818)Updating files:  84% (10768/12818)Updating files:  85% (10896/12818)Updating files:  86% (11024/12818)Updating files:  87% (11152/12818)Updating files:  88% (11280/12818)Updating files:  89% (11409/12818)Updating files:  90% (11537/12818)Updating files:  91% (11665/12818)Updating files:  92% (11793/12818)Updating files:  93% (11921/12818)Updating files:  94% (12049/12818)Updating files:  95% (12178/12818)Updating files:  96% (12306/12818)Updating files:  96% (12321/12818)Updating files:  97% (12434/12818)Updating files:  98% (12562/12818)Updating files:  99% (12690/12818)Updating files: 100% (12818/12818)Updating files: 100% (12818/12818), done.
++ cd /global/homes/s/shubhp/work/exaalt/lammps_src
++ git checkout 7d5fc356fe
+Note: switching to '7d5fc356fe'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 7d5fc356fe Merge pull request #3311 from akohlmey/next-stable-release
++ sed -i s/sm_35/sm_80/ /global/homes/s/shubhp/work/exaalt/lammps_src/lib/kokkos/bin/nvcc_wrapper
++ sed -i 's/new char.7./new char[8]/' src/KOKKOS/kokkos.cpp
++ '[' '!' -d build_PM ']'
++ mkdir build_PM
++ cd build_PM
++ rm -rf '*'
++ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_Fortran_COMPILER=mpifort -D CMAKE_C_COMPILER=mpicc -D CMAKE_CXX_COMPILER=mpic++ -D CMAKE_INSTALL_PREFIX=/global/homes/s/shubhp/work/exaalt/install_GPU_nvhpc-mpich -D LAMMPS_EXCEPTIONS=on -D BUILD_SHARED_LIBS=on -D BUILD_MPI=yes -D PKG_KOKKOS=yes -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes -D PKG_MANYBODY=yes -D PKG_REPLICA=yes -D PKG_ML-SNAP=yes -D PKG_EXTRA-FIX=yes -D PKG_MPIIO=yes -D LAMMPS_SIZES=BIGBIG ../cmake
+/usr/bin/ld: /usr/lib64/crt1.o: in function `_start':
+/home/abuild/rpmbuild/BUILD/glibc-2.31/csu/../sysdeps/x86_64/start.S:104:(.text+0x30): undefined reference to `main'
+      Options:       -Minform=severe;-Xcudafe;--diag_suppress=unrecognized_pragma
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_Fortran_COMPILER
+
+
++ make -j64
++ make install -j64
++ cd /global/homes/s/shubhp/work/exaalt
++ rm -rf /global/homes/s/shubhp/work/exaalt/lammps_src

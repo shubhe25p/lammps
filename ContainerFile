@@ -1,0 +1,86 @@
+FROM nvcr.io/nvidia/cuda:12.3.2-devel-ubuntu22.04
+WORKDIR /opt
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN \
+    apt-get update        &&   \
+    apt-get install --yes      \
+        build-essential        \
+        autoconf               \
+        cmake                  \
+        flex                   \
+        bison                  \
+        zlib1g-dev             \
+        fftw-dev               \
+        fftw3                  \
+        apbs                   \
+        libicu-dev             \
+        libbz2-dev             \
+        libboost-all-dev       \
+        libgmp-dev             \
+        bc                     \
+        libblas-dev            \
+        liblapack-dev          \
+        libfftw3-dev           \
+        automake               \
+        lsb-core               \
+        libxc-dev              \
+        git                    \
+        unzip                  \
+        libgsl-dev             \
+        libhdf5-serial-dev     \
+        wget              &&   \
+    apt-get clean all
+
+
+#install miniconda
+ENV installer=Miniconda3-py39_4.12.0-Linux-x86_64.sh
+
+RUN wget https://repo.anaconda.com/miniconda/$installer && \
+    /bin/bash $installer -b -p /opt/miniconda3          && \
+    rm -rf $installer
+
+ENV PATH=/opt/miniconda3/bin:$PATH
+RUN conda install -y numpy scipy matplotlib setuptools mpi4py
+
+
+ARG mpich=4.2.2
+ARG mpich_prefix=mpich-$mpich
+
+RUN \
+    wget https://www.mpich.org/static/downloads/$mpich/$mpich_prefix.tar.gz && \
+    tar xvzf $mpich_prefix.tar.gz                                           && \
+    cd $mpich_prefix                                                        && \
+    ./configure FFLAGS=-fallow-argument-mismatch FCFLAGS=-fallow-argument-mismatch && \
+    make -j 16                                                              && \
+    make install                                                            && \
+    make clean                                                              && \
+    cd ..                                                                   && \
+    rm -rf $mpich_prefix
+
+RUN /sbin/ldconfig
+
+#Installing lammps
+WORKDIR /opt
+RUN cd /opt
+RUN git clone -b stable_2Aug2023_update3 --recursive https://github.com/lammps/lammps.git lammps
+RUN cd /opt/lammps
+WORKDIR /opt/lammps
+RUN mkdir build
+RUN cd /opt/lammps/build
+WORKDIR /opt/lammps/build
+RUN cmake -DCMAKE_INSTALL_PREFIX=$PWD/../install -D CMAKE_BUILD_TYPE=Release \
+            -D CMAKE_Fortran_COMPILER=mpif90 -D CMAKE_C_COMPILER=$(which mpicc) -D CMAKE_CXX_COMPILER=$(which mpicxx) \
+            -D MPI_C_COMPILER=$(which mpicc) -D MPI_CXX_COMPILER=$(which mpicxx) -D LAMMPS_EXCEPTIONS=ON \
+            -D PKG_KOKKOS=yes -D Kokkos_ARCH_ZEN3=yes  -D Kokkos_ARCH_AMPERE80=ON -D Kokkos_ENABLE_CUDA=yes \
+            -D PKG_MANYBODY=ON -D PKG_MOLECULE=ON -D PKG_KSPACE=ON -D PKG_REPLICA=ON \
+            -D PKG_MPIIO=ON -D PKG_ML-SNAP=ON -D PKG_EXTRA-FIX=yes -D PKG_COLVARS=yes \
+            -D BUILD_MPI=yes -D BUILD_SHARED_LIBS=on -D CMAKE_CXX_STANDARD=17 -D Kokkos_ENABLE_OPENMP=yes \
+            -D LAMMPS_SIZES=BIGBIG -D CMAKE_POSITION_INDEPENDENT_CODE=ON -D CMAKE_EXE_FLAGS="-dynamic" ../cmake
+RUN make -j 4
+RUN make install
+
+# Setup entry point for production.
+ENV PATH="$PATH:/opt/lammps/install/bin"
+ENV PATH=/opt/lammps/install/bin:$PATH
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/lammps/install/lib
